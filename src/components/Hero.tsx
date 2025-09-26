@@ -18,7 +18,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-16">
+        <div className="mt-20 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-16">
           {/* Outer wrapper keeps shadows and border, inner wrapper clips the image and notch */}
           <div className="relative rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[2.5rem] border border-black/5 shadow-xl sm:shadow-2xl shadow-gray-300/50">
             <div className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[2.5rem]">
@@ -40,8 +40,8 @@ export default function Hero() {
             </div>
 
             {/* Floating CTA group sits above the outer wrapper so it is not clipped */}
-            <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-[200px] sm:max-w-none sm:w-auto px-2 sm:px-0">
-              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-2 bg-white rounded-full p-1.5 sm:p-1 shadow-lg">
+            <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-[240px] sm:max-w-none sm:w-auto px-6 sm:px-0 ">
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-2 bg-white rounded-full p-4 sm:p-1 shadow-lg">
                 <Button className="px-4 sm:px-5 py-2.5 sm:py-2 text-sm w-full sm:w-auto font-medium">Get Started</Button>
                 <Button variant="outline" className="px-4 sm:px-5 py-2.5 sm:py-2 text-sm bg-white w-full sm:w-auto font-medium">Contact Us</Button>
               </div>
