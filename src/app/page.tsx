@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import CompanyLogos from "@/components/CompanyLogos";
 import Feature from "@/components/FeaturesSection";
 import Solutions from "@/components/OurSolution";
+import TrustedByBusiness from "@/components/TrustedByBusiness";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <CompanyLogos />
       <Feature />
       <Solutions />
+      <TrustedByBusiness />
     </main>
   );
 }
