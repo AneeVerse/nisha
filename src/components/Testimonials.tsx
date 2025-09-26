@@ -99,14 +99,16 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
   const duplicatedItems = [...items, ...items, ...items];
 
   return (
-    <div className="overflow-hidden mask-gradient">
+    <div className="relative overflow-hidden">
       <div 
         ref={marqueeRef} 
-        className={`marquee-track ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}
+        className={`flex ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}
         style={{
           animationDuration: '60s',
           animationTimingFunction: 'linear',
           animationIterationCount: 'infinite',
+          display: 'flex',
+          width: 'fit-content',
         }}
       >
         {duplicatedItems.map((t, i) => (
@@ -114,7 +116,7 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
             key={`${t.name}-${i}`}
             className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow duration-300"
           >
-            <blockquote className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6">"{t.quote}"</blockquote>
+            <blockquote className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6">&quot;{t.quote}&quot;</blockquote>
             <figcaption className="mt-4 flex items-center gap-3">
               <Image
                 src={t.avatar}
@@ -147,7 +149,7 @@ export default function Testimonials() {
             How We Transformed <span className="whitespace-nowrap">Their Journey</span>
           </h2>
           <p className="mt-2 text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
-            Untitled is growing fast, and we are always looking for passionate people to help our customers succeed.
+            Nisha Roadways is growing fast, and we are always looking for passionate people to help our customers succeed.
           </p>
         </div>
 

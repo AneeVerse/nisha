@@ -7,10 +7,8 @@ export default function Hero() {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-gray-900 leading-[1.1] sm:leading-tight tracking-tighter mb-4 sm:mb-6">
-            One Platform to Manage All
-            <br className="hidden xs:block" />
-            <span className="block xs:inline">Your Ship </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">Inspections</span>
+            One Platform to Manage All <br />Your Ship 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]"> Inspections</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4 leading-relaxed">
