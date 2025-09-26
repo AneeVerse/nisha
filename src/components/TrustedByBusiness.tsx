@@ -35,10 +35,10 @@ export default function TrustedByBusiness() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left content */}
           <div className="lg:col-span-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
               Trusted by Business
             </h2>
-            <p className="mt-3 text-gray-600 max-w-xl">
+            <p className="mt-3 text-gray-600 max-w-xl text-sm sm:text-base">
               We deliver reliable, on‑time logistics with modern tracking and customer‑first support, trusted by teams across industries.
             </p>
 
@@ -59,7 +59,7 @@ export default function TrustedByBusiness() {
                       <button
                         onClick={() => setOpenIndex(isOpen ? null : idx)}
                         aria-label={isOpen ? "Collapse" : "Expand"}
-                        className="ml-4 h-7 w-7 shrink-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white flex items-center justify-center text-base leading-none transition-transform"
+                        className="ml-4 h-7 w-7 shrink-0 rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white flex items-center justify-center text-base leading-none transition-transform hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f]"
                       >
                         {isOpen ? "−" : "+"}
                       </button>
@@ -95,22 +95,22 @@ export default function TrustedByBusiness() {
 
         {/* Stats bar */}
         <div className="mt-10 sm:mt-12">
-          <div className="rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg">
+          <div className="rounded-2xl bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white shadow-lg">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/20">
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold">150+</div>
+              <div className="p-4 sm:p-6 text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">150+</div>
                 <div className="mt-1 text-xs sm:text-sm opacity-90">Projects Delivered</div>
               </div>
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold">50+</div>
+              <div className="p-4 sm:p-6 text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">50+</div>
                 <div className="mt-1 text-xs sm:text-sm opacity-90">Clients Happys</div>
               </div>
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold">1,000 M</div>
+              <div className="p-4 sm:p-6 text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">1,000 M</div>
                 <div className="mt-1 text-xs sm:text-sm opacity-90">Social Media Base</div>
               </div>
-              <div className="p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold">6+</div>
+              <div className="p-4 sm:p-6 text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">6+</div>
                 <div className="mt-1 text-xs sm:text-sm opacity-90">Year Experiences</div>
               </div>
             </div>

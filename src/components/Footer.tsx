@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
                         />
                         <button
                           type="submit"
-                          className="px-4 sm:px-6 lg:px-8 h-12 sm:h-14 lg:h-16 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm lg:text-lg font-semibold transition-colors duration-200 whitespace-nowrap"
+                          className="px-4 sm:px-6 lg:px-8 h-12 sm:h-14 lg:h-16 bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f] text-white text-xs sm:text-sm lg:text-lg font-semibold transition-all duration-200 whitespace-nowrap"
                         >
                           Subscribe Now
                         </button>
@@ -155,7 +155,7 @@ const Footer: React.FC = () => {
               {/* Navigation links section below */}
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
                 <div>
-                  <h4 className="text-blue-400 font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Useful Link</h4>
+                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Useful Link</h4>
                   <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm lg:text-base text-white/70">
                     <li><a href="#" className="hover:text-white transition-colors">About us</a></li>
                     <li><a href="#" className="hover:text-white transition-colors">Appointment</a></li>
@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-blue-400 font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Resources</h4>
+                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Resources</h4>
                   <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm lg:text-base text-white/70">
                     <li><a href="#" className="hover:text-white transition-colors">Licenses</a></li>
                     <li><a href="#" className="hover:text-white transition-colors">Style Guide</a></li>
@@ -172,7 +172,7 @@ const Footer: React.FC = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-blue-400 font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Working Hours</h4>
+                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Working Hours</h4>
                   <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm lg:text-base text-white/70">
                     <li>Mon to Fri : 9:00 AM - 5:00 PM</li>
                     <li>Saturday : 10:00 AM - 6:00 PM</li>
@@ -180,7 +180,7 @@ const Footer: React.FC = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-blue-400 font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Say Hello</h4>
+                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] font-semibold mb-3 sm:mb-4 text-sm sm:text-base lg:text-lg">Say Hello</h4>
                   <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm lg:text-base text-white/70">
                     <li><a href="mailto:contact@pbmit.com" className="hover:text-white transition-colors">contact@pbmit.com</a></li>
                     <li className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-white">+(02) 574 - 328 - 301</li>

@@ -140,7 +140,9 @@ export default function Testimonials() {
     <section aria-label="Testimonials" className="py-16 sm:py-20">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Testimnials</div>
+          <div>
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">Testimonials</span>
+          </div>
           <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
             How We Transformed <span className="whitespace-nowrap">Their Journey</span>
           </h2>

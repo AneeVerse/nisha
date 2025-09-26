@@ -15,12 +15,12 @@ export default function CompanyLogos() {
   return (
     <section aria-label="Companies using our product" className="py-10 sm:py-12">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16 -mt-16 ">
-        <p className="text-center text-sm md:text-xl text-gray-900 -mb-10">
+        <p className="text-center text-sm sm:text-base md:text-lg lg:text-xl text-gray-900 -mb-8 sm:-mb-10 px-4">
           Over 32k+ software businesses growing with ShipMate
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-6">
-          <ul className="flex items-center justify-between gap-6 flex-wrap lg:flex-nowrap">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-4 sm:gap-6">
+          <ul className="flex items-center justify-center sm:justify-between gap-4 sm:gap-6 flex-wrap lg:flex-nowrap">
             {logos.map((logo) => (
               <li key={logo.src} className="flex items-center justify-center">
                 <Image
@@ -28,7 +28,7 @@ export default function CompanyLogos() {
                   alt={logo.alt}
                   width={160}
                   height={48}
-                  className="h-8 md:h-10 lg:h-10 w-auto object-contain select-none transition"
+                  className="h-6 sm:h-8 md:h-10 lg:h-10 w-auto object-contain select-none transition hover:opacity-80"
                   sizes="(max-width: 1024px) 33vw, 12vw"
                 />
               </li>

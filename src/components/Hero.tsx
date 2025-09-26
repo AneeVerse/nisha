@@ -6,19 +6,19 @@ export default function Hero() {
     <section id="home" className="relative">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tighter mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight tracking-tighter mb-4 sm:mb-6">
             One Platform to Manage All
             <br />
             Your Ship {" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Inspections</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">Inspections</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Connect ship owners with qualified inspectors to simplify compliance and maintenance processes.
           </p>
         </div>
 
-        <div className="mt-12 lg:mt-16">
+        <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16">
           {/* Outer wrapper keeps shadows and border, inner wrapper clips the image and notch */}
           <div className="relative rounded-[2.5rem] border border-black/5 shadow-2xl shadow-gray-300/50">
             <div className="relative overflow-hidden rounded-[2.5rem]">
@@ -41,9 +41,9 @@ export default function Hero() {
 
             {/* Floating CTA group sits above the outer wrapper so it is not clipped */}
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="flex items-center gap-2 bg-white  rounded-full p-1 ">
-                <Button className="px-5 py-2 text-sm">Get Started</Button>
-                <Button variant="outline" className="px-5 py-2 text-sm bg-white">Contact Us</Button>
+              <div className="flex flex-col sm:flex-row items-center gap-2 bg-white rounded-full p-1">
+                <Button className="px-4 sm:px-5 py-2 text-xs sm:text-sm w-full sm:w-auto">Get Started</Button>
+                <Button variant="outline" className="px-4 sm:px-5 py-2 text-xs sm:text-sm bg-white w-full sm:w-auto">Contact Us</Button>
               </div>
             </div>
           </div>

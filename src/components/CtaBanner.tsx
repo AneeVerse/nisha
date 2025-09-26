@@ -30,18 +30,18 @@ export default function CtaBanner() {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 py-12 sm:py-14 md:py-16 grid place-items-center text-center px-6">
-            <h2 className="max-w-3xl text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
+          <div className="relative z-10 py-8 sm:py-12 md:py-14 lg:py-16 grid place-items-center text-center px-4 sm:px-6">
+            <h2 className="max-w-3xl text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
               Simplify your logistics with easy
               <br className="hidden sm:block" /> booking & real‑time tracking
             </h2>
-            <p className="mt-4 max-w-2xl text-gray-600 text-sm sm:text-base">
+            <p className="mt-3 sm:mt-4 max-w-2xl text-gray-600 text-sm sm:text-base px-2">
               From pickup to global delivery, ShipMate makes shipping simple, transparent, and stress‑free. We handle the complexity so you can focus on what matters most.
             </p>
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 text-sm sm:text-base font-semibold shadow-md hover:opacity-95 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold shadow-md hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f] transition-all duration-200"
               >
                 Calculate Now
                 <svg
