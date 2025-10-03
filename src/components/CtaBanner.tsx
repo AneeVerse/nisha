@@ -40,7 +40,7 @@ export default function CtaBanner() {
             <div className="mt-3 sm:mt-4 md:mt-6">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-semibold shadow-md hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f] transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] text-white px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-semibold shadow-md hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f] transition-all duration-200 hover:scale-105"
               >
                 Calculate Now
                 <svg

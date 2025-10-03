@@ -73,7 +73,7 @@ function BlogCard({ post, index }: { post: BlogItem; index: number }) {
       </div>
 
       {/* Content footer */}
-      <div className="relative z-10 -mt-1 sm:-mt-2 rounded-b-xl sm:rounded-b-2xl px-4 sm:px-5 lg:px-6 pb-4 sm:pb-5 lg:pb-6 pt-4 sm:pt-5 lg:pt-6 transition-colors duration-500 ease-in-out bg-white text-gray-900 group-hover:bg-gradient-to-r group-hover:from-[#2489be] group-hover:via-[#89517f] group-hover:to-[#cb4147] group-hover:text-white">
+      <div className="relative z-10 -mt-1 sm:-mt-2 rounded-b-xl sm:rounded-b-2xl px-4 sm:px-5 lg:px-6 pb-4 sm:pb-5 lg:pb-6 pt-4 sm:pt-5 lg:pt-6 transition-colors duration-500 ease-in-out bg-white text-gray-900 group-hover:bg-gradient-to-r group-hover:from-[#6a31eb] group-hover:via-[#9a45d1] group-hover:to-[#d560ab] group-hover:text-white">
         {/* Meta */}
         <div className="mb-3 sm:mb-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 lg:gap-6 text-xs sm:text-sm">
           <div className="flex items-center gap-2 opacity-80">
@@ -99,7 +99,7 @@ function BlogCard({ post, index }: { post: BlogItem; index: number }) {
         {/* Read more */}
         <Link
           href={post.href}
-          className="inline-flex items-center gap-2 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] group-hover:text-white transition-colors text-sm sm:text-base"
+          className="inline-flex items-center gap-2 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] group-hover:text-white transition-colors text-sm sm:text-base"
         >
           Read More
           <span className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">→</span>
@@ -115,7 +115,7 @@ export default function BlogSection() {
       <div className="mx-auto max-w-[1350px] px-4 sm:px-6">
         {/* Heading */}
         <div className="mb-8 sm:mb-10 text-center">
-          <span className="text-xs sm:text-sm font-semibold uppercase mb-2 tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">
+          <span className="text-xs sm:text-sm font-semibold uppercase mb-2 tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">
             Our Blogs
           </span>
           <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1f1634] leading-tight">

@@ -47,7 +47,7 @@ const FeaturesSection = () => {
             {/* Left Column - Text Content */}
             <div className="flex flex-col justify-start lg:justify-center space-y-3 sm:space-y-4 md:space-y-5 lg:col-span-7 order-1 lg:order-1">
               <div className="max-w-2xl">
-                <span className="text-xs sm:text-sm font-semibold uppercase mb-2 tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">
+                <span className="text-xs sm:text-sm font-semibold uppercase mb-2 tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">
                   About Us
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.1] sm:leading-tight tracking-tighter mb-3 sm:mb-4 md:mb-5">
@@ -64,7 +64,7 @@ const FeaturesSection = () => {
                 <div className="mt-4 sm:mt-5 md:mt-6 space-y-4 sm:space-y-5 md:space-y-6">
                   {/* Seamless Process */}
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-[#2489be]/10 via-[#89517f]/10 to-[#cb4147]/10 text-[#2489be] mt-0.5">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-[#6a31eb]/10 via-[#9a45d1]/10 to-[#d560ab]/10 text-[#6a31eb] mt-0.5">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                       </svg>
@@ -77,7 +77,7 @@ const FeaturesSection = () => {
                   
                   {/* Dedicated Team */}
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-[#2489be]/10 via-[#89517f]/10 to-[#cb4147]/10 text-[#89517f] mt-0.5">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-[#6a31eb]/10 via-[#9a45d1]/10 to-[#d560ab]/10 text-[#9a45d1] mt-0.5">
                       <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
@@ -90,7 +90,7 @@ const FeaturesSection = () => {
                   
                   {/* 24/7 Customer Support */}
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-[#2489be]/10 via-[#89517f]/10 to-[#cb4147]/10 text-[#cb4147] mt-0.5">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-[#6a31eb]/10 via-[#9a45d1]/10 to-[#d560ab]/10 text-[#d560ab] mt-0.5">
                       <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                       </svg>
@@ -126,10 +126,10 @@ const FeaturesSection = () => {
                       {/* Play Button - Bottom Right */}
                       <div className="absolute bottom-3 sm:bottom-4 md:bottom-5 right-3 sm:right-4 md:right-5 z-10">
                         <div className="relative group">
-                          <span className="absolute -inset-1.5 sm:-inset-2 md:-inset-3 rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] opacity-60 blur-md sm:blur-lg animate-pulse group-hover:opacity-80" />
+                          <span className="absolute -inset-1.5 sm:-inset-2 md:-inset-3 rounded-full bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] opacity-60 blur-md sm:blur-lg animate-pulse group-hover:opacity-80" />
                           <button
                             onClick={handlePlayVideo}
-                            className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center bg-black ring-1 sm:ring-2 ring-[#2489be] text-[#2489be] shadow-lg sm:shadow-xl transition-all duration-200 hover:bg-gradient-to-r hover:from-[#2489be] hover:via-[#89517f] hover:to-[#cb4147] hover:text-white hover:ring-[#2489be] hover:scale-110"
+                            className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center bg-black ring-1 sm:ring-2 ring-[#6a31eb] text-[#6a31eb] shadow-lg sm:shadow-xl transition-all duration-200 hover:bg-gradient-to-r hover:from-[#6a31eb] hover:via-[#9a45d1] hover:to-[#d560ab] hover:text-white hover:ring-[#6a31eb] hover:scale-110"
                             aria-label="Play video"
                           >
                             <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-0.5 sm:ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">

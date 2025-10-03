@@ -124,13 +124,13 @@ export default function OurSolution() {
       {/* Eyebrow */}
       <div className="flex items-center justify-center gap-2 sm:gap-3 font-medium">
     
-        <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">OUR SERVICES</span>
+        <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">OUR SERVICES</span>
       </div>
 
       {/* Title */}
       <h2 className="mt-4 sm:mt-5 text-center text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] font-extrabold leading-tight tracking-tighter">
         <span className="text-gray-900">Your Trusted Partner for</span>{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]">Effortless Global Shipping</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">Effortless Global Shipping</span>
       </h2>
 
       {/* Tabs */}
@@ -142,10 +142,10 @@ export default function OurSolution() {
             <button
               type="button"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full flex items-center justify-between bg-white border-2 border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#2489be] focus:border-[#2489be]"
+              className="w-full flex items-center justify-between bg-white border-2 border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#6a31eb] focus:border-[#6a31eb]"
             >
               <div className="flex items-center gap-3">
-                <div className="h-3 w-3 rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]"></div>
+                <div className="h-3 w-3 rounded-full bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]"></div>
                 <span className="text-gray-800 font-medium text-sm">{activeConfig.label}</span>
               </div>
               <svg
@@ -170,16 +170,16 @@ export default function OurSolution() {
                       key={service.key}
                       type="button"
                       onClick={() => handleServiceSelect(service.key)}
-                      className={`w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-[#2489be]/10 hover:via-[#89517f]/10 hover:to-[#cb4147]/10 transition-colors duration-150 ${
-                        active === service.key ? 'bg-gradient-to-r from-[#2489be]/10 via-[#89517f]/10 to-[#cb4147]/10 border-r-4 border-[#2489be]' : ''
+                      className={`w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-[#6a31eb]/10 hover:via-[#9a45d1]/10 hover:to-[#d560ab]/10 transition-colors duration-150 ${
+                        active === service.key ? 'bg-gradient-to-r from-[#6a31eb]/10 via-[#9a45d1]/10 to-[#d560ab]/10 border-r-4 border-[#6a31eb]' : ''
                       }`}
                     >
                       <div className="flex items-center gap-3">
                         <div className={`h-2.5 w-2.5 rounded-full ${
-                          active === service.key ? 'bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]' : 'bg-gray-300'
+                          active === service.key ? 'bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]' : 'bg-gray-300'
                         }`}></div>
                         <span className={`text-sm font-medium ${
-                          active === service.key ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147]' : 'text-gray-700'
+                          active === service.key ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]' : 'text-gray-700'
                         }`}>
                           {service.label}
                         </span>
@@ -204,7 +204,7 @@ export default function OurSolution() {
                   onClick={() => setActive(s.key)}
                   className={`flex-1 px-4 py-2.5 text-sm font-medium rounded-full transition-all ${
                     isActive
-                      ? 'text-white bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] shadow'
+                      ? 'text-white bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] shadow'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                   }`}
                 >
@@ -217,7 +217,7 @@ export default function OurSolution() {
       </div>
 
       {/* Content card (gradient like reference) */}
-      <div className="mt-6 sm:mt-8 mx-auto max-w-[1100px] rounded-[24px] overflow-hidden bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] shadow-lg">
+      <div className="mt-6 sm:mt-8 mx-auto max-w-[1100px] rounded-[24px] overflow-hidden bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] shadow-lg">
         <div className="p-4 sm:p-6 md:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
             {/* Image */}
@@ -253,10 +253,10 @@ export default function OurSolution() {
                       element.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
-                  className="group inline-flex items-center rounded-full bg-white text-[#2489be] pl-5 pr-2 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-white/90"
+                  className="group inline-flex items-center rounded-full bg-white text-[#6a31eb] pl-5 pr-2 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-white/90"
                 >
                   <span>Get a Free Quote</span>
-                  <span className="ml-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white">
+                  <span className="ml-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

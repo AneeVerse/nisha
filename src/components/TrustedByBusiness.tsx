@@ -59,7 +59,7 @@ export default function TrustedByBusiness() {
                       <button
                         onClick={() => setOpenIndex(isOpen ? null : idx)}
                         aria-label={isOpen ? "Collapse" : "Expand"}
-                        className="ml-4 h-7 w-7 shrink-0 rounded-full bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white flex items-center justify-center text-base leading-none transition-transform hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f]"
+                        className="ml-4 h-7 w-7 shrink-0 rounded-full bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] text-white flex items-center justify-center text-base leading-none transition-transform hover:from-[#1e7aa8] hover:via-[#7a4a72] hover:to-[#b8393f]"
                       >
                         {isOpen ? "−" : "+"}
                       </button>
@@ -95,7 +95,7 @@ export default function TrustedByBusiness() {
 
         {/* Stats bar */}
         <div className="mt-10 sm:mt-12">
-          <div className="rounded-2xl bg-gradient-to-r from-[#2489be] via-[#89517f] to-[#cb4147] text-white shadow-lg">
+          <div className="rounded-2xl bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] text-white shadow-lg">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/20">
               <div className="p-4 sm:p-6 text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">150+</div>
