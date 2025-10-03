@@ -34,26 +34,41 @@ const Footer: React.FC = () => {
   return (
     <footer ref={sectionRef} className="relative bg-[#061128] text-white mt-8 sm:mt-12 md:mt-16">
       {/* Road strip with two trucks */}
-      <div className="relative h-16 sm:h-20 md:h-24 overflow-hidden">
-        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[2px] sm:h-[3px] bg-[#1b243b]"></div>
-        <div className="absolute inset-x-2 sm:inset-x-3 top-1/2 -translate-y-1/2 flex justify-between items-center">
+      <div className="relative h-24 sm:h-28 md:h-32 lg:h-36 overflow-hidden mb-6 sm:mb-8">
+        {/* Upper lane solid line */}
+        <div className="absolute inset-x-0 top-[35%] -translate-y-1/2 h-[2px] sm:h-[3px] bg-[#1b243b]"></div>
+        {/* Upper lane dashed line */}
+        <div className="absolute inset-x-2 sm:inset-x-3 top-[35%] -translate-y-1/2 flex justify-between items-center">
           <div className="flex-1 h-[2px] sm:h-[3px] bg-[repeating-linear-gradient(to_right,_transparent,_transparent_12px,_#ffffff_12px,_#ffffff_24px)] sm:bg-[repeating-linear-gradient(to_right,_transparent,_transparent_16px,_#ffffff_16px,_#ffffff_32px)] opacity-70"></div>
         </div>
-        {/* Left truck goes right */}
-        <div ref={leftTruckRef} className="pointer-events-none absolute left-[-80px] sm:left-[-100px] md:left-[-120px] top-0 h-full flex items-center">
+        
+        {/* Lower lane solid line */}
+        <div className="absolute inset-x-0 top-[70%] -translate-y-1/2 h-[2px] sm:h-[3px] bg-[#1b243b]"></div>
+        {/* Lower lane dashed line */}
+        <div className="absolute inset-x-2 sm:inset-x-3 top-[70%] -translate-y-1/2 flex justify-between items-center">
+          <div className="flex-1 h-[2px] sm:h-[3px] bg-[repeating-linear-gradient(to_right,_transparent,_transparent_12px,_#ffffff_12px,_#ffffff_24px)] sm:bg-[repeating-linear-gradient(to_right,_transparent,_transparent_16px,_#ffffff_16px,_#ffffff_32px)] opacity-70"></div>
+        </div>
+        {/* Small truck (upper lane) goes right - behind big truck */}
+        <div
+          ref={leftTruckRef}
+          className="pointer-events-none absolute left-[-80px] sm:left-[-100px] md:left-[-120px] top-[15%] z-10 flex items-center"
+        >
           <Image
             src="/images/footer/621dbe2c84d5870bfcca78a1_01.svg"
-            alt="Truck moving right"
+            alt="Small truck moving right"
             width={120}
             height={60}
             className="drop-shadow-lg w-16 h-8 sm:w-20 sm:h-10 md:w-[120px] md:h-[60px]"
           />
         </div>
-        {/* Right truck goes left */}
-        <div ref={rightTruckRef} className="pointer-events-none absolute right-[-80px] sm:right-[-100px] md:right-[-120px] top-0 h-full flex items-center">
+        {/* Big truck (lower lane) goes left - in front */}
+        <div
+          ref={rightTruckRef}
+          className="pointer-events-none absolute right-[-80px] sm:right-[-100px] md:right-[-120px] top-[50%] z-20 flex items-center"
+        >
           <Image
             src="/images/footer/62207283e85d0a3ded8b3d3c_05.svg"
-            alt="Truck moving left"
+            alt="Big truck moving left"
             width={120}
             height={60}
             className="drop-shadow-lg w-16 h-8 sm:w-20 sm:h-10 md:w-[120px] md:h-[60px]"
@@ -63,7 +78,7 @@ const Footer: React.FC = () => {
 
       {/* Main footer content */}
       <div className="relative">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8 lg:py-12">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8 lg:py-12 -mt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
             {/* Left: brand + map image - takes 1 column */}
             <div className="flex flex-col lg:col-span-1 items-center md:items-start">
