@@ -4,33 +4,19 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
-function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <line x1="3" y1="6" x2="21" y2="6" />
-      <line x1="3" y1="12" x2="21" y2="12" />
-      <line x1="3" y1="18" x2="21" y2="18" />
-    </svg>
-  );
-}
-function XIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-  );
-}
-
-// Simple chevron icon
-function ChevronDown(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  );
-}
+import { 
+  Truck, 
+  Container, 
+  Settings, 
+  Shield, 
+  Package, 
+  Lock, 
+  Warehouse, 
+  FileText,
+  Menu,
+  X,
+  ChevronDown
+} from "lucide-react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -61,49 +47,57 @@ export default function Navbar() {
       title: "EMPTY CONTAINER TRANSPORTATION", 
       desc: "Pioneers in empty container movement across all major ports and ICDs. Cost-effective solutions with industry-leading turnaround times.", 
       benefits: "40% cost savings, 24/7 availability, pan-India coverage",
-      href: "#empty-container" 
+      href: "/services/empty-container-transportation",
+      icon: <Truck className="w-5 h-5" />
     },
     { 
       title: "EXPORT & IMPORT CONTAINERS", 
       desc: "Full-service container logistics for 20ft, 40ft, and 45ft units. Seamless port-to-door connectivity with real-time tracking.", 
       benefits: "Zero documentation delays, customs clearance support, damage-free delivery",
-      href: "#export-import" 
+      href: "/services/export-import-containers",
+      icon: <Container className="w-5 h-5" />
     },
     { 
       title: "PROJECT CARGO MANAGEMENT", 
       desc: "Oversized and heavy machinery transportation with route surveys, permits, and specialized vehicles. No cargo too complex.", 
       benefits: "Custom engineering solutions, permit management, dedicated project managers",
-      href: "#project-cargo" 
+      href: "/services/project-cargo-management",
+      icon: <Settings className="w-5 h-5" />
     },
     { 
       title: "CHEMICAL TRANSPORTATION", 
       desc: "Certified hazardous and non-hazardous chemical transport with safety-trained drivers and compliant vehicles.", 
       benefits: "ADR-certified drivers, emergency response protocols, insurance coverage",
-      href: "#chemical-transport" 
+      href: "/services/chemical-transportation",
+      icon: <Shield className="w-5 h-5" />
     },
     { 
       title: "BULK CARGO SOLUTIONS", 
       desc: "Steel coils, grains, construction materials, and industrial goods with optimized vehicle configurations.", 
       benefits: "Load optimization, reduced handling damage, flexible scheduling",
-      href: "#bulk-cargo" 
+      href: "/services/bulk-cargo-solutions",
+      icon: <Package className="w-5 h-5" />
     },
     { 
       title: "HIGH-VALUE GOODS ESCORT", 
       desc: "Armed security escort services with GPS tracking for valuable and sensitive cargo shipments.", 
       benefits: "24/7 surveillance, trained security personnel, comprehensive insurance",
-      href: "#high-value-escort" 
+      href: "/services/high-value-goods-escort",
+      icon: <Lock className="w-5 h-5" />
     },
     { 
       title: "WAREHOUSING & STORAGE", 
       desc: "Climate-controlled facilities near major ports with inventory management and last-mile distribution.", 
       benefits: "Strategic locations, inventory tracking, flexible storage terms",
-      href: "#warehousing" 
+      href: "/services/warehousing-storage",
+      icon: <Warehouse className="w-5 h-5" />
     },
     { 
       title: "LCL CONSOLIDATION", 
       desc: "Small package delivery across India with consolidated shipping for cost-effective transportation.", 
       benefits: "Reduced shipping costs, weekly consolidations, nationwide reach",
-      href: "#lcl-consolidation" 
+      href: "/services/lcl-consolidation",
+      icon: <FileText className="w-5 h-5" />
     },
   ];
 
@@ -157,21 +151,7 @@ export default function Navbar() {
                       </div>
                     </div>
                     <div className="flex-shrink-0 w-6 h-6 text-gray-400">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        {index === 0 && <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/>}
-                        {index === 0 && <path d="M15 18H9"/>}
-                        {index === 0 && <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/>}
-                        {index === 0 && <circle cx="17" cy="18" r="2"/>}
-                        {index === 0 && <circle cx="7" cy="18" r="2"/>}
-                        
-                        {index === 1 && <rect x="1" y="3" width="15" height="13"/>}
-                        {index === 1 && <path d="m16 8 2 2-2 2"/>}
-                        {index === 1 && <path d="M21 12H18"/>}
-                        
-                        {index === 2 && <path d="M12 2L2 7l10 5 10-5-10-5z"/>}
-                        {index === 2 && <path d="M2 17l10 5 10-5"/>}
-                        {index === 2 && <path d="M2 12l10 5 10-5"/>}
-                      </svg>
+                      {item.icon}
                     </div>
                   </Link>
                 ))}
@@ -192,17 +172,7 @@ export default function Navbar() {
                       </div>
                     </div>
                     <div className="flex-shrink-0 w-6 h-6 text-gray-400">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        {index === 0 && <path d="M9 12l2 2 4-4"/>}
-                        {index === 0 && <circle cx="12" cy="12" r="9"/>}
-                        
-                        {index === 1 && <path d="M12 2L2 7l10 5 10-5-10-5z"/>}
-                        {index === 1 && <path d="M2 17l10 5 10-5"/>}
-                        {index === 1 && <path d="M2 12l10 5 10-5"/>}
-                        
-                        {index === 2 && <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4l3 3V8l-3 3z"/>}
-                        {index === 2 && <path d="M22 4H12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h9l1 1V6a2 2 0 0 0-2-2z"/>}
-                      </svg>
+                      {item.icon}
                     </div>
                   </Link>
                 ))}
@@ -222,14 +192,7 @@ export default function Navbar() {
                       </div>
                     </div>
                     <div className="flex-shrink-0 w-6 h-6 text-gray-400">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        {index === 0 && <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>}
-                        {index === 0 && <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/>}
-                        {index === 0 && <path d="M12 3v6"/>}
-                        
-                        {index === 1 && <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>}
-                        {index === 1 && <path d="M9 9h6v6H9z"/>}
-                      </svg>
+                      {item.icon}
                     </div>
                   </Link>
                 ))}
@@ -317,7 +280,7 @@ export default function Navbar() {
                 className="text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                 aria-label="Toggle menu"
               >
-                {isMobileMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
             </div>
           </div>
