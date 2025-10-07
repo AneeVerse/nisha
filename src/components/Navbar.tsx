@@ -208,7 +208,7 @@ export default function Navbar() {
                 <Link key={item.title} href={item.href} className="group block">
                   <div className="aspect-[5/2] bg-gray-100 rounded-lg overflow-hidden mb-4">
                     <Image 
-                      src={item.image} 
+                      src={'image' in item ? item.image : '/images/use-everywhere/images1.png'} 
                       alt={item.title}
                       width={400}
                       height={300}

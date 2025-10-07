@@ -113,7 +113,7 @@ export default function ServicesPage() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                From 20ft containers to 100-ton project cargo, we handle what others can't. 35+ years of expertise across 16 industry sectors with zero damage guarantee.
+                From 20ft containers to 100-ton project cargo, we handle what others can&apos;t. 35+ years of expertise across 16 industry sectors with zero damage guarantee.
               </p>
               <Button className="px-8 py-3 text-lg">
                 Get Custom Quote for Your Cargo
@@ -150,7 +150,7 @@ export default function ServicesPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Whether you're shipping a single container or managing complex project cargo, Nisha Roadways delivers tailored solutions that move your business forward. Our comprehensive service portfolio covers every logistics challenge across India's most demanding routes.
+              Whether you&apos;re shipping a single container or managing complex project cargo, Nisha Roadways delivers tailored solutions that move your business forward. Our comprehensive service portfolio covers every logistics challenge across India&apos;s most demanding routes.
             </p>
           </div>
 
