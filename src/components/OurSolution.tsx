@@ -93,6 +93,9 @@ const SERVICES: ServiceConfig[] = [
 export default function OurSolution() {
   const [currentIndex, setCurrentIndex] = useState(2); // Start with middle tab (index 2)
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -136,6 +139,57 @@ export default function OurSolution() {
     }, 8000);
   };
 
+  // Handle mouse drag functionality
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setIsAutoScrolling(false);
+    setDragStart(e.clientX);
+    setDragOffset(0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    
+    const currentOffset = e.clientX - dragStart;
+    setDragOffset(currentOffset);
+  };
+
+  const handleMouseUp = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    
+    setIsDragging(false);
+    const threshold = 100; // Minimum drag distance to trigger scroll
+    
+    if (Math.abs(dragOffset) > threshold) {
+      if (dragOffset > 0) {
+        // Dragged right (previous service)
+        setCurrentIndex((prev) => (prev - 1 + SERVICES.length) % SERVICES.length);
+      } else {
+        // Dragged left (next service)
+        setCurrentIndex((prev) => (prev + 1) % SERVICES.length);
+      }
+    }
+    
+    setDragOffset(0);
+    
+    // Resume auto-scrolling after 8 seconds
+    setTimeout(() => {
+      setIsAutoScrolling(true);
+    }, 8000);
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      setDragOffset(0);
+      
+      // Resume auto-scrolling after 8 seconds
+      setTimeout(() => {
+        setIsAutoScrolling(true);
+      }, 8000);
+    }
+  };
+
   // Handle mouse wheel scroll with smooth transitions
   const handleWheel = (e: React.WheelEvent) => {
     e.preventDefault();
@@ -176,10 +230,19 @@ export default function OurSolution() {
       <div className="mt-8 sm:mt-10 px-4 py-6">
         <div 
           ref={containerRef}
-          className="flex justify-center overflow-hidden py-4"
+          className={`flex justify-center overflow-hidden py-4 select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
           onWheel={handleWheel}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
         >
-          <div className="flex gap-4 sm:gap-6 items-center max-w-6xl">
+          <div 
+            className="flex gap-4 sm:gap-6 items-center max-w-6xl transition-transform duration-200"
+            style={{
+              transform: isDragging ? `translateX(${dragOffset}px)` : 'translateX(0px)'
+            }}
+          >
             {visibleServices.map((service, index) => {
               const isMiddle = index === 1;
               const isSide = index === 0 || index === 2;
