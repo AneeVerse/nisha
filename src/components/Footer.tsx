@@ -64,8 +64,8 @@ const Footer: React.FC = () => {
             src="/images/footer/62207283e85d0a3ded8b3d3c_05.svg"
             alt="Big truck moving left"
             width={120}
-            height={60}
-            className="drop-shadow-lg w-16 h-8 sm:w-20 sm:h-10 md:w-[120px] md:h-[60px]"
+            height={120}
+            className="drop-shadow-lg w-16 h-8 sm:w-20 sm:h-10 md:w-[120px] md:h-[100px]"
           />
         </div>
       </div>
