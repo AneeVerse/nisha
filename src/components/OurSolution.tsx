@@ -267,14 +267,6 @@ export default function OurSolution() {
             })}
           </div>
         </div>
-        
-        {/* Auto-scroll indicator */}
-        <div className="flex justify-center mt-6">
-          <div className="flex items-center gap-2 text-xs text-gray-500">
-            <div className={`w-2 h-2 rounded-full transition-colors duration-300 ${isAutoScrolling ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`}></div>
-            <span className="font-medium">{isAutoScrolling ? 'Auto-scrolling' : 'Manual mode'}</span>
-          </div>
-        </div>
       </div>
 
       {/* Content card */}
