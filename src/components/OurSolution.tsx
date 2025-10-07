@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 
-type ServiceKey = "fleet" | "vendor" | "customized" | "pan-india" | "lcv" | "mcv" | "hcv" | "container" | "specialized";
+type ServiceKey = "empty-container" | "export-import" | "project-cargo" | "chemical" | "bulk-cargo" | "high-value" | "warehousing" | "lcl";
 
 type ServiceConfig = {
   key: ServiceKey;
@@ -12,118 +12,157 @@ type ServiceConfig = {
   imageAlt: string;
   heading: string;
   description: string;
+  benefits: string[];
 };
 
 const SERVICES: ServiceConfig[] = [
   {
-    key: "fleet",
-    label: "Fleet Ownership & Contracting",
+    key: "empty-container",
+    label: "Empty Container Transportation",
     imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Modern fleet of trucks",
-    heading: "Fleet Ownership & Contracting",
-    description: "Leverage the strength and dependability of our own modern, well-maintained fleet for hassle-free, end-to-end transport solutions. Our team manages every detail—from pick-up scheduling to delivery tracking—ensuring shipments are handled with utmost care and delivered right on time. With us, you get the consistency, transparency, and quality that only a true fleet owner can provide.",
+    imageAlt: "Empty container transportation",
+    heading: "Empty Container Transportation",
+    description: "Pioneers in empty container movement across all major ports and ICDs. Cost-effective solutions with industry-leading turnaround times.",
+    benefits: ["40% cost savings", "24/7 availability", "pan-India coverage"]
   },
   {
-    key: "vendor",
-    label: "Vendor Network Access",
+    key: "export-import",
+    label: "Export & Import Containers",
     imageSrc: "/images/our-solution/ship.avif",
-    imageAlt: "Vendor network logistics",
-    heading: "Vendor Network Access",
-    description: "Unlock a broad spectrum of transport capabilities with our trusted vendor network. We source specialized vehicles and equipment through long-standing partnerships, enabling us to accommodate even the most unique or large-scale logistics requirements. Our network ensures flexibility, expanded coverage, and the right fleet for every project—no matter how complex your needs.",
+    imageAlt: "Export import containers",
+    heading: "Export & Import Containers",
+    description: "Full-service container logistics for 20ft, 40ft, and 45ft units. Seamless port-to-door connectivity with real-time tracking.",
+    benefits: ["Zero documentation delays", "customs clearance support", "damage-free delivery"]
   },
   {
-    key: "customized",
-    label: "Customized Logistics",
+    key: "project-cargo",
+    label: "Project Cargo Management",
     imageSrc: "/images/our-solution/railway.avif",
-    imageAlt: "Customized logistics solutions",
-    heading: "Customized Logistics",
-    description: "Every business is unique—and so are their logistics needs. We work closely with you to create customized, cost-efficient transport and distribution solutions tailored precisely to your industry, scale, and operational workflows. Whether it's dedicated supply chains, time-sensitive consignments, or multi-city coordination, we design logistics that truly fit your business.",
+    imageAlt: "Project cargo management",
+    heading: "Project Cargo Management",
+    description: "Oversized and heavy machinery transportation with route surveys, permits, and specialized vehicles. No cargo too complex.",
+    benefits: ["Custom engineering solutions", "permit management", "dedicated project managers"]
   },
   {
-    key: "pan-india",
-    label: "Pan-India Operations",
+    key: "chemical",
+    label: "Chemical Transportation",
     imageSrc: "/images/our-solution/airway.avif",
-    imageAlt: "Pan-India logistics network",
-    heading: "Pan-India Operations",
-    description: "Experience seamless connectivity to every corner of India. Our widespread operational network spans all major cities, industrial hubs, and emerging markets, delivering uninterrupted logistics support wherever your business takes you. With reliable last-mile connectivity and deep local expertise, your cargo arrives safely—no destination is out of reach.",
+    imageAlt: "Chemical transportation",
+    heading: "Chemical Transportation",
+    description: "Certified hazardous and non-hazardous chemical transport with safety-trained drivers and compliant vehicles.",
+    benefits: ["ADR-certified drivers", "emergency response protocols", "insurance coverage"]
   },
   {
-    key: "lcv",
-    label: "Light Commercial Vehicles (LCV)",
+    key: "bulk-cargo",
+    label: "Bulk Cargo Solutions",
     imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Light commercial vehicles",
-    heading: "Light Commercial Vehicles (LCV)",
-    description: "Perfect for fast-paced urban businesses, our LCVs are designed for quick, agile, and cost-effective delivery within cities and surrounding areas. From e-commerce parcels to time-sensitive documents and small retail consignments, we ensure flexible routing and prompt service for every short-haul load.",
+    imageAlt: "Bulk cargo solutions",
+    heading: "Bulk Cargo Solutions",
+    description: "Steel coils, grains, construction materials, and industrial goods with optimized vehicle configurations.",
+    benefits: ["Load optimization", "reduced handling damage", "flexible scheduling"]
   },
   {
-    key: "mcv",
-    label: "Medium Commercial Vehicles (MCV)",
-    imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Medium commercial vehicles",
-    heading: "Medium Commercial Vehicles (MCV)",
-    description: "Strike the right balance between capacity and efficiency. Our MCV fleet is ideal for regional distribution and city-to-city transfers—offering optimal load sizes, consistent schedules, and superior reliability. When you need more than a van but less than a truck, MCVs fill the gap seamlessly.",
-  },
-  {
-    key: "hcv",
-    label: "Heavy Commercial Vehicles (HCV)",
-    imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Heavy commercial vehicles",
-    heading: "Heavy Commercial Vehicles (HCV)",
-    description: "Move bulk goods and heavy cargo across vast distances with complete peace of mind. Our HCV segment is engineered for long-haul, high-capacity operations, backed by experienced drivers and robust safety protocols. From manufacturing units to distribution centers, we power the backbone of large-scale logistics.",
-  },
-  {
-    key: "container",
-    label: "Containerized Cargo Movement",
+    key: "high-value",
+    label: "High-Value Goods Escort",
     imageSrc: "/images/our-solution/ship.avif",
-    imageAlt: "Containerized cargo transport",
-    heading: "Containerized Cargo Movement",
-    description: "Protect your cargo from weather and theft while maximizing space with our containerized solutions. Ideal for valuable, fragile, or sensitive goods, our container trucks and trailers offer secure, standardized transport—ensuring safe passage from source to destination, no matter the distance or road conditions.",
+    imageAlt: "High-value goods escort",
+    heading: "High-Value Goods Escort",
+    description: "Armed security escort services with GPS tracking for valuable and sensitive cargo shipments.",
+    benefits: ["24/7 surveillance", "trained security personnel", "comprehensive insurance"]
   },
   {
-    key: "specialized",
-    label: "Specialized Fleet Sourcing",
+    key: "warehousing",
+    label: "Warehousing & Storage",
     imageSrc: "/images/our-solution/railway.avif",
-    imageAlt: "Specialized fleet vehicles",
-    heading: "Specialized Fleet Sourcing",
-    description: "Need something specific? We extend our services with access to rare and specialized vehicles—including 40ft trailers, pullers, multi-axle carriers, and more—via our vast network. No matter how unique or demanding your consignment, we find and deploy the right transport so you never have to compromise on logistics.",
+    imageAlt: "Warehousing and storage",
+    heading: "Warehousing & Storage",
+    description: "Climate-controlled facilities near major ports with inventory management and last-mile distribution.",
+    benefits: ["Strategic locations", "inventory tracking", "flexible storage terms"]
   },
+  {
+    key: "lcl",
+    label: "LCL Consolidation",
+    imageSrc: "/images/our-solution/airway.avif",
+    imageAlt: "LCL consolidation",
+    heading: "LCL Consolidation",
+    description: "Small package delivery across India with consolidated shipping for cost-effective transportation.",
+    benefits: ["Reduced shipping costs", "weekly consolidations", "nationwide reach"]
+  }
 ];
 
 export default function OurSolution() {
-  const [active, setActive] = useState<ServiceKey>("fleet");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(2); // Start with middle tab (index 2)
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Limit tabs to 4 primary items (as per request)
-  const PRIMARY_KEYS: ServiceKey[] = ["fleet", "vendor", "customized", "pan-india"];
-  const PRIMARY_SERVICES = SERVICES.filter((s) => PRIMARY_KEYS.includes(s.key));
+  // Get 3 services to display based on current index
+  const getVisibleServices = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const serviceIndex = (currentIndex - 1 + i + SERVICES.length) % SERVICES.length;
+      visible.push(SERVICES[serviceIndex]);
+    }
+    return visible;
+  };
 
-  const activeConfig = (PRIMARY_SERVICES.find((s) => s.key === active) || PRIMARY_SERVICES[0])!;
+  const visibleServices = getVisibleServices();
+  const activeService = visibleServices[1]; // Middle tab is always active
 
-  // Close dropdown when clicking outside
+  // Auto-scroll functionality
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
+    if (isAutoScrolling) {
+      autoScrollRef.current = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % SERVICES.length);
+      }, 5000);
+    }
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
       }
     };
+  }, [isAutoScrolling]);
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  // Handle manual tab click
+  const handleTabClick = (clickedIndex: number) => {
+    setIsAutoScrolling(false);
+    const offset = clickedIndex - 1; // Calculate offset from middle (now index 1)
+    setCurrentIndex((prev) => (prev + offset + SERVICES.length) % SERVICES.length);
+    
+    // Resume auto-scrolling after 8 seconds
+    setTimeout(() => {
+      setIsAutoScrolling(true);
+    }, 8000);
+  };
 
-  const handleServiceSelect = (serviceKey: ServiceKey) => {
-    setActive(serviceKey);
-    setIsDropdownOpen(false);
+  // Handle mouse wheel scroll with smooth transitions
+  const handleWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    setIsAutoScrolling(false);
+    
+    // Smooth scrolling with reduced sensitivity
+    const scrollSensitivity = 50;
+    if (Math.abs(e.deltaY) > scrollSensitivity) {
+      if (e.deltaY > 0) {
+        // Scroll right (next service)
+        setCurrentIndex((prev) => (prev + 1) % SERVICES.length);
+      } else {
+        // Scroll left (previous service)
+        setCurrentIndex((prev) => (prev - 1 + SERVICES.length) % SERVICES.length);
+      }
+    }
+
+    // Resume auto-scrolling after 8 seconds
+    setTimeout(() => {
+      setIsAutoScrolling(true);
+    }, 8000);
   };
 
   return (
     <section id="our-solution" className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-10 lg:px-12 py-12 sm:py-16 md:py-20 mt-20">
       {/* Eyebrow */}
       <div className="flex items-center justify-center gap-2 sm:gap-3 font-medium">
-    
         <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">OUR SERVICES</span>
       </div>
 
@@ -133,90 +172,49 @@ export default function OurSolution() {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">Effortless Global Shipping</span>
       </h2>
 
-      {/* Tabs */}
-      <div className="mt-8 sm:mt-10 px-4">
-        {/* Mobile: Custom Dropdown (limited to 4) */}
-        <div className="block sm:hidden" ref={dropdownRef}>
-          <div className="relative">
-            {/* Dropdown Trigger */}
-            <button
-              type="button"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full flex items-center justify-between bg-white border-2 border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#6a31eb] focus:border-[#6a31eb]"
-            >
-              <div className="flex items-center gap-3">
-                <div className="h-3 w-3 rounded-full bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]"></div>
-                <span className="text-gray-800 font-medium text-sm">{activeConfig.label}</span>
-              </div>
-              <svg
-                className={`h-5 w-5 text-gray-500 transition-transform duration-200 ${
-                  isDropdownOpen ? 'rotate-180' : 'rotate-0'
-                }`}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-
-            {/* Dropdown Menu */}
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-100 rounded-2xl shadow-xl z-50 overflow-hidden animate-in slide-in-from-top-2 duration-200">
-                <div className="py-2">
-                  {PRIMARY_SERVICES.map((service) => (
-                    <button
-                      key={service.key}
-                      type="button"
-                      onClick={() => handleServiceSelect(service.key)}
-                      className={`w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-[#6a31eb]/10 hover:via-[#9a45d1]/10 hover:to-[#d560ab]/10 transition-colors duration-150 ${
-                        active === service.key ? 'bg-gradient-to-r from-[#6a31eb]/10 via-[#9a45d1]/10 to-[#d560ab]/10 border-r-4 border-[#6a31eb]' : ''
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className={`h-2.5 w-2.5 rounded-full ${
-                          active === service.key ? 'bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]' : 'bg-gray-300'
-                        }`}></div>
-                        <span className={`text-sm font-medium ${
-                          active === service.key ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]' : 'text-gray-700'
-                        }`}>
-                          {service.label}
-                        </span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Tablet & Desktop: Centered pill group (4 tabs) */}
-        <div className="hidden sm:flex justify-center">
-          <div className="rounded-full bg-white border border-gray-200 shadow-sm p-1 flex gap-1 max-w-3xl w-full">
-            {PRIMARY_SERVICES.map((s) => {
-              const isActive = active === s.key;
+      {/* Scrolling Tabs */}
+      <div className="mt-8 sm:mt-10 px-4 py-6">
+        <div 
+          ref={containerRef}
+          className="flex justify-center overflow-hidden py-4"
+          onWheel={handleWheel}
+        >
+          <div className="flex gap-4 sm:gap-6 items-center max-w-6xl">
+            {visibleServices.map((service, index) => {
+              const isMiddle = index === 1;
+              const isSide = index === 0 || index === 2;
+              
               return (
                 <button
-                  key={s.key}
+                  key={`${service.key}-${currentIndex}-${index}`}
                   type="button"
-                  onClick={() => setActive(s.key)}
-                  className={`flex-1 px-4 py-2.5 text-sm font-medium rounded-full transition-all ${
-                    isActive
-                      ? 'text-white bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] shadow'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                  }`}
+                  onClick={() => handleTabClick(index)}
+                  className={`
+                    transition-all duration-700 ease-in-out rounded-full font-medium whitespace-nowrap transform 
+                    w-[280px] sm:w-[320px] h-[60px] sm:h-[70px] flex items-center justify-center text-center
+                    ${isMiddle 
+                      ? 'text-white bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] scale-110 text-base sm:text-lg z-10' 
+                      : 'text-gray-700 bg-white border-2 border-gray-200 hover:bg-gray-50 hover:border-gray-300 scale-95 text-sm sm:text-base shadow-md'
+                    }
+                  `}
                 >
-                  {s.label}
+                  {service.label}
                 </button>
               );
             })}
           </div>
         </div>
+        
+        {/* Auto-scroll indicator */}
+        <div className="flex justify-center mt-6">
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className={`w-2 h-2 rounded-full transition-colors duration-300 ${isAutoScrolling ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`}></div>
+            <span className="font-medium">{isAutoScrolling ? 'Auto-scrolling' : 'Manual mode'}</span>
+          </div>
+        </div>
       </div>
 
-      {/* Content card (gradient like reference) */}
+      {/* Content card */}
       <div className="mt-6 sm:mt-8 mx-auto max-w-[1100px] rounded-[24px] overflow-hidden bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] shadow-lg">
         <div className="p-4 sm:p-6 md:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
@@ -224,12 +222,12 @@ export default function OurSolution() {
             <div className="relative rounded-2xl overflow-hidden bg-white/10">
               <div className="relative h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px]">
                 <Image
-                  key={activeConfig.imageSrc}
-                  src={activeConfig.imageSrc}
-                  alt={activeConfig.imageAlt}
+                  key={activeService.imageSrc}
+                  src={activeService.imageSrc}
+                  alt={activeService.imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 48vw"
-                  className="object-cover"
+                  className="object-cover transition-opacity duration-500"
                   priority
                 />
               </div>
@@ -237,12 +235,25 @@ export default function OurSolution() {
 
             {/* Text */}
             <div className="flex flex-col justify-center text-white px-1 md:px-2 lg:px-1">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold leading-snug">
-                {activeConfig.heading}
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold leading-snug transition-all duration-500">
+                {activeService.heading}
               </h3>
-              <p className="mt-3 text-white/90 leading-relaxed text-sm md:text-[15px]">
-                {activeConfig.description}
+              <p className="mt-3 text-white/90 leading-relaxed text-sm md:text-[15px] transition-all duration-500">
+                {activeService.description}
               </p>
+
+              {/* Benefits */}
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold text-white/95 mb-2">Key Benefits:</h4>
+                <ul className="space-y-1">
+                  {activeService.benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-center gap-2 text-xs sm:text-sm text-white/90">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/70"></div>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <div className="mt-5 sm:mt-6">
                 <button
