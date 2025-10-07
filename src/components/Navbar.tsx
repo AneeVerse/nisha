@@ -96,7 +96,7 @@ export default function Navbar() {
       title: "LCL CONSOLIDATION", 
       desc: "Small package delivery across India with consolidated shipping for cost-effective transportation.", 
       benefits: "Reduced shipping costs, weekly consolidations, nationwide reach",
-      href: "/services/lcl-consolidation",
+      href: "/services/lcl-consolidation-services",
       icon: <FileText className="w-5 h-5" />
     },
   ];
