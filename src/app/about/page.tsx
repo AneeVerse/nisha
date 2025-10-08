@@ -117,60 +117,127 @@ export default function AboutPage() {
       </section>
 
       {/* The Beginning - Our Story */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Where Dreams Meet Determination</h2>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/30 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+              Our Journey
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Where Dreams Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Determination</span>
+            </h2>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-yellow-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">1982</div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-bold text-gray-900">The Beginning</h3>
-                    <p className="text-gray-600">Masjid Bunder, Mumbai</p>
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Timeline Cards */}
+            <div className="space-y-8">
+              {/* 1982 Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-white/50 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="bg-gradient-to-br from-yellow-500 to-orange-500 text-white rounded-2xl w-16 h-16 flex items-center justify-center font-bold text-xl shadow-lg">
+                        1982
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">The Beginning</h3>
+                      <p className="text-blue-600 font-semibold mb-4">Masjid Bunder, Mumbai</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        In a modest 80 square feet office, Mr. Nandkishor Agarwal planted the seeds of what would become India's logistics revolution. Named lovingly after his daughter Nisha, this wasn't just another business venture—it was a father's tribute and a visionary's mission.
+                      </p>
+                    </div>
                   </div>
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
-                  In a modest 80 square feet office, Mr. Nandkishor Agarwal planted the seeds of what would become India's logistics revolution. Named lovingly after his daughter Nisha, this wasn't just another business venture—it was a father's tribute and a visionary's mission.
-                </p>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-500">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">1975</div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-bold text-gray-900">The Foundation</h3>
-                    <p className="text-gray-600">Learning the Trade</p>
+              {/* 1975 Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-white/50 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-2xl w-16 h-16 flex items-center justify-center font-bold text-xl shadow-lg">
+                        1975
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">The Foundation</h3>
+                      <p className="text-indigo-600 font-semibold mb-4">Learning the Trade</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        Mr. Nandkishor had already spent seven years mastering the rough and tumble of the transportation industry since arriving in Mumbai from Calcutta. Starting as a supervisor, he learned every nuance of the trade.
+                      </p>
+                    </div>
                   </div>
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Mr. Nandkishor had already spent seven years mastering the rough and tumble of the transportation industry since arriving in Mumbai from Calcutta. Starting as a supervisor, he learned every nuance of the trade.
-                </p>
               </div>
             </div>
             
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 rounded-2xl text-white">
-                <h3 className="text-2xl font-bold mb-4">The Pioneer's Vision</h3>
-                <p className="text-blue-100 mb-6 leading-relaxed">
-                  What set Nisha Roadways apart from day one was our founder's revolutionary idea: empty container transportation by road. This pioneering effort gave us a head start in a domain that others hadn't even considered.
-                </p>
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <p className="text-yellow-300 font-semibold">Today, four decades later</p>
-                  <p className="text-blue-100">That same spirit of innovation drives our partnerships with 500+ companies across shipping, retail, pharmaceuticals, chemicals, infrastructure, aviation, defense, and countless other sectors.</p>
+            {/* Vision Card */}
+            <div className="relative lg:sticky lg:top-8">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-700/20 rounded-3xl blur-2xl"></div>
+                <div className="relative bg-gradient-to-br from-blue-600 to-indigo-700 p-10 rounded-3xl text-white shadow-2xl overflow-hidden">
+                  {/* Background Pattern */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
+                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
+                        <div className="w-6 h-6 bg-white rounded-full"></div>
+                      </div>
+                      <h3 className="text-3xl font-bold">The Pioneer's Vision</h3>
+                    </div>
+                    
+                    <p className="text-blue-100 mb-8 leading-relaxed text-lg">
+                      What set Nisha Roadways apart from day one was our founder's revolutionary idea: empty container transportation by road. This pioneering effort gave us a head start in a domain that others hadn't even considered.
+                    </p>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center">
+                          <div className="w-4 h-4 bg-white rounded-full"></div>
+                        </div>
+                        <p className="text-yellow-300 font-bold text-lg">Today, four decades later</p>
+                      </div>
+                      <p className="text-blue-100 leading-relaxed">
+                        That same spirit of innovation drives our partnerships with <span className="font-bold text-white">500+ companies</span> across shipping, retail, pharmaceuticals, chemicals, infrastructure, aviation, defense, and countless other sectors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating Image */}
+                <div className="absolute -top-8 -right-8 z-20">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full blur-lg opacity-50"></div>
+                    <Image 
+                      src="/images/use-everywhere/images2.png" 
+                      alt="Nisha Roadways Journey" 
+                      width={120} 
+                      height={120} 
+                      className="relative w-32 h-32 object-cover rounded-full border-4 border-white shadow-2xl"
+                    />
+                  </div>
                 </div>
               </div>
-              <Image 
-                src="/images/use-everywhere/images2.png" 
-                alt="Nisha Roadways Journey" 
-                width={400} 
-                height={300} 
-                className="absolute -top-6 -right-6 w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
-              />
             </div>
           </div>
         </div>
@@ -560,59 +627,140 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+          
+          {/* Bottom Stats */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center space-x-8 bg-white/80 backdrop-blur-sm border border-white/30 rounded-2xl px-8 py-6 shadow-xl">
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-indigo-600">16+</div>
+                <div className="text-sm text-gray-600 font-medium">Industries</div>
+              </div>
+              <div className="w-px h-12 bg-gray-300"></div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-purple-600">500+</div>
+                <div className="text-sm text-gray-600 font-medium">Clients Served</div>
+              </div>
+              <div className="w-px h-12 bg-gray-300"></div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-blue-600">99.8%</div>
+                <div className="text-sm text-gray-600 font-medium">Success Rate</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Network & Awards Combined */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-400/30 to-indigo-600/30 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-400/30 to-pink-600/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Network */}
-          <div className="mb-20">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Pan-India Presence, Local Expertise</h2>
-              <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+          <div className="mb-24">
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-blue-700 font-semibold mb-8 shadow-lg">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></span>
+                Nationwide Network
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">Pan-India Presence</span>, Local Expertise
+              </h2>
+              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full mb-6"></div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                With 30+ strategically located branches across India, we deliver unmatched connectivity and localized expertise for seamless logistics solutions
+              </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  With 30+ branches strategically located across India, we create cost-effective transportation plans and provide services at all major ports and ICDs.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-blue-50 p-6 rounded-2xl">
-                    <h4 className="font-bold text-blue-900 mb-3">Major Ports</h4>
-                    <ul className="text-blue-700 space-y-1">
-                      <li>• Mumbai</li>
-                      <li>• JNPT</li>
-                      <li>• Chennai</li>
-                      <li>• Kolkata</li>
-                      <li>• Kandla</li>
-                    </ul>
-                  </div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="bg-white/70 backdrop-blur-sm border border-white/30 p-8 rounded-3xl shadow-xl">
+                  <p className="text-xl text-gray-700 mb-8 leading-relaxed font-medium">
+                    Our extensive network creates cost-effective transportation plans and provides comprehensive services at all major ports and ICDs across the nation.
+                  </p>
                   
-                  <div className="bg-green-50 p-6 rounded-2xl">
-                    <h4 className="font-bold text-green-900 mb-3">Primary ICDs</h4>
-                    <ul className="text-green-700 space-y-1">
-                      <li>• Delhi</li>
-                      <li>• Bangalore</li>
-                      <li>• Hyderabad</li>
-                      <li>• Ahmedabad</li>
-                    </ul>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl border border-blue-200/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-center mb-4">
+                        <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center mr-3">
+                          <span className="text-white font-bold text-lg">🚢</span>
+                        </div>
+                        <h4 className="font-bold text-blue-900 text-lg">Major Ports</h4>
+                      </div>
+                      <ul className="text-blue-800 space-y-2 font-medium">
+                        <li className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Mumbai</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>JNPT</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Chennai</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Kolkata</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Kandla</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="group bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-2xl border border-green-200/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-center mb-4">
+                        <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center mr-3">
+                          <span className="text-white font-bold text-lg">🏭</span>
+                        </div>
+                        <h4 className="font-bold text-green-900 text-lg">Primary ICDs</h4>
+                      </div>
+                      <ul className="text-green-800 space-y-2 font-medium">
+                        <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Delhi</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Bangalore</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Hyderabad</li>
+                        <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Ahmedabad</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
               
               <div className="relative">
-                <div className="bg-gradient-to-br from-indigo-600 to-purple-700 p-8 rounded-3xl text-white">
-                  <MapPin className="w-12 h-12 text-yellow-400 mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">30+ Branches Nationwide</h3>
-                  <p className="text-indigo-100 mb-6">
-                    Our nationwide network ensures that no destination is too remote and no cargo too challenging.
-                  </p>
-                  <div className="bg-white/10 p-4 rounded-lg">
-                    <p className="text-yellow-300 font-semibold">Coverage Areas:</p>
-                    <p className="text-indigo-100 text-sm">Industrial corridors, manufacturing hubs, and Tier-1, Tier-2, Tier-3 cities nationwide</p>
+                <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 p-10 rounded-3xl text-white shadow-2xl border border-white/20 backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-3xl"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                        <MapPin className="w-8 h-8 text-indigo-900" />
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-bold mb-1">30+ Branches</h3>
+                        <p className="text-indigo-200 font-medium">Nationwide Coverage</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-indigo-100 mb-8 text-lg leading-relaxed">
+                      Our nationwide network ensures that no destination is too remote and no cargo too challenging for our expert logistics solutions.
+                    </p>
+                    
+                    <div className="bg-white/15 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                      <div className="flex items-center mb-3">
+                        <span className="w-3 h-3 bg-yellow-400 rounded-full mr-3"></span>
+                        <p className="text-yellow-300 font-bold text-lg">Coverage Areas</p>
+                      </div>
+                      <p className="text-indigo-100 leading-relaxed">
+                        Industrial corridors, manufacturing hubs, and comprehensive coverage across Tier-1, Tier-2, and Tier-3 cities nationwide
+                      </p>
+                    </div>
+                    
+                    {/* Stats Row */}
+                    <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/20">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-yellow-300">30+</div>
+                        <div className="text-indigo-200 text-sm font-medium">Branches</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-yellow-300">5</div>
+                        <div className="text-indigo-200 text-sm font-medium">Major Ports</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-yellow-300">4</div>
+                        <div className="text-indigo-200 text-sm font-medium">Primary ICDs</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
