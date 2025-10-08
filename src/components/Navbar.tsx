@@ -110,8 +110,8 @@ export default function Navbar() {
 
   const resources = [
     { title: "Blogs", desc: "Insights and updates", href: "#blogs", image: "/images/use-everywhere/images1.png" },
-    { title: "Nisha Academy", desc: "Guides, playbooks, videos", href: "#academy", image: "/images/use-everywhere/images2.png" },
-    { title: "FAQ", desc: "Answers to common questions", href: "#faq", image: "/images/use-everywhere/images3.png" },
+    { title: "Nisha Academy", desc: "Logistics education and training", href: "/academy", image: "/images/use-everywhere/images2.png" },
+    { title: "FAQ", desc: "Answers to common questions", href: "/faq", image: "/images/use-everywhere/images3.png" },
   ];
 
   function MegaPanel({ section }: { section: "services" | "whyus" | "resources" }) {
