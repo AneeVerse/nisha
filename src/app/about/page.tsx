@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, Award, Users, Globe, Shield, Truck, Warehouse, Cpu, Target, Eye, Heart, Star, CheckCircle, MapPin, Phone, Mail, ExternalLink, TrendingUp } from 'lucide-react';
+import { ArrowRight, Award, Users, Globe, Shield, Truck, Warehouse, Cpu, Target, Eye, Heart, Star, CheckCircle, MapPin } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -15,7 +15,7 @@ export default function AboutPage() {
         
         {/* Grid Pattern Overlay */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          backgroundImage: `url(&quot;data:image/svg+xml,%3Csvg width=&apos;60&apos; height=&apos;60&apos; viewBox=&apos;0 0 60 60&apos; xmlns=&apos;http://www.w3.org/2000/svg&apos;%3E%3Cg fill=&apos;none&apos; fill-rule=&apos;evenodd&apos;%3E%3Cg fill=&apos;%23000000&apos; fill-opacity=&apos;1&apos;%3E%3Ccircle cx=&apos;7&apos; cy=&apos;7&apos; r=&apos;1&apos;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;)`
         }}></div>
         
         <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-8">
@@ -32,13 +32,13 @@ export default function AboutPage() {
               {/* Main Heading - Perfect Typography */}
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
-                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient">80 Square Feet</span> to India's <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500 animate-gradient">Logistics Leader</span>
+                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient">80 Square Feet</span> to India&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500 animate-gradient">Logistics Leader</span>
                 </h1>
               </div>
               
               {/* Description */}
               <p className="text-lg text-gray-700 leading-relaxed font-medium max-w-xl">
-                The inspiring story of how a father's dream, named after his daughter, grew into India's most trusted logistics partner serving <span className="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">500+ companies</span> across <span className="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">16 industries</span>.
+                The inspiring story of how a father&apos;s dream, named after his daughter, grew into India&apos;s most trusted logistics partner serving <span className="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">500+ companies</span> across <span className="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">16 industries</span>.
               </p>
               
               {/* CTA Buttons - Perfect Alignment */}
@@ -154,7 +154,7 @@ export default function AboutPage() {
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">The Beginning</h3>
                       <p className="text-blue-600 font-semibold mb-4">Masjid Bunder, Mumbai</p>
                       <p className="text-gray-700 leading-relaxed text-lg">
-                        In a modest 80 square feet office, Mr. Nandkishor Agarwal planted the seeds of what would become India's logistics revolution. Named lovingly after his daughter Nisha, this wasn't just another business venture—it was a father's tribute and a visionary's mission.
+                        In a modest 80 square feet office, Mr. Nandkishor Agarwal planted the seeds of what would become India&apos;s logistics revolution. Named lovingly after his daughter Nisha, this wasn&apos;t just another business venture—it was a father&apos;s tribute and a visionary&apos;s mission.
                       </p>
                     </div>
                   </div>
@@ -203,11 +203,11 @@ export default function AboutPage() {
                       <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
                         <div className="w-6 h-6 bg-white rounded-full"></div>
                       </div>
-                      <h3 className="text-3xl font-bold">The Pioneer's Vision</h3>
+                      <h3 className="text-3xl font-bold">The Pioneer&apos;s Vision</h3>
                     </div>
                     
                     <p className="text-blue-100 mb-8 leading-relaxed text-lg">
-                      What set Nisha Roadways apart from day one was our founder's revolutionary idea: empty container transportation by road. This pioneering effort gave us a head start in a domain that others hadn't even considered.
+                      What set Nisha Roadways apart from day one was our founder&apos;s revolutionary idea: empty container transportation by road. This pioneering effort gave us a head start in a domain that others hadn&apos;t even considered.
                     </p>
                     
                     <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
@@ -253,7 +253,7 @@ export default function AboutPage() {
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 md:p-12 rounded-3xl shadow-xl relative">
-              <div className="absolute top-6 left-6 text-6xl text-orange-400 opacity-50">"</div>
+              <div className="absolute top-6 left-6 text-6xl text-orange-400 opacity-50">&quot;</div>
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-orange-600 mb-4">JAI MATA DI!</h3>
               </div>
@@ -294,7 +294,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">The Dream Team Behind India's Logistics Success</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">The Dream Team Behind India&apos;s Logistics Success</h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
           </div>
           
@@ -369,7 +369,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Rajkumar Agarwal</h3>
                 <p className="text-purple-600 font-semibold mb-4">Mentor</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Practicing lawyer specializing in Income Tax who left practice for real estate in 1990. Founder and Managing Director of Kolkata's AMBEY GROUP with 20+ years construction expertise.
+                  Practicing lawyer specializing in Income Tax who left practice for real estate in 1990. Founder and Managing Director of Kolkata&apos;s AMBEY GROUP with 20+ years construction expertise.
                 </p>
               </div>
             </div>
@@ -520,7 +520,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Customer Orientation</h3>
               <p className="text-gray-600 leading-relaxed">
-                Aligning ourselves to our customers' goals helps us create suitable solutions that directly address their needs.
+                Aligning ourselves to our customers&apos; goals helps us create suitable solutions that directly address their needs.
               </p>
             </div>
           </div>
@@ -570,7 +570,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Technology Integration</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    World-class information technology including cyber security ensuring complete safety of clients' goods and valuable cargo. Latest tracking devices deliver efficient service.
+                    World-class information technology including cyber security ensuring complete safety of clients&apos; goods and valuable cargo. Latest tracking devices deliver efficient service.
                   </p>
                 </div>
               </div>
@@ -819,7 +819,7 @@ export default function AboutPage() {
               Handle With <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">Care</span>
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              We realize that the shipments we carry are the lifeline of our clients' businesses. That's why we take "Handle with Care" beyond industry standards.
+              We realize that the shipments we carry are the lifeline of our clients&apos; businesses. That&apos;s why we take &quot;Handle with Care&quot; beyond industry standards.
             </p>
           </div>
           
@@ -920,7 +920,7 @@ export default function AboutPage() {
               </h2>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Join the <span className="font-bold text-emerald-600">Nisha Parivaar</span> and become part of India's most trusted logistics family. Together, we'll build the future of transportation and create success stories that inspire generations.
+                Join the <span className="font-bold text-emerald-600">Nisha Parivaar</span> and become part of India&apos;s most trusted logistics family. Together, we&apos;ll build the future of transportation and create success stories that inspire generations.
               </p>
               
               {/* Benefits Grid */}
@@ -983,7 +983,7 @@ export default function AboutPage() {
             <div className="relative">
               {/* Floating Elements - Moved Up */}
               <div className="absolute -top-12 -right-4 bg-emerald-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg animate-bounce z-20">
-                We're Hiring!
+                We&apos;re Hiring!
               </div>
               <div className="absolute -top-8 -left-4 bg-teal-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg z-20">
                 5000+ Team Members

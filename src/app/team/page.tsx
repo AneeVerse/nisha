@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Users, Award, Target, Shield, Heart, Star, MapPin, Mail, Phone, Calendar, CheckCircle, TrendingUp, Globe, Clock, Briefcase, GraduationCap, Zap, BarChart3, BookOpen, Trophy, Circle, FileText } from 'lucide-react'
+import { ArrowRight, Users, Award, Target, Shield, Heart, Star, MapPin, Mail, CheckCircle, TrendingUp, Briefcase, Zap, BarChart3, Trophy, Circle, FileText, Clock, BookOpen, Globe } from 'lucide-react'
 
 export default function TeamPage() {
   return (
@@ -42,12 +42,12 @@ export default function TeamPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-12 leading-tight tracking-tight">
             The People Behind
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mt-1">
-              India's Logistics Success
+              India&apos;s Logistics Success
             </span>
           </h1>
           
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-16 max-w-5xl mx-auto leading-relaxed font-medium">
-            Meet the visionary leaders, dedicated professionals, and passionate team members who drive excellence in every mile we cover across India's logistics landscape.
+            Meet the visionary leaders, dedicated professionals, and passionate team members who drive excellence in every mile we cover across India&apos;s logistics landscape.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ export default function TeamPage() {
                       Leadership Philosophy
                     </h4>
                     <blockquote className="text-gray-700 italic leading-relaxed text-lg">
-                      "Success in logistics is not just about moving goods from point A to point B. It's about building relationships, ensuring reliability, and creating value for every stakeholder in the supply chain."
+                      "Success in logistics is not just about moving goods from point A to point B. It&apos;s about building relationships, ensuring reliability, and creating value for every stakeholder in the supply chain."
                     </blockquote>
                   </div>
                 </div>

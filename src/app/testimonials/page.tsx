@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Star, Quote, Users, Award, Target, Shield, Heart, MapPin, Mail, Phone, Calendar, CheckCircle, TrendingUp, Globe, Clock, Briefcase, GraduationCap, Zap, BarChart3, BookOpen, Trophy, Circle, FileText, Factory, Truck, Building2, Wrench, Cpu, Plane, Fuel, ShoppingCart, HardHat, Beaker, Package, Filter, Play, Download, ExternalLink, ChevronRight, Building, Anchor, Pill, Shirt, Smartphone, Cog, Hammer, Palette, Lightbulb, Zap as Energy, Store, HardHat as Construction, Droplets } from 'lucide-react'
+import { ArrowRight, Star, Quote, CheckCircle, Trophy, FileText, Factory, Building2, Filter, Download, Anchor, Pill } from 'lucide-react'
 
 export default function TestimonialsPage() {
   const [selectedIndustry, setSelectedIndustry] = useState('All')
@@ -29,7 +29,7 @@ export default function TestimonialsPage() {
       industry: "Pharmaceuticals",
       image: "/api/placeholder/80/80",
       rating: 5,
-      testimonial: "In the pharmaceutical industry, there's no room for error. Nisha Roadways' temperature-controlled transportation and their meticulous documentation process have been crucial for our regulatory compliance. Their drivers are trained in pharmaceutical handling protocols, and their real-time monitoring gives us complete visibility. They've helped us maintain our zero-deviation record across all shipments.",
+      testimonial: "In the pharmaceutical industry, there&apos;s no room for error. Nisha Roadways&apos; temperature-controlled transportation and their meticulous documentation process have been crucial for our regulatory compliance. Their drivers are trained in pharmaceutical handling protocols, and their real-time monitoring gives us complete visibility. They&apos;ve helped us maintain our zero-deviation record across all shipments.",
       keyMetrics: "Temperature compliance: 100%, Documentation accuracy: 99.9%, Regulatory adherence: Perfect"
     },
     {
@@ -51,7 +51,7 @@ export default function TestimonialsPage() {
       industry: "Construction",
       image: "/api/placeholder/80/80",
       rating: 5,
-      testimonial: "Managing construction logistics across multiple project sites requires a partner who understands the complexity of heavy machinery transportation. Nisha Roadways' project cargo expertise and their ability to handle oversized equipment has been invaluable. Their route surveys and permit management saved us significant time and costs. They're not just transporters; they're logistics consultants who add real value to our projects.",
+      testimonial: "Managing construction logistics across multiple project sites requires a partner who understands the complexity of heavy machinery transportation. Nisha Roadways&apos; project cargo expertise and their ability to handle oversized equipment has been invaluable. Their route surveys and permit management saved us significant time and costs. They&apos;re not just transporters; they&apos;re logistics consultants who add real value to our projects.",
       keyMetrics: "50+ project sites served, 100% permit success rate, 25% time savings"
     },
     {
@@ -62,7 +62,7 @@ export default function TestimonialsPage() {
       industry: "Electronics",
       image: "/api/placeholder/80/80",
       rating: 5,
-      testimonial: "As a growing startup in the electronics space, we needed a logistics partner who could scale with us. Nisha Roadways provided the reliability of an established company with the flexibility we needed. Their escort services for high-value shipments and their damage-free track record gave us the confidence to expand nationally. They've been crucial in our journey from a startup to a recognized brand.",
+      testimonial: "As a growing startup in the electronics space, we needed a logistics partner who could scale with us. Nisha Roadways provided the reliability of an established company with the flexibility we needed. Their escort services for high-value shipments and their damage-free track record gave us the confidence to expand nationally. They&apos;ve been crucial in our journey from a startup to a recognized brand.",
       keyMetrics: "3x business growth supported, Zero theft incidents, 99.2% delivery accuracy"
     },
     {
@@ -73,7 +73,7 @@ export default function TestimonialsPage() {
       industry: "Engineering",
       image: "/api/placeholder/80/80",
       rating: 5,
-      testimonial: "BHEL's heavy engineering equipment requires specialized handling that few companies can provide. Nisha Roadways' technical expertise in load calculations, their custom securing methods, and their experienced crew have made them our preferred partner for critical shipments. During the recent turbine transportation project, their precision and attention to detail ensured flawless execution. Their reliability is military-grade.",
+      testimonial: "BHEL&apos;s heavy engineering equipment requires specialized handling that few companies can provide. Nisha Roadways&apos; technical expertise in load calculations, their custom securing methods, and their experienced crew have made them our preferred partner for critical shipments. During the recent turbine transportation project, their precision and attention to detail ensured flawless execution. Their reliability is military-grade.",
       keyMetrics: "500+ heavy equipment moves, 100% safety record, 15+ year partnership"
     }
   ]
@@ -154,7 +154,7 @@ export default function TestimonialsPage() {
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
-            Discover why 500+ companies across 16+ industries have chosen Nisha Roadways as their trusted logistics partner. From Fortune 500 giants to innovative startups, hear directly from the leaders who've experienced our commitment to excellence.
+            Discover why 500+ companies across 16+ industries have chosen Nisha Roadways as their trusted logistics partner. From Fortune 500 giants to innovative startups, hear directly from the leaders who&apos;ve experienced our commitment to excellence.
           </p>
 
           {/* Testimonial Impact Metrics */}
@@ -359,8 +359,8 @@ export default function TestimonialsPage() {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 500+ companies who've transformed their logistics operations through our partnership approach. Experience the difference that four decades of excellence makes.
-          </p>
+          Join 500+ companies who&apos;ve transformed their logistics operations through our partnership approach. Experience the difference that four decades of excellence makes.
+        </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-colors">
               Start Your Partnership
@@ -380,8 +380,8 @@ export default function TestimonialsPage() {
               Share Your Experience
             </h2>
             <p className="text-lg text-gray-600">
-              Are you a current client? We'd love to hear about your experience with Nisha Roadways.
-            </p>
+          Are you a current client? We&apos;d love to hear about your experience with Nisha Roadways.
+        </p>
           </div>
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100">
@@ -427,22 +427,3 @@ export default function TestimonialsPage() {
     </div>
   )
 }
-
-const styles = `
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-float.delay-1000 {
-    animation-delay: 1s;
-  }
-
-  .animate-float.delay-2000 {
-    animation-delay: 2s;
-  }
-`

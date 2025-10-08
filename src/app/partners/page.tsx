@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Users, Award, Target, Shield, Heart, Star, MapPin, Mail, Phone, Calendar, CheckCircle, TrendingUp, Globe, Clock, Briefcase, GraduationCap, Zap, BarChart3, BookOpen, Trophy, Circle, FileText, Factory, Truck, Building2, Wrench, Cpu, Plane, Fuel, ShoppingCart, HardHat, Beaker, Package } from 'lucide-react'
+import { ArrowRight, Users, Award, Target, Shield, Heart, Star, MapPin, Factory, Truck, Building2, Wrench, Cpu, Plane, Fuel, ShoppingCart, HardHat, Beaker, Package, Trophy, Zap, Globe, BarChart3 } from 'lucide-react'
 
 export default function PartnersPage() {
   return (
@@ -44,7 +44,7 @@ export default function PartnersPage() {
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
-            For over four decades, we've been the logistics backbone for India's leading companies. From Fortune 500 giants to innovative startups, discover the industry leaders who trust Nisha Roadways with their most critical shipments.
+            For over four decades, we&apos;ve been the logistics backbone for India&apos;s leading companies. From Fortune 500 giants to innovative startups, discover the industry leaders who trust Nisha Roadways with their most critical shipments.
           </p>
 
           {/* Stats Bar */}
@@ -94,10 +94,10 @@ export default function PartnersPage() {
               <span className="block text-blue-600 mt-2">Choose Excellence</span>
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-medium mb-8">
-              When India's most demanding companies need logistics excellence, they choose Nisha Roadways. Our client portfolio reads like a who's who of Indian industry—from shipping giants who trust us with their containers to pharmaceutical leaders who rely on our precision, and from steel manufacturers who depend on our specialized handling to FMCG brands who count on our nationwide reach.
+              When India&apos;s most demanding companies need logistics excellence, they choose Nisha Roadways. Our client portfolio reads like a who&apos;s who of Indian industry—from shipping giants who trust us with their containers to pharmaceutical leaders who rely on our precision, and from steel manufacturers who depend on our specialized handling to FMCG brands who count on our nationwide reach.
             </p>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our collaborations aren't just business relationships—they're partnerships built on four decades of reliability, innovation, and unwavering commitment to excellence.
+              Our collaborations aren&apos;t just business relationships—they&apos;re partnerships built on four decades of reliability, innovation, and unwavering commitment to excellence.
             </p>
           </div>
         </div>

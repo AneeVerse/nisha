@@ -154,7 +154,7 @@ export default function OurSolution() {
     setDragOffset(currentOffset);
   };
 
-  const handleMouseUp = (e: React.MouseEvent) => {
+  const handleMouseUp = () => {
     if (!isDragging) return;
     
     setIsDragging(false);
@@ -243,15 +243,17 @@ export default function OurSolution() {
               transform: isDragging ? `translateX(${dragOffset}px)` : 'translateX(0px)'
             }}
           >
-            {visibleServices.map((service, index) => {
-              const isMiddle = index === 1;
-              const isSide = index === 0 || index === 2;
+            {visibleServices.map((service) => {
+              const isMiddle = service.key === SERVICES[currentIndex].key;
               
               return (
                 <button
-                  key={`${service.key}-${currentIndex}-${index}`}
+                  key={`${service.key}-${currentIndex}`}
                   type="button"
-                  onClick={() => handleTabClick(index)}
+                  onClick={() => {
+                    const visibleIndex = visibleServices.findIndex(s => s.key === service.key);
+                    handleTabClick(visibleIndex);
+                  }}
                   className={`
                     transition-all duration-700 ease-in-out rounded-full font-medium whitespace-nowrap transform 
                     w-[280px] sm:w-[320px] h-[60px] sm:h-[70px] flex items-center justify-center text-center

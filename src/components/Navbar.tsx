@@ -5,17 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { 
-  Truck, 
-  Container, 
-  Settings, 
-  Shield, 
-  Package, 
-  Lock, 
-  Warehouse, 
-  FileText,
   Menu,
   X,
-  ChevronDown
+  ChevronDown,
+  Truck,
+  Container,
+  Settings,
+  Shield,
+  Package,
+  Lock,
+  Warehouse,
+  FileText
 } from "lucide-react";
 
 export default function Navbar() {
@@ -204,7 +204,7 @@ export default function Navbar() {
           {/* Why Us & Resources - Simple image and text format like Superside */}
           {(section === "whyus" || section === "resources") && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {items.map((item, index) => (
+              {items.map((item) => (
                 <Link key={item.title} href={item.href} className="group block">
                   <div className="aspect-[5/2] bg-gray-100 rounded-lg overflow-hidden mb-4">
                     <Image 
