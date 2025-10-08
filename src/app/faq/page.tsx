@@ -354,19 +354,19 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 mt-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-10">
               Get instant answers to your logistics questions. With 43 years of industry experience, 
               we've compiled comprehensive responses to help you make informed decisions about your cargo transportation needs.
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
+            <div className="max-w-2xl mx-auto mb-25">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
                 <input

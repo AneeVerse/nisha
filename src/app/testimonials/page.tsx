@@ -140,20 +140,20 @@ export default function TestimonialsPage() {
 
         <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/30 backdrop-blur-md rounded-full border border-white/40 shadow-lg text-blue-700 font-semibold text-sm tracking-wide uppercase mb-2 mt-6">
+            <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/30 backdrop-blur-md rounded-full border border-white/40 shadow-lg text-blue-700 font-semibold text-sm tracking-wide uppercase  mt-18">
               <Star className="w-4 h-4" />
               Client Success Stories
             </div>
           </div>
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
             Voices of Trust from
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mt-1">
               Industry Leaders
             </span>
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg lg:text-lg text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium">
             Discover why 500+ companies across 16+ industries have chosen Nisha Roadways as their trusted logistics partner. From Fortune 500 giants to innovative startups, hear directly from the leaders who&apos;ve experienced our commitment to excellence.
           </p>
 
