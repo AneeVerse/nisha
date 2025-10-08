@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { Search, Calendar, User, ArrowRight, TrendingUp, Sparkles } from 'lucide-react'
+import { Search, User, ArrowRight, TrendingUp, Sparkles } from 'lucide-react'
+import type { BlogPost } from '@/data/blogData'
 import { blogPosts } from '@/data/blogData'
 import Image from 'next/image'
 
@@ -40,7 +41,7 @@ export default function BlogPage() {
     return thumbnails[category as keyof typeof thumbnails] || '/images/blog/default.jpg'
   }
 
-  const ArticleCard = ({ post, featured = false }: { post: any, featured?: boolean }) => (
+  const ArticleCard = ({ post, featured = false }: { post: BlogPost, featured?: boolean }) => (
     <article className={`group bg-white rounded-xl border border-gray-100 hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden ${featured ? 'h-[320px]' : 'h-[280px]'}`}>
       {/* Thumbnail Image */}
       <div className={`relative overflow-hidden ${featured ? 'h-40' : 'h-32'}`}>
