@@ -2,17 +2,47 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { 
   ArrowRight,
-  Phone
+  Phone,
+  Container,
+  Zap,
+  Target,
+  Shield,
+  CheckCircle,
+  Wrench,
+  Factory,
+  ClipboardCheck,
+  Award,
+  Globe
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import { ServiceData } from "@/data/services";
-import { getServiceIcon } from "@/utils/iconMapping";
 
 interface ServiceTemplateProps {
   service: ServiceData;
 }
 
 export default function ServiceTemplate({ service }: ServiceTemplateProps) {
+  // Function to get appropriate icon for different sections
+  const getIconForSection = (sectionType: string, index?: number) => {
+    switch (sectionType) {
+      case 'benefit':
+        const benefitIcons = [Award, Zap, Target, Globe];
+        return benefitIcons[index! % benefitIcons.length];
+      case 'technical':
+        return Wrench;
+      case 'equipment':
+        return Container;
+      case 'industry':
+        return Factory;
+      case 'process':
+        return ClipboardCheck;
+      case 'compliance':
+        return Shield;
+      default:
+        return CheckCircle;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       
@@ -97,7 +127,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {service.keyBenefits.map((benefit, index) => {
-              const IconComponent = getServiceIcon(service.slug, benefit.title, benefit.description);
+              const IconComponent = getIconForSection('benefit', index);
               return (
                 <div key={index} className="group p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-green-200 hover:-translate-y-2">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -145,7 +175,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
               
               <div className="grid grid-cols-1 gap-4">
                 {service.technicalSpecs.map((spec, index) => {
-                  const IconComponent = getServiceIcon(service.slug, spec.title, spec.description);
+                  const IconComponent = getIconForSection('technical');
                   return (
                     <div key={index} className="group p-4 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-blue-200">
                       <div className="flex items-start space-x-3">
@@ -181,7 +211,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {service.specializedEquipment.map((equipment, index) => {
-                const IconComponent = getServiceIcon(service.slug, equipment);
+                const IconComponent = getIconForSection('equipment');
                 return (
                   <div key={index} className="p-6 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center space-x-3">
@@ -212,7 +242,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {service.industries.map((industry, index) => {
-              const IconComponent = getServiceIcon(service.slug, industry);
+              const IconComponent = getIconForSection('industry');
               return (
                 <div key={index} className="group p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-purple-200 hover:-translate-y-2">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -240,7 +270,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {service.process.map((step, index) => {
-              const IconComponent = getServiceIcon(service.slug, step.title, step.description);
+              const IconComponent = getIconForSection('process');
               return (
                 <div key={index} className="relative group">
                   <div className="p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-blue-200">
@@ -275,7 +305,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {service.compliance.map((item, index) => {
-                const IconComponent = getServiceIcon(service.slug, item.title, item.description);
+                const IconComponent = getIconForSection('compliance');
                 return (
                   <div key={index} className="p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
                     <div className="flex items-start space-x-4">
