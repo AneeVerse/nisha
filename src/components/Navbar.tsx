@@ -15,7 +15,8 @@ import {
   Package,
   Lock,
   Warehouse,
-  FileText
+  FileText,
+  Zap
 } from "lucide-react";
 
 export default function Navbar() {
@@ -135,8 +136,8 @@ export default function Navbar() {
                   
                   {/* Content */}
                   <div className="relative flex items-center gap-3">
-                    <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
-                      <Truck className="w-4 h-4" />
+                    <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300 group-hover:rotate-12">
+                      <Zap className="w-4 h-4" />
                     </div>
                     <span className="tracking-wide">Our Services</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-2 transition-transform duration-500 ease-out">
