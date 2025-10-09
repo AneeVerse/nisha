@@ -17,14 +17,11 @@ export default function CompanyLogos() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-8 sm:mb-12 md:mb-16 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-blue-600 font-semibold mb-8 shadow-lg">
-            <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse"></span>
-            Industry Leaders
-          </div>
+          
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 tracking-tight mb-6">
             COMPANIES WE HAVE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">COLLABORATED </span> WITH
           </h2>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-6"></div>
+         
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Trusted by Industry Leaders Across 16+ Sectors
           </p>
@@ -38,14 +35,14 @@ export default function CompanyLogos() {
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
           
           {/* Scrolling logos */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden -mt-10">
             <ul
               className="flex items-center gap-8 sm:gap-12 md:gap-16 animate-[logos-marquee_40s_linear_infinite] hover:[animation-play-state:paused]"
               aria-label="Scrolling company logos"
             >
               {[...logos, ...logos, ...logos].map((logo, idx) => (
                 <li key={`${logo.src}-${idx}`} className="flex items-center justify-center flex-shrink-0">
-                  <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
+                  <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:scale-105">
                     <Image
                       src={logo.src}
                       alt={logo.alt}
