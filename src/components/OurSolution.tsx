@@ -250,7 +250,9 @@ export default function OurSolution() {
             {SERVICES.map((service, index) => (
               <div
                 key={service.key}
-                ref={(el) => (serviceRefs.current[index] = el)}
+                ref={(el) => {
+                  serviceRefs.current[index] = el
+                }}
                 className={`relative transition-all duration-500 ${
                   activeServiceIndex === index ? "transform scale-105" : "transform scale-100 opacity-75"
                 }`}

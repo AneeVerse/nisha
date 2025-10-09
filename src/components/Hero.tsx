@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Play, Truck, MapPin, Shield } from "lucide-react";
 
 export default function Hero() {
   return (
