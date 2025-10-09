@@ -19,39 +19,39 @@ type BlogItem = {
 const BLOGS: BlogItem[] = [
   {
     id: 'b1',
-    date: '18',
-    month: 'March',
-    img: '/images/blog/blog-img1.png',
-    author: 'Henry Nicolls',
-    category: 'Tax Lawyer',
-    title: 'Experience Matters: Your Tax Your & Resolution Starts Here',
+    date: '15',
+    month: 'October',
+    img: '/images/blog/images1.avif',
+    author: 'Navin Agarwal',
+    category: 'Industry Trends',
+    title: 'The Future of Container Transportation in India: 5 Trends Reshaping the Industry',
     excerpt:
-      "As a small business owner, you’re well aware of the numerous financial responsibilities.",
-    href: '#',
+      "As India's logistics sector evolves rapidly, container transportation is experiencing unprecedented transformation. From AI-powered route optimization to sustainability mandates...",
+    href: '/blog',
   },
   {
     id: 'b2',
-    date: '16',
-    month: 'June',
-    img: '/images/blog/blog-img2.png',
-    author: 'Henry Nicolls',
-    category: 'Tax Lawyer',
-    title: 'Experience Matters: Your Tax Your & Resolution Starts Here',
+    date: '12',
+    month: 'October',
+    img: '/images/blog/images2.avif',
+    author: 'Safety Team Lead',
+    category: 'Safety & Compliance',
+    title: 'Zero-Damage Logistics: How Advanced Safety Protocols Are Revolutionizing Cargo Protection',
     excerpt:
-      "As a small business owner, you’re well aware of the numerous financial responsibilities.",
-    href: '#',
+      "In an industry where even 0.1% damage can cost millions, Nisha Roadways' zero-damage methodology has become the gold standard...",
+    href: '/blog',
   },
   {
     id: 'b3',
-    date: '12',
-    month: 'July',
-    img: '/images/blog/blog-img3.png',
-    author: 'Henry Nicolls',
-    category: 'Tax Lawyer',
-    title: 'Experience Matters: Your Tax Your & Resolution Starts Here',
+    date: '10',
+    month: 'October',
+    img: '/images/blog/images3.avif',
+    author: 'Project Management Team',
+    category: 'Case Studies',
+    title: 'Project Cargo Success Story: Moving 120-Ton Equipment Across India\'s Most Challenging Routes',
     excerpt:
-      "As a small business owner, you’re well aware of the numerous financial responsibilities.",
-    href: '#',
+      "When a leading power plant needed to transport oversized equipment through narrow mountain passes, conventional logistics failed...",
+    href: '/blog',
   },
 ];
 
@@ -59,9 +59,9 @@ const BLOGS: BlogItem[] = [
 
 function BlogCard({ post, index }: { post: BlogItem; index: number }) {
   return (
-    <article className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:shadow-xl">
-      {/* Media */}
-      <div className="relative h-[200px] sm:h-[240px] lg:h-[280px] overflow-hidden">
+    <article className="group relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      {/* Image with internal padding and curved corners */}
+      <div className="relative h-[200px] mb-6 overflow-hidden rounded-2xl">
         <Image
           src={post.img}
           alt={post.title}
@@ -72,38 +72,17 @@ function BlogCard({ post, index }: { post: BlogItem; index: number }) {
         />
       </div>
 
-      {/* Content footer */}
-      <div className="relative z-10 -mt-1 sm:-mt-2 rounded-b-xl sm:rounded-b-2xl px-4 sm:px-5 lg:px-6 pb-4 sm:pb-5 lg:pb-6 pt-4 sm:pt-5 lg:pt-6 transition-colors duration-500 ease-in-out bg-white text-gray-900 group-hover:bg-gradient-to-r group-hover:from-[#6a31eb] group-hover:via-[#9a45d1] group-hover:to-[#d560ab] group-hover:text-white">
-        {/* Meta */}
-        <div className="mb-3 sm:mb-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 lg:gap-6 text-xs sm:text-sm">
-          <div className="flex items-center gap-2 opacity-80">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="transition-colors duration-300 group-hover:fill-white/90 sm:w-4 sm:h-4"><path d="M12 12c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4 1.791 4 4 4Zm0 2c-3.313 0-6 2.239-6 5v1h12v-1c0-2.761-2.687-5-6-5Z" fill="currentColor"/></svg>
-            <span className="text-xs sm:text-sm">{post.author}</span>
-          </div>
-          <div className="flex items-center gap-2 opacity-80">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="transition-colors duration-300 group-hover:fill-white/90 sm:w-4 sm:h-4"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 20-10-5V9l10 5 10-5v8l-10 5Z" fill="currentColor"/></svg>
-            <span className="text-xs sm:text-sm">{post.category}</span>
-          </div>
-        </div>
-
+      {/* Content - simplified to just title and description */}
+      <div className="space-y-3">
         {/* Title */}
-        <h3 className="mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl font-semibold leading-snug line-clamp-2">
+        <h3 className="text-lg font-semibold leading-tight line-clamp-2 text-gray-900">
           {post.title}
         </h3>
 
-        {/* Excerpt */}
-        <p className="mb-4 sm:mb-5 text-sm sm:text-[15px] leading-5 sm:leading-6 opacity-90 line-clamp-2 sm:line-clamp-3">
+        {/* Description */}
+        <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
           {post.excerpt}
         </p>
-
-        {/* Read more */}
-        <Link
-          href={post.href}
-          className="inline-flex items-center gap-2 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab] group-hover:text-white transition-colors text-sm sm:text-base"
-        >
-          Read More
-          <span className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">→</span>
-        </Link>
       </div>
     </article>
   );
@@ -111,20 +90,25 @@ function BlogCard({ post, index }: { post: BlogItem; index: number }) {
 
 export default function BlogSection() {
   return (
-    <section className="bg-[#f6f3ff] py-12 sm:py-16">
+    <section className="bg-white py-12 sm:py-16 mt-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Heading */}
-        <div className="mb-8 sm:mb-10 text-center">
-          <span className="text-xs sm:text-sm font-semibold uppercase mb-2 tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">
+        <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-blue-600 font-semibold mb-8 shadow-lg">
+            <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse"></span>
             Our Blogs
-          </span>
-          <h2 className="mt-3 sm:mt-4 text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#1f1634] leading-tight">
-          Latest Insights From Our Trucker Tools
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6">
+            LATEST <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">INSIGHTS</span> FROM OUR TRUCKER TOOLS
           </h2>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover industry expertise, safety protocols, and innovative solutions from our logistics professionals
+          </p>
         </div>
 
         {/* Grid */}
-        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {BLOGS.map((post, idx) => (
             <BlogCard key={post.id} post={post} index={idx} />
           ))}

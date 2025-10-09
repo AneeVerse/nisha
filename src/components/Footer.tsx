@@ -34,7 +34,12 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer ref={sectionRef} className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white mt-8 sm:mt-12 md:mt-0 ">
+      <footer ref={sectionRef} className="relative bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900 text-white mt-8 sm:mt-12 md:mt-0 overflow-visible">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.1)_25%,rgba(59,130,246,0.1)_50%,transparent_50%,transparent_75%,rgba(59,130,246,0.1)_75%)] bg-[length:20px_20px]"></div>
+        </div>
         {/* Road strip with two trucks */}
         <div className="relative h-24 sm:h-28 md:h-32 lg:h-36 overflow-visible mb-6 sm:mb-8">
           {/* Single lane solid line */}

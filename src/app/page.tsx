@@ -19,8 +19,8 @@ export default function Home() {
       <Solutions />
       <TrustedByBusiness />
       <SocialMosaic />
-      <Testimonials />
       <ReviewVideo />
+          <Testimonials />
       <BlogSection />
       <CtaBanner />
       <Footer />

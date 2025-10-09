@@ -33,7 +33,7 @@ export default function BlogPage() {
       {/* Media */}
       <div className="relative h-[200px] sm:h-[240px] lg:h-[280px] overflow-hidden">
         <Image
-          src="/images/blog/blog-img1.png"
+          src={post.image || "/images/blog/images1.avif"}
           alt={post.title}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"

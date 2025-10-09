@@ -114,7 +114,7 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
         {duplicatedItems.map((t, i) => (
           <figure
             key={`${t.name}-${i}`}
-            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 bg-white shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow duration-300"
+            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow duration-300"
           >
             <blockquote className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6">&quot;{t.quote}&quot;</blockquote>
             <figcaption className="mt-4 flex items-center gap-3">
@@ -142,19 +142,12 @@ export default function Testimonials() {
     <section aria-label="Testimonials" className="py-16 sm:py-20">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div>
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#6a31eb] via-[#9a45d1] to-[#d560ab]">Client Stories</span>
-          </div>
-          <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-            Trusted by Businesses <span className="whitespace-nowrap">Across India</span>
-          </h2>
-          <p className="mt-2 text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
-            From small enterprises to large corporations, discover how Nisha Roadways has become their trusted logistics partner.
-          </p>
+         
+       
+         
         </div>
 
-        <div className="mt-10 space-y-6">
-          <Row items={TOP_ROW} direction="left" />
+        <div className="mt-10">
           <Row items={BOTTOM_ROW} direction="right" />
         </div>
       </div>

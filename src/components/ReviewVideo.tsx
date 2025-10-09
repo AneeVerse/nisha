@@ -281,25 +281,20 @@ export default function ReviewVideo() {
 
   return (
     <>
-      <section className="w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-8 sm:py-10 md:py-16 lg:py-20 xl:py-10 xl:pt-20 overflow-hidden md:-mt-25 md:-mb-16 -mt-8 -mb-10 relative">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-orange-400/20 to-red-600/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-purple-400/10 to-blue-400/10 rounded-full blur-2xl"></div>
-        </div>
+      <section className="w-full bg-white py-8 sm:py-10 md:py-16 lg:py-20 xl:py-10 xl:pt-20 overflow-hidden md:-mt-25 md:-mb-16 -mt-8 -mb-10 relative">
+        
         
         <div className="w-full relative z-10">
           {/* Section Heading */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-[#ef4a25] font-semibold mb-8 shadow-lg">
-              <span className="w-2 h-2 bg-[#ef4a25] rounded-full mr-3 animate-pulse"></span>
+            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-blue-600 font-semibold mb-8 shadow-lg">
+              <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse"></span>
               Client Testimonials
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6">
-              VOICES OF <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ef4a25] via-orange-600 to-red-600">BUSINESS</span> PARTNERS
+              VOICES OF <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">BUSINESS</span> PARTNERS
             </h2>
-            <div className="w-32 h-1.5 bg-gradient-to-r from-[#ef4a25] via-orange-500 to-red-500 mx-auto rounded-full mb-6"></div>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Hear from our trusted partners who have experienced excellence in logistics solutions
             </p>
@@ -390,7 +385,7 @@ export default function ReviewVideo() {
                   {/* Reviewer Info */}
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">{selectedVideo.reviewerName}</h3>
-                    <p className="text-base text-[#ef4a25] font-semibold">{selectedVideo.title}</p>
+                    <p className="text-base text-blue-600 font-semibold">{selectedVideo.title}</p>
                     <p className="text-sm text-gray-600">{selectedVideo.subtitle}</p>
                   </div>
                   
@@ -415,7 +410,7 @@ export default function ReviewVideo() {
                         window.location.href = '/contact';
                       }, 100);
                     }}
-                    className="w-full bg-gradient-to-r from-[#ef4a25] via-orange-600 to-red-600 hover:from-[#d13d1f] hover:via-orange-700 hover:to-red-700 text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     Book Your Journey
                   </button>
@@ -517,7 +512,7 @@ const VideoCard: React.FC<{
                   e.stopPropagation();
                   onPlayClick(video);
                 }}
-                className="bg-[#ef4a25] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-[#d13d1f] transition-colors duration-200 select-none"
+                className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-200 select-none"
               >
                 Watch Full Video
               </button>
