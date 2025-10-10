@@ -155,7 +155,8 @@ export default function OurSolution() {
     }
   }, [])
 
-  const activeService = SERVICES[activeServiceIndex]
+  const LIMITED_SERVICES = SERVICES.slice(0, 4)
+  const activeService = LIMITED_SERVICES[activeServiceIndex]
 
   return (
     <section
@@ -174,10 +175,6 @@ export default function OurSolution() {
       <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-blue-600 font-semibold mb-8 shadow-lg">
-            <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse"></span>
-            Our Services
-          </div>
 
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-6">
@@ -199,17 +196,17 @@ export default function OurSolution() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Fixed Left Image Card */}
-          <div className="lg:w-1/2 order-2 lg:order-1 lg:self-start sticky top-24">
+          <div className="lg:w-1/2 order-2 lg:order-1 lg:self-start sticky top-28 lg:my-12">
             <div className="relative group">
               {/* Card Container */}
-              <div className="relative rounded-3xl bg-white shadow-2xl shadow-blue-500/20 border border-blue-100/50 backdrop-blur-sm">
+              <div className="relative rounded-3xl bg-white shadow-2xl shadow-black/50 border border-blue-100/50 backdrop-blur-sm">
                 {/* Animated border */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-cyan-500/20 to-indigo-500/20 p-[2px]">
                   <div className="w-full h-full rounded-3xl bg-white"></div>
                 </div>
 
                 {/* Image Container */}
-                <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden rounded-3xl">
+                <div className="relative h-[320px] sm:h-[420px] lg:h-[480px] overflow-hidden rounded-3xl">
                   <Image
                     key={activeService.imageSrc}
                     src={activeService.imageSrc || "/placeholder.svg"}
@@ -224,19 +221,6 @@ export default function OurSolution() {
 
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-800/20 to-transparent"></div>
-
-                  {/* Service indicator */}
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-white/20">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-slate-600 uppercase tracking-wider">
-                          Service {activeServiceIndex + 1} of {SERVICES.length}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-slate-900 leading-tight">{activeService.heading}</h3>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -247,92 +231,47 @@ export default function OurSolution() {
           </div>
 
           {/* Right Side - Scrollable Services */}
-          <div className="space-y-8 order-1 lg:order-2 lg:w-1/2 lg:flex-shrink-0">
-            {SERVICES.map((service, index) => (
+          <div className="space-y-6 order-1 lg:order-2 lg:w-1/2 lg:flex-shrink-0">
+            {LIMITED_SERVICES.map((service, index) => (
               <div
                 key={service.key}
                 ref={(el) => {
                   serviceRefs.current[index] = el
                 }}
-                className={`relative transition-all duration-500 ${
-                  activeServiceIndex === index ? "transform scale-105" : "transform scale-100 opacity-75"
-                }`}
+                className="relative transition-all duration-500"
               >
                 {/* Service Card */}
                 <div className="relative group">
                   {/* Background card */}
-                  <div
-                    className={`relative rounded-3xl p-8 sm:p-10 transition-all duration-500 ${
-                      activeServiceIndex === index
-                        ? "bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white shadow-2xl shadow-blue-500/30"
-                        : "bg-white/80 backdrop-blur-sm text-slate-700 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/20"
-                    } border border-white/20`}
-                  >
-                    {/* Active service background animation */}
-                    {activeServiceIndex === index && (
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-indigo-500/20 animate-pulse"></div>
-                    )}
-
+                  <div className="relative rounded-2xl p-6 sm:p-8 bg-white shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
                     <div className="relative z-10">
                       {/* Service number and label */}
-                      <div className="flex items-center gap-4 mb-6">
-                        <div
-                          className={`flex items-center justify-center w-12 h-12 rounded-2xl font-bold text-lg transition-all duration-300 ${
-                            activeServiceIndex === index
-                              ? "bg-white/20 text-white"
-                              : "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
-                          }`}
-                        >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-500 text-white font-bold text-sm">
                           {String(index + 1).padStart(2, "0")}
                         </div>
-                        <div
-                          className={`h-[2px] flex-1 rounded-full transition-all duration-300 ${
-                            activeServiceIndex === index ? "bg-white/30" : "bg-gradient-to-r from-blue-500 to-cyan-500"
-                          }`}
-                        ></div>
+                        <div className="h-[2px] flex-1 rounded-full bg-blue-500"></div>
                       </div>
 
                       {/* Content */}
-                      <h3
-                        className={`text-2xl sm:text-3xl font-bold mb-4 leading-tight transition-colors duration-300 ${
-                          activeServiceIndex === index ? "text-white" : "text-slate-900"
-                        }`}
-                      >
+                      <h3 className="text-xl sm:text-2xl font-bold mb-3 leading-tight text-gray-900">
                         {service.heading}
                       </h3>
 
-                      <p
-                        className={`text-lg leading-relaxed mb-6 transition-colors duration-300 ${
-                          activeServiceIndex === index ? "text-blue-100" : "text-slate-600"
-                        }`}
-                      >
+                      <p className="text-base leading-relaxed mb-4 text-gray-600">
                         {service.description}
                       </p>
 
                       {/* Benefits */}
-                      <div className="space-y-3 mb-8">
-                        <h4
-                          className={`text-sm font-semibold uppercase tracking-wider flex items-center gap-2 transition-colors duration-300 ${
-                            activeServiceIndex === index ? "text-blue-200" : "text-slate-500"
-                          }`}
-                        >
-                          <div
-                            className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                              activeServiceIndex === index ? "bg-cyan-400" : "bg-blue-500"
-                            }`}
-                          ></div>
+                      <div className="space-y-2 mb-6">
+                        <h4 className="text-sm font-semibold uppercase tracking-wider flex items-center gap-2 text-gray-500">
+                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                           Key Benefits
                         </h4>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center gap-3 group/benefit">
-                              <div
-                                className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover/benefit:scale-110 ${
-                                  activeServiceIndex === index
-                                    ? "bg-white/20 text-white"
-                                    : "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
-                                }`}
-                              >
+                            <li key={benefitIndex} className="flex items-center gap-2 group/benefit">
+                              <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-blue-500 text-white">
                                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path
                                     strokeLinecap="round"
@@ -342,11 +281,7 @@ export default function OurSolution() {
                                   ></path>
                                 </svg>
                               </div>
-                              <span
-                                className={`text-sm font-medium transition-colors duration-300 ${
-                                  activeServiceIndex === index ? "text-blue-100" : "text-slate-600"
-                                }`}
-                              >
+                              <span className="text-sm font-medium text-gray-600">
                                 {benefit}
                               </span>
                             </li>
@@ -355,38 +290,33 @@ export default function OurSolution() {
                       </div>
 
                       {/* CTA Button */}
-                      {activeServiceIndex === index && (
-                        <div className="animate-fadeIn">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              const element = document.getElementById("contact")
-                              if (element) {
-                                element.scrollIntoView({ behavior: "smooth" })
-                              }
-                            }}
-                            className="group inline-flex items-center rounded-2xl bg-white text-blue-700 pl-6 pr-3 py-4 text-sm font-bold shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 relative overflow-hidden"
-                          >
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                            <span className="relative z-10">Get Quote for {service.label}</span>
-                            <span className="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-700 group-hover:bg-blue-200 transition-all duration-300 relative z-10">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                className="h-5 w-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinejoin="round"
-                              >
-                                <path d="M7 17L17 7" strokeLinecap="round" />
-                                <path d="M7 7h10v10" strokeLinecap="round" />
-                              </svg>
-                            </span>
-                          </button>
-                        </div>
-                      )}
+                      <div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const element = document.getElementById("contact")
+                            if (element) {
+                              element.scrollIntoView({ behavior: "smooth" })
+                            }
+                          }}
+                          className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 overflow-hidden"
+                        >
+                          {/* Animated background overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
+                          
+                          {/* Glow effect */}
+                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+                          
+                          {/* Content */}
+                          <span className="relative flex items-center gap-2">
+                            Know More
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
+                              <path d="M5 12h14"/>
+                              <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -396,27 +326,7 @@ export default function OurSolution() {
         </div>
       </div>
 
-      {/* Progress indicator */}
-      <div className="lg:sticky lg:top-24 right-8 z-20 hidden lg:block">
-        <div className="flex flex-col gap-3">
-          {SERVICES.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                serviceRefs.current[index]?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                })
-              }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeServiceIndex === index
-                  ? "bg-gradient-to-r from-blue-500 to-cyan-500 scale-125"
-                  : "bg-slate-300 hover:bg-slate-400"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
+
     </section>
   )
 }

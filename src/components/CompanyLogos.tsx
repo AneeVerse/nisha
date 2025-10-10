@@ -13,10 +13,10 @@ const logos = [
 
 export default function CompanyLogos() {
   return (
-    <section aria-label="Companies using our services" className="bg-white py-12 sm:py-16 mt-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section aria-label="Companies using our services" className="bg-gradient-to-br from-gray-50 to-white py-12 sm:py-16 mt-10">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+        {/* <div className="mb-8 sm:mb-12 md:mb-16 text-center">
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-6">
             COMPANIES WE HAVE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">COLLABORATED </span> WITH
@@ -26,7 +26,7 @@ export default function CompanyLogos() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Trusted by Industry Leaders Across 16+ Sectors
           </p>
-        </div>
+        </div> */}
 
 
         {/* Company Logos Marquee */}

@@ -39,28 +39,22 @@ export default function Hero() {
               Pan-India coverage. Zero damage guarantee. 24/7 tracking..
             </p>
 
-             {/* CTA Button - White background with blue accents */}
+             {/* CTA Button - Match navbar styling */}
             <div className="flex items-center gap-6 mb-20">
-              <Button 
-                variant="outline"
-                className="group relative px-12 py-4 !bg-white hover:!bg-gradient-to-r hover:!from-blue-600 hover:!via-blue-700 hover:!to-blue-800 !text-gray-900 hover:!text-white text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 overflow-hidden min-w-[280px] !border !border-blue-200 hover:!border-blue-800"
-              >
+              <Button className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 overflow-hidden">
                 {/* Animated background overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-blue-50/50 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
                 
-                {/* Blue glow effect on hover */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/10 via-blue-500/20 to-blue-600/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
                 
-                <span className="relative flex items-center justify-center gap-12 uppercase">
-                 Track Your Shipment
-
-                  {/* Blue icon */}
-                  <div className="relative w-10 h-10 rounded-full  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 group-hover:bg-blue-600 flex items-center justify-center transition-all duration-300 shadow-lg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
-                      <path d="M5 12h14"/>
-                      <path d="m12 5 7 7-7 7"/>
-                    </svg>
-                  </div>
+                {/* Content */}
+                <span className="relative flex items-center gap-2">
+                 GET QUOTE NOW
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                  </svg>
                 </span>
               </Button>
             </div>

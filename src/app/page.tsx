@@ -18,7 +18,7 @@ export default function Home() {
       <Feature />
       <Solutions />
       {/* <TrustedByBusiness /> */}
-      <SocialMosaic />
+      {/* <SocialMosaic /> */}
       <ReviewVideo />
           <Testimonials />
       <BlogSection />

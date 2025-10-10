@@ -287,10 +287,7 @@ export default function ReviewVideo() {
         <div className="w-full relative z-10">
           {/* Section Heading */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full text-blue-600 font-semibold mb-8 shadow-lg">
-              <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 animate-pulse"></span>
-              Client Testimonials
-            </div>
+            
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-6">
               VOICES OF <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">BUSINESS</span> PARTNERS
             </h2>
