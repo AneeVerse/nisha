@@ -84,10 +84,10 @@ const Footer: React.FC = () => {
             {/* Main Footer Content */}
             <div className="mb-12">
               
-              {/* Two-column layout with left-right spacing */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+              {/* Three-column layout with improved spacing */}
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-8 lg:gap-16">
                 
-                {/* Left Column - Logo */}
+                {/* Left Column - Logo and Contact */}
                 <div className="space-y-6">
                   <div className="flex justify-center lg:justify-start -ml-3">
                     <Image 
@@ -110,52 +110,88 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
-                {/* Right Column - Navigation Links */}
+
+                {/* Middle Column - Services (Expanded) */}
                 <div className="space-y-6">
-                  <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    {/* Column 1 */}
+                  <div className="grid grid-cols-2 gap-8 lg:gap-20">
+                    {/* Services Column 1 */}
                     <div className="space-y-3">
-                      <Link href="/track-shipment" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Track Shipment
+                      <Link href="/services/empty-container-transportation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Empty Container Transportation</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/get-quote" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Get Quote
+                      <Link href="/services/export-import-containers" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Export Import Containers</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/container-sizes" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Container Sizes
+                      <Link href="/services/project-cargo-management" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Project Cargo Management</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/our-network" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Our Network
+                      <Link href="/services/chemical-transportation" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Chemical Transportation</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
                     </div>
                     
-                    {/* Column 2 */}
+                    {/* Services Column 2 */}
+                    <div className="space-y-3 ">
+                      <Link href="/services/bulk-cargo-solutions" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Bulk Cargo Solutions</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
+                      </Link>
+                      <Link href="/services/armed-escort-services" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Armed Escort Services</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
+                      </Link>
+                      <Link href="/services/warehousing-storage" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Warehousing Storage</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
+                      </Link>
+                      <Link href="/services/lcl-consolidation-services" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">LCL Consolidation Services</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Right Column - Why Us and Resources */}
+                <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-6 lg:gap-30 ">
+                    {/* Why Us Column */}
                     <div className="space-y-3">
-                      <Link href="/career-opportunities" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Career Opportunities
+                      <Link href="/about" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">About</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/media-awards" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Media & Awards
+                      <Link href="/team" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Team</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/industry-blog" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Industry Blog
+                      <Link href="/partners" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Partners</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/nisha-academy" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Nisha Academy
+                      <Link href="/testimonials" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Testimonials</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
                     </div>
                     
-                    {/* Column 3 */}
-                    <div className="space-y-3">
-                      <Link href="/faq-center" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        FAQ Center
+                    {/* Resources Column */}
+                    <div className="space-y-3 ">
+                      <Link href="/blog" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Blog</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/transportation-guide" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Transportation Guide
+                      <Link href="/academy" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">Academy</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
-                      <Link href="/safety-standards" className="text-white hover:text-blue-300 transition-colors duration-200 text-sm py-2 border-l-2 border-white hover:border-blue-300 pl-3 hover:pl-4 transition-all duration-200 block">
-                        Safety Standards
+                      <Link href="/faq" className="group relative text-white hover:text-blue-300 transition-all duration-300 text-sm py-3 px-4 border-l-3 border-white hover:border-blue-300 hover:bg-blue-900/20 rounded-r-lg block transform hover:translate-x-2 hover:shadow-lg hover:shadow-blue-500/20">
+                        <span className="relative z-10">FAQ</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-lg"></div>
                       </Link>
                     </div>
                   </div>
@@ -200,19 +236,7 @@ const Footer: React.FC = () => {
                     </svg>
                   </a>
                   
-                  {/* Email */}
-                  <a href="mailto:info@nisharoadways.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors duration-200 p-2 hover:bg-gray-800 rounded-full">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5L4 8V6l8 5 8-5v2z" />
-                    </svg>
-                  </a>
                   
-                  {/* Phone */}
-                  <a href="tel:+91-22-41632222" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors duration-200 p-2 hover:bg-gray-800 rounded-full">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
