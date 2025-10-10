@@ -239,57 +239,79 @@ export default function Navbar() {
             </div>
           )}
 
-          {/* Resources - New Layout with Left Menu and Right Content */}
+          {/* Resources - Updated Layout */}
           {section === "resources" && (
             <div className="flex gap-12">
-              {/* Left Side - Navigation Menu */}
-              <div className="w-64 flex-shrink-0">
+              {/* Left Side - Expanded Navigation */}
+              <div className="w-80 flex-shrink-0">
                 <div className="space-y-1">
-                  {resources.map((item) => (
-                    <Link 
-                      key={item.title} 
-                      href={item.href} 
-                      className="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50/50 border border-transparent hover:border-blue-100/50 transition-all duration-300"
-                    >
-                      <div className="w-2 h-2 bg-blue-600 rounded-full group-hover:scale-125 transition-transform duration-200"></div>
-                      <div>
-                        <div className="font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">
-                          {item.title}
+                  {resources.map((item, index) => (
+                    <div key={item.title}>
+                      <Link 
+                        href={item.href} 
+                        className="group flex items-center gap-4 px-0 py-4 hover:text-blue-600 transition-colors duration-200"
+                      >
+                        <div className="w-6 h-6 flex items-center justify-center">
+                          {item.title === "Blogs" && (
+                            <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                          )}
+                          {item.title === "Nisha Academy" && (
+                            <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                          )}
+                          {item.title === "FAQ" && (
+                            <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                          )}
                         </div>
-                        <div className="text-sm text-gray-600">
-                          {item.desc}
+                        <div>
+                          <div className="font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-200">
+                            {item.title}
+                          </div>
+                          <div className="text-sm text-gray-500 mt-0.5">
+                            {item.desc}
+                          </div>
                         </div>
-                      </div>
-                    </Link>
+                      </Link>
+                      
+                      {/* Simple divider line */}
+                      {index < resources.length - 1 && (
+                        <div className="h-px bg-gray-100 my-2"></div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
 
-              {/* Right Side - Content Sections */}
+              {/* Right Side - Expanded Content Cards */}
               <div className="flex-1 grid grid-cols-2 gap-8">
                 {/* Blog Section */}
                 <div>
                   <Link href="/blog" className="block mb-4 group">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-200">Blog</h3>
-                    <p className="text-sm text-gray-600">Latest articles and insights</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">Blog</h3>
+                    <p className="text-sm text-gray-500">Latest articles and insights</p>
                   </Link>
-                  <div className="grid grid-cols-1 gap-3">
-                    {latestBlogs.map((blog, index) => (
+                  <div className="space-y-3">
+                    {latestBlogs.slice(0, 3).map((blog, index) => (
                       <Link 
                         key={index} 
                         href={blog.href}
-                        className="group block p-3 rounded-xl hover:bg-gray-50/50 border border-transparent hover:border-gray-200/50 transition-all duration-300"
+                        className="group block p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                       >
-                        <div className="aspect-[3/1] bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-3 overflow-hidden">
+                        <div className="aspect-[5/2] bg-gray-100 rounded-lg mb-3 overflow-hidden">
                           <Image 
                             src={blog.image} 
                             alt={blog.title}
-                            width={300}
-                            height={100}
+                            width={400}
+                            height={160}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <h4 className="font-semibold text-sm text-gray-900 group-hover:text-blue-700 transition-colors duration-200 line-clamp-2">
+                        <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2 leading-relaxed">
                           {blog.title}
                         </h4>
                       </Link>
@@ -300,26 +322,26 @@ export default function Navbar() {
                 {/* Academy Section */}
                 <div>
                   <Link href="/academy" className="block mb-4 group">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors duration-200">Academy</h3>
-                    <p className="text-sm text-gray-600">Latest programs and courses</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-emerald-600 transition-colors">Academy</h3>
+                    <p className="text-sm text-gray-500">Latest programs and courses</p>
                   </Link>
-                  <div className="grid grid-cols-1 gap-3">
-                    {latestPrograms.map((program, index) => (
+                  <div className="space-y-3">
+                    {latestPrograms.slice(0, 3).map((program, index) => (
                       <Link 
                         key={index} 
                         href={program.href}
-                        className="group block p-3 rounded-xl hover:bg-gray-50/50 border border-transparent hover:border-gray-200/50 transition-all duration-300"
+                        className="group block p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                       >
-                        <div className="aspect-[3/1] bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mb-3 overflow-hidden">
+                        <div className="aspect-[5/2] bg-gray-100 rounded-lg mb-3 overflow-hidden">
                           <Image 
                             src={program.image} 
                             alt={program.title}
-                            width={300}
-                            height={100}
+                            width={400}
+                            height={160}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <h4 className="font-semibold text-sm text-gray-900 group-hover:text-emerald-700 transition-colors duration-200 line-clamp-2">
+                        <h4 className="text-sm font-medium text-gray-800 group-hover:text-emerald-600 transition-colors line-clamp-2 leading-relaxed">
                           {program.title}
                         </h4>
                       </Link>
