@@ -2,16 +2,13 @@
 
 import Image from "next/image"
 import { useState, useRef, useEffect } from "react"
+import Link from "next/link"
 
 type ServiceKey =
-  | "empty-container"
-  | "export-import"
-  | "project-cargo"
-  | "chemical"
-  | "bulk-cargo"
-  | "high-value"
-  | "warehousing"
-  | "lcl"
+  | "container-logistics"
+  | "specialized-cargo"
+  | "multimodal-transport"
+  | "value-added-services"
 
 type ServiceConfig = {
   key: ServiceKey
@@ -21,85 +18,53 @@ type ServiceConfig = {
   heading: string
   description: string
   benefits: string[]
+  link: string
 }
 
 const SERVICES: ServiceConfig[] = [
   {
-    key: "empty-container",
-    label: "Empty Container Transportation",
+    key: "container-logistics",
+    label: "Container Logistics Solutions",
     imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Empty container transportation",
-    heading: "Empty Container Transportation",
+    imageAlt: "Container logistics solutions",
+    heading: "Container Logistics Solutions",
     description:
-      "Pioneers in empty container movement across all major ports and ICDs. Cost-effective solutions with industry-leading turnaround times.",
-    benefits: ["40% cost savings", "24/7 availability", "pan-India coverage"],
+      "Comprehensive container transportation services including empty containers, export-import logistics, and domestic cargo movement across all major ports and ICDs.",
+    benefits: ["Port-to-door connectivity", "Real-time tracking", "Customs support"],
+    link: "/services#container-logistics",
   },
   {
-    key: "export-import",
-    label: "Export & Import Containers",
+    key: "specialized-cargo",
+    label: "Specialized Cargo Solutions",
     imageSrc: "/images/our-solution/ship.avif",
-    imageAlt: "Export import containers",
-    heading: "Export & Import Containers",
+    imageAlt: "Specialized cargo solutions",
+    heading: "Specialized Cargo Solutions",
     description:
-      "Full-service container logistics for 20ft, 40ft, and 45ft units. Seamless port-to-door connectivity with real-time tracking.",
-    benefits: ["Zero documentation delays", "customs clearance support", "damage-free delivery"],
+      "Custom solutions for unique cargo requirements including project cargo, bulk transportation, chemical logistics, and solar panel transportation with specialized handling.",
+    benefits: ["Custom engineering", "Safety protocols", "Specialized equipment"],
+    link: "/services#specialized-cargo",
   },
   {
-    key: "project-cargo",
-    label: "Project Cargo Management",
+    key: "multimodal-transport",
+    label: "Multimodal Transport Solutions",
     imageSrc: "/images/our-solution/railway.avif",
-    imageAlt: "Project cargo management",
-    heading: "Project Cargo Management",
+    imageAlt: "Multimodal transport solutions",
+    heading: "Multimodal Transport Solutions",
     description:
-      "Oversized and heavy machinery transportation with route surveys, permits, and specialized vehicles. No cargo too complex.",
-    benefits: ["Custom engineering solutions", "permit management", "dedicated project managers"],
+      "Integrated transportation across multiple modes including rail services and coastal shipping, providing seamless connectivity and cost-effective alternatives.",
+    benefits: ["Multi-mode integration", "Cost optimization", "Flexible routing"],
+    link: "/services#multimodal-transport",
   },
   {
-    key: "chemical",
-    label: "Chemical Transportation",
+    key: "value-added-services",
+    label: "Value-Added Logistics Services",
     imageSrc: "/images/our-solution/airway.avif",
-    imageAlt: "Chemical transportation",
-    heading: "Chemical Transportation",
+    imageAlt: "Value-added logistics services",
+    heading: "Value-Added Logistics Services",
     description:
-      "Certified hazardous and non-hazardous chemical transport with safety-trained drivers and compliant vehicles.",
-    benefits: ["ADR-certified drivers", "emergency response protocols", "insurance coverage"],
-  },
-  {
-    key: "bulk-cargo",
-    label: "Bulk Cargo Solutions",
-    imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Bulk cargo solutions",
-    heading: "Bulk Cargo Solutions",
-    description:
-      "Steel coils, grains, construction materials, and industrial goods with optimized vehicle configurations.",
-    benefits: ["Load optimization", "reduced handling damage", "flexible scheduling"],
-  },
-  {
-    key: "high-value",
-    label: "High-Value Goods Escort",
-    imageSrc: "/images/our-solution/ship.avif",
-    imageAlt: "High-value goods escort",
-    heading: "High-Value Goods Escort",
-    description: "Armed security escort services with GPS tracking for valuable and sensitive cargo shipments.",
-    benefits: ["24/7 surveillance", "trained security personnel", "comprehensive insurance"],
-  },
-  {
-    key: "warehousing",
-    label: "Warehousing & Storage",
-    imageSrc: "/images/our-solution/railway.avif",
-    imageAlt: "Warehousing and storage",
-    heading: "Warehousing & Storage",
-    description: "Climate-controlled facilities near major ports with inventory management and last-mile distribution.",
-    benefits: ["Strategic locations", "inventory tracking", "flexible storage terms"],
-  },
-  {
-    key: "lcl",
-    label: "LCL Consolidation",
-    imageSrc: "/images/our-solution/airway.avif",
-    imageAlt: "LCL consolidation",
-    heading: "LCL Consolidation",
-    description: "Small package delivery across India with consolidated shipping for cost-effective transportation.",
-    benefits: ["Reduced shipping costs", "weekly consolidations", "nationwide reach"],
+      "Enhanced services for optimal supply chain management including LCL consolidation, high-value goods escort, and comprehensive warehousing solutions.",
+    benefits: ["Supply chain optimization", "Security services", "Inventory management"],
+    link: "/services#value-added-services",
   },
 ]
 
@@ -155,8 +120,7 @@ export default function OurSolution() {
     }
   }, [])
 
-  const LIMITED_SERVICES = SERVICES.slice(0, 4)
-  const activeService = LIMITED_SERVICES[activeServiceIndex]
+  const activeService = SERVICES[activeServiceIndex]
 
   return (
     <section
@@ -232,7 +196,7 @@ export default function OurSolution() {
 
           {/* Right Side - Scrollable Services */}
           <div className="space-y-6 order-1 lg:order-2 lg:w-1/2 lg:flex-shrink-0">
-            {LIMITED_SERVICES.map((service, index) => (
+            {SERVICES.map((service, index) => (
               <div
                 key={service.key}
                 ref={(el) => {
@@ -291,15 +255,9 @@ export default function OurSolution() {
 
                       {/* CTA Button */}
                       <div>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            const element = document.getElementById("contact")
-                            if (element) {
-                              element.scrollIntoView({ behavior: "smooth" })
-                            }
-                          }}
-                          className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 overflow-hidden"
+                        <Link 
+                          href={service.link}
+                          className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 overflow-hidden"
                         >
                           {/* Animated background overlay */}
                           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
@@ -315,7 +273,7 @@ export default function OurSolution() {
                               <path d="m12 5 7 7-7 7"/>
                             </svg>
                           </span>
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
