@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import ServicesMegaMenu from "@/components/ServicesMegaMenu";
 import { 
   Menu,
   X,
@@ -25,6 +26,10 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = React.useState<null | "services" | "whyus" | "resources">(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const pathname = usePathname();
+  
+  // Hover delay management
+  const hoverTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const [pendingClose, setPendingClose] = React.useState(false);
 
   // Handle scroll effect
   React.useEffect(() => {
@@ -56,6 +61,41 @@ export default function Navbar() {
       return () => document.removeEventListener("click", handleClickOutside);
     }
   }, [openMenu]);
+
+  // Cleanup timeout on unmount
+  React.useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Hover delay functions
+  const handleMenuEnter = (menuType: "services" | "whyus" | "resources") => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setPendingClose(false);
+    setOpenMenu(menuType);
+  };
+
+  const handleMenuLeave = () => {
+    setPendingClose(true);
+    hoverTimeoutRef.current = setTimeout(() => {
+      setOpenMenu(null);
+      setPendingClose(false);
+    }, 300); // 300ms delay before closing
+  };
+
+  const handleMenuEnterArea = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setPendingClose(false);
+  };
 
   const services = [
     { 
@@ -379,7 +419,7 @@ export default function Navbar() {
     );
 
     return (
-      <div className={`absolute left-0 right-0 top-full z-50 ${isOpen ? "block" : "hidden"}`} onMouseLeave={() => setOpenMenu(null)}>
+      <div className={`absolute left-0 right-0 top-full z-50 ${isOpen ? "block" : "hidden"}`} onMouseEnter={handleMenuEnterArea} onMouseLeave={handleMenuLeave}>
         {panel}
       </div>
     );
@@ -417,30 +457,24 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-10">
-              {/* Mega menu triggers */}
-              <div className="relative" onMouseEnter={() => setOpenMenu("services")} onClick={(e) => e.stopPropagation()}>
-                <button className={`group inline-flex items-center gap-2 text-base font-medium transition-all duration-300 py-3 px-3 relative ${
-                  isScrolled || openMenu || pathname !== '/'
-                    ? 'text-gray-900 hover:text-blue-600' 
-                    : 'text-white hover:text-blue-400'
-                }`}>
-                  <span className="relative">
-                    Services
-                    {/* Animated underline */}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full transition-all duration-300 ease-out"></span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-all duration-300 ${
-                    openMenu === "services" 
-                      ? "rotate-180 text-blue-400" 
-                      : isScrolled || openMenu || pathname !== '/'
-                        ? "group-hover:text-blue-600" 
-                        : "group-hover:text-blue-400"
-                  }`} />
-                </button>
-                <MegaPanel section="services" />
+              {/* Services Mega menu */}
+              <div className="relative" onMouseEnter={() => handleMenuEnter("services")} onMouseLeave={handleMenuLeave} onClick={(e) => e.stopPropagation()}>
+                <ServicesMegaMenu 
+                  color={{
+                    text: isScrolled || openMenu || pathname !== '/' 
+                      ? '#171717' 
+                      : '#ffffff'
+                  }}
+                  isOpen={openMenu === "services"}
+                  onMouseEnter={() => handleMenuEnter("services")}
+                  onMouseLeave={handleMenuLeave}
+                  onClose={() => setOpenMenu(null)}
+                />
               </div>
               
-              <div className="relative" onMouseEnter={() => setOpenMenu("whyus")} onClick={(e) => e.stopPropagation()}>
+              <div className="relative" onMouseEnter={() => handleMenuEnter("whyus")} onMouseLeave={handleMenuLeave} onClick={(e) => e.stopPropagation()}>
+                {/* Invisible bridge area */}
+                <div className="absolute top-full left-0 right-0 h-2 bg-transparent pointer-events-auto" onMouseEnter={handleMenuEnterArea}></div>
                 <button className={`group inline-flex items-center gap-2 text-base font-medium transition-all duration-300 py-3 px-3 relative ${
                   isScrolled || openMenu || pathname !== '/'
                     ? 'text-gray-900 hover:text-blue-600' 
@@ -462,7 +496,9 @@ export default function Navbar() {
                 <MegaPanel section="whyus" />
               </div>
               
-              <div className="relative" onMouseEnter={() => setOpenMenu("resources")} onClick={(e) => e.stopPropagation()}>
+              <div className="relative" onMouseEnter={() => handleMenuEnter("resources")} onMouseLeave={handleMenuLeave} onClick={(e) => e.stopPropagation()}>
+                {/* Invisible bridge area */}
+                <div className="absolute top-full left-0 right-0 h-2 bg-transparent pointer-events-auto" onMouseEnter={handleMenuEnterArea}></div>
                 <button className={`group inline-flex items-center gap-2 text-base font-medium transition-all duration-300 py-3 px-3 relative ${
                   isScrolled || openMenu || pathname !== '/'
                     ? 'text-gray-900 hover:text-blue-600' 
