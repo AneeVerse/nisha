@@ -75,6 +75,20 @@ export default function OurSolution() {
   const [activeServiceIndex, setActiveServiceIndex] = useState(0)
   const [isScrolling, setIsScrolling] = useState(false)
 
+  // Preload all service images when component mounts
+  useEffect(() => {
+    const preloadImages = () => {
+      SERVICES.forEach((service) => {
+        if (typeof window !== 'undefined') {
+          const img = new window.Image()
+          img.src = service.imageSrc
+        }
+      })
+    }
+
+    preloadImages()
+  }, [])
+
   // Intersection Observer to detect which service is in view
   useEffect(() => {
     const observers: IntersectionObserver[] = []
