@@ -100,7 +100,7 @@ const ServicesPage = () => {
           name: "Bulk Cargo Transportation",
           description: "Efficient transportation of bulk materials including steel coils, grains, and construction materials.",
           icon: <FaWarehouse />,
-          slug: "bulk-cargo-transportation",
+          slug: "bulk-cargo-solutions",
           features: [
             "Steel coils and metal products",
             "Grains and agricultural products",

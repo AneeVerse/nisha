@@ -100,16 +100,50 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
       {/* About Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
-              About This Service
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
+                  About This Service
+                </div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  {service.about.title}
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {service.about.description}
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-8">
+                {service.about.stats.map((stat, index) => (
+                  <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                    <div className="text-3xl lg:text-4xl font-bold text-purple-600 mb-2">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-              Professional Transportation Solutions
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              {service.about}
-            </p>
+            
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src={service.about.image}
+                  alt="About Service"
+                  width={600}
+                  height={500}
+                  className="w-full h-[500px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full opacity-30"></div>
+              <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-200 to-purple-300 rounded-full opacity-40"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -197,37 +231,7 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
         </div>
       </section>
 
-      {/* Specialized Equipment (if available) */}
-      {service.specializedEquipment && (
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-6">
-                Specialized Equipment
-              </div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Advanced <span className="text-orange-600">Equipment</span>
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {service.specializedEquipment.map((equipment, index) => {
-                const IconComponent = getIconForSection('equipment');
-                return (
-                  <div key={index} className="p-6 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-5 h-5 text-orange-600" />
-                      </div>
-                      <p className="text-gray-700 font-medium">{equipment}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
+
 
       {/* Industries Served */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -249,7 +253,8 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{industry}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{industry.description}</p>
                 </div>
               );
             })}
@@ -291,59 +296,9 @@ export default function ServiceTemplate({ service }: ServiceTemplateProps) {
         </div>
       </section>
 
-      {/* Compliance & Safety (if available) */}
-      {service.compliance && (
-        <section className="py-20 bg-red-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-semibold mb-6">
-                Compliance & Safety
-              </div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Safety <span className="text-red-600">First</span>
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {service.compliance.map((item, index) => {
-                const IconComponent = getIconForSection('compliance');
-                return (
-                  <div key={index} className="p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-red-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                        <p className="text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
 
-      {/* Emergency Support (if available) */}
-      {service.emergencySupport && (
-        <section className="py-20 bg-yellow-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-semibold mb-6">
-                Emergency Support
-              </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                24/7 Emergency Response
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                {service.emergencySupport}
-              </p>
-            </div>
-          </div>
-        </section>
-      )}
+
+
 
       <CtaBanner />
       <Footer />

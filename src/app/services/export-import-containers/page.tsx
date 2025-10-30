@@ -1,6 +1,6 @@
 import { getServiceBySlug } from "@/data/services";
-import ServiceTemplate from "@/components/ServiceTemplate";
 import { notFound } from "next/navigation";
+import ServiceTemplate from "@/components/ServiceTemplate";
 
 export default function ExportImportContainersPage() {
   const service = getServiceBySlug("export-import-containers");

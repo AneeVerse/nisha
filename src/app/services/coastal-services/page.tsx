@@ -2,8 +2,8 @@ import { getServiceBySlug } from "@/data/services";
 import { notFound } from "next/navigation";
 import ServiceTemplate from "@/components/ServiceTemplate";
 
-export default function ProjectCargoManagementPage() {
-  const service = getServiceBySlug("project-cargo-management");
+export default function CoastalServicesPage() {
+  const service = getServiceBySlug("coastal-services");
   
   if (!service) {
     notFound();
@@ -13,7 +13,7 @@ export default function ProjectCargoManagementPage() {
 }
 
 export async function generateMetadata() {
-  const service = getServiceBySlug("project-cargo-management");
+  const service = getServiceBySlug("coastal-services");
   
   if (!service) {
     return {

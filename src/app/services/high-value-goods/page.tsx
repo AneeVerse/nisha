@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import ServiceTemplate from '@/components/ServiceTemplate';
 
 export async function generateMetadata() {
-  const service = getServiceBySlug('logistics-consulting');
+  const service = getServiceBySlug('high-value-goods');
   
   if (!service) {
     return {
@@ -18,8 +18,8 @@ export async function generateMetadata() {
   };
 }
 
-export default function LogisticsConsultingPage() {
-  const service = getServiceBySlug('logistics-consulting');
+export default function HighValueGoodsPage() {
+  const service = getServiceBySlug('high-value-goods');
   
   if (!service) {
     notFound();

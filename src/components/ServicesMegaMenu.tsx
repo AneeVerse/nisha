@@ -118,7 +118,7 @@ const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({
           name: "Bulk Cargo Transportation",
           description: "Steel coils, grains, construction materials",
           icon: <FaWarehouse className="text-amber-600" />,
-          slug: "bulk-cargo-transportation"
+          slug: "bulk-cargo-solutions"
         },
         {
           name: "Chemical Transportation",
