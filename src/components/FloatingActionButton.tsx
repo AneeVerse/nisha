@@ -59,7 +59,7 @@ const FloatingActionButton = () => {
           </motion.a>
 
           <motion.a
-            href="tel:022 - 416322222"
+            href="tel:+91 9820420924"
             className="w-14 h-14 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-lg border border-blue-600"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -136,14 +136,14 @@ const FloatingActionButton = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <a
-                  href="tel:022 - 416322222"
+                  href="tel:+91 9820420924"
                   className="flex items-center text-blue-600 cursor-pointer"
                 >
                   <FaPhone size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">Call: 022 - 41632222</span>
+                  <span className="ml-3 text-lg font-medium text-gray-700">Call: +91 98 2042 0924</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('022 - 41632222')}
+                  onClick={() => handleCopy('+91 9820420924')}
                   className="text-gray-500 hover:text-blue-600 focus:outline-none"
                   whileTap={{ scale: 0.9 }}
                 >
