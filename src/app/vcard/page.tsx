@@ -401,7 +401,7 @@ export default function VCardPage() {
         }}
       >
         <Image
-          src="/images/vcard/qr.webp"
+          src="/images/vcard/qr1.png"
           alt="QR Code"
           width={40}
           height={40}
@@ -471,7 +471,7 @@ export default function VCardPage() {
           </button>
           <div className="flex flex-col items-center">
             <Image
-              src="/images/vcard/qr.webp"
+              src="/images/vcard/qr1.png"
               alt="QR Code"
               width={250}
               height={250}
