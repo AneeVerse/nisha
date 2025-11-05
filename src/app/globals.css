@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
+/* Branding Font Family - Only Medium and Semibold */
 @font-face {
-  font-family: 'Branding-Black';
-  src: url('/font/fonts/fonnts.com-Branding-Black.otf') format('opentype');
-  font-weight: normal;
+  font-family: 'Branding';
+  src: url('/font/fonts/fonnts.com-Branding-Medium.otf') format('opentype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Branding';
+  src: url('/font/fonts/fonnts.com-Branding-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,11 +36,30 @@
   }
 }
 
+/* Use Branding font for all text - Medium weight by default */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Branding-Black", Arial, Helvetica, sans-serif;
- 
+  font-family: "Branding", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Default font family for all elements */
+*, *::before, *::after {
+  font-family: "Branding", Arial, Helvetica, sans-serif;
+}
+
+/* All headings - Semibold (600) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* All body text and sub text - Medium (500) */
+p, body, div, span, a, li, td, th, label, input, textarea, select, button {
+  font-weight: 500;
 }
 
 html {

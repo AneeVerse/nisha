@@ -32,13 +32,15 @@ export default function AboutPage() {
               {/* Main Heading - Perfect Typography */}
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
-                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient">80 Square Feet</span> to India&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500 animate-gradient">Logistics Leader</span>
+                  Our Story
                 </h1>
               </div>
               
               {/* Description */}
               <p className="text-lg text-gray-700 leading-relaxed font-medium max-w-xl">
-                The inspiring story of how a father&apos;s dream, named after his daughter, grew into India&apos;s most trusted logistics partner serving <span className="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">500+ companies</span> across <span className="font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">16 industries</span>.
+                We started in 1982 with a simple idea: move cargo reliably, track it completely, and keep clients informed.
+                <br /><br />
+                43 years later, we&apos;re moving 96,000 shipments annually across India. We&apos;ve grown from local transport to pan-India operations with plans for Dubai and Africa.
               </p>
               
               {/* CTA Buttons - Perfect Alignment */}
@@ -132,7 +134,7 @@ export default function AboutPage() {
               Our Journey
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Where Dreams Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Determination</span>
+              What Sets Us Apart
             </h2>
             <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
           </div>
@@ -151,10 +153,10 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">The Beginning</h3>
-                      <p className="text-blue-600 font-semibold mb-4">Masjid Bunder, Mumbai</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Real tracking, not updates</h3>
+                      <p className="text-blue-600 font-semibold mb-4">Our GPS system</p>
                       <p className="text-gray-700 leading-relaxed text-lg">
-                        In a modest 80 square feet office, Mr. Nandkishor Agarwal planted the seeds of what would become India&apos;s logistics revolution. Named lovingly after his daughter Nisha, this wasn&apos;t just another business venture—it was a father&apos;s tribute and a visionary&apos;s mission.
+                        Our GPS system tracks through driver phones and cell towers. You get automated reports every hour not when someone remembers to call you.
                       </p>
                     </div>
                   </div>
@@ -175,10 +177,10 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">The Foundation</h3>
-                      <p className="text-indigo-600 font-semibold mb-4">Learning the Trade</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Owned + Leased fleet</h3>
+                      <p className="text-indigo-600 font-semibold mb-4">Flexibility</p>
                       <p className="text-gray-700 leading-relaxed text-lg">
-                        Mr. Nandkishor had already spent seven years mastering the rough and tumble of the transportation industry since arriving in Mumbai from Calcutta. Starting as a supervisor, he learned every nuance of the trade.
+                        75 owned vehicles and 650 leased vehicles give us flexibility. Need 50 trucks next week? We can make it happen.
                       </p>
                     </div>
                   </div>
@@ -203,11 +205,11 @@ export default function AboutPage() {
                       <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
                         <div className="w-6 h-6 bg-white rounded-full"></div>
                       </div>
-                      <h3 className="text-3xl font-bold">The Pioneer&apos;s Vision</h3>
+                      <h3 className="text-3xl font-bold">500 containers ready</h3>
                     </div>
                     
                     <p className="text-blue-100 mb-8 leading-relaxed text-lg">
-                      What set Nisha Roadways apart from day one was our founder&apos;s revolutionary idea: empty container transportation by road. This pioneering effort gave us a head start in a domain that others hadn&apos;t even considered.
+                      We own 500 containers in different sizes and types. GP, high cube, reefer, tank, flat rack whatever your cargo needs.
                     </p>
                     
                     <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
@@ -215,10 +217,10 @@ export default function AboutPage() {
                         <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center">
                           <div className="w-4 h-4 bg-white rounded-full"></div>
                         </div>
-                        <p className="text-yellow-300 font-bold text-lg">Today, four decades later</p>
+                        <p className="text-yellow-300 font-bold text-lg">Our Approach</p>
                       </div>
                       <p className="text-blue-100 leading-relaxed">
-                        That same spirit of innovation drives our partnerships with <span className="font-bold text-white">500+ companies</span> across shipping, retail, pharmaceuticals, chemicals, infrastructure, aviation, defense, and countless other sectors.
+                        We check container conditions before pickup. We provide bottle seals for your cargo. We verify everything at delivery and inform you immediately if there&apos;s an issue. When you need escorts, special locks, or brand-new containers for high-value cargo—you get them. No upcharges, no negotiations.
                       </p>
                     </div>
                   </div>
@@ -290,11 +292,50 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Technology Integration */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Technology Integration</h2>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              We&apos;re building <span className="font-bold text-blue-600">DICE</span>, our end-to-end logistics platform. It handles orders, tracking, documentation, and billing with minimal human intervention. AI integration improves route planning and reduces delivery times.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Training Matters */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Training Matters</h2>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              <span className="font-bold text-blue-600">Aamita</span> is our weekly training program where industry experts share real experiences. Our team learns from people who&apos;ve handled ODC movements in monsoons, cleared customs in 2 hours, and managed port congestion. Better training means better service for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Building Relationships */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Building Relationships</h2>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              We organize the <span className="font-bold text-blue-600">Nisha Cricket Team IPL Championship</span> every year. Clients join us for friendly matches. It&apos;s not about winning—it&apos;s about knowing the people who move your cargo.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Leadership Team */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">The Dream Team Behind India&apos;s Logistics Success</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Leadership (DREAM TEAM)</h2>
             <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
           </div>
           
@@ -319,7 +360,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Nandkishor Agarwal</h3>
                 <p className="text-blue-600 font-semibold mb-4">Founder & Chairman</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Born and brought up in Calcutta, moved to Mumbai in 1975. His 43 years of rich experience in the transport sector has earned him tremendous goodwill and respect among clients, competitors, and industry leaders.
+                  Born and brought up in Calcutta, Mr. Nandkishor Agarwal moved to Mumbai in 1975. Having completed his education in Calcutta, he got a job in a small transport company as Supervisor as soon as he arrived in Mumbai. He subsequently started out on his own and founded Nisha Roadways Pvt. Ltd. in 1982. The company has grown from strength to strength over the years. His rich experience of 43 years in the transport sector has earned him tremendous goodwill and respect amongst his clients, competitors and industry biggies.
                 </p>
               </div>
             </div>
@@ -344,7 +385,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Navin Agarwal</h3>
                 <p className="text-green-600 font-semibold mb-4">Chief Executive Officer</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  B.Com from Mumbai University and MBA from K.J. Somaiya Institute. Joined in 2000, transformed Nisha Roadways from 4 branches to 30+ branches pan-India with innovative leadership.
+                  After completing his B.Com from Mumbai University, Navin acquired an MBA from K. J. Somaiya Institute of Management Studies, Mumbai, and subsequently joined the business in the year 2000. Bringing innovative ideas, he worked to boost the business from just four to 30+ branches, thus widening the network pan-India. Making calculated strategies work for him, he diversified into other segments like tank division, LCL, FCL services, warehousing and packaging etc. Today under his astute supervision, NRPL is steadily growing with their own fleet on roads.
                 </p>
               </div>
             </div>
@@ -369,7 +410,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Rajkumar Agarwal</h3>
                 <p className="text-purple-600 font-semibold mb-4">Mentor</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Practicing lawyer specializing in Income Tax who left practice for real estate in 1990. Founder and Managing Director of Kolkata&apos;s AMBEY GROUP with 20+ years construction expertise.
+                  Mr. Raj Kumar Agarwal, a practicing lawyer in the field of Income tax, left his practice to pursue his dream in the field of Real estate in the year 1990. Currently the founder & Managing Director of Kolkata&apos;s Real Estate company &quot;AMBEY GROUP&quot;, engaged in construction and land development for both residential as well as commercial spaces since more than two decades.
                 </p>
               </div>
             </div>
@@ -394,7 +435,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Sumit Singhania</h3>
                 <p className="text-orange-600 font-semibold mb-4">Chartered Accountant, BAS & CO.</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  18+ years experience in audit, finance, real estate, and taxation. Extensive knowledge of Indian real estate sector with Big 4 CA firms experience.
+                  He is a chartered accountant with over 18 years of working experience in the field of audit, finance, real-estate and taxation. He has extensive knowledge of the Indian real-estate sector and has passion for developing innovative products for the real-estate sector. He carries with him the experience of working with the big 4 CA Firms and has executed several projects in the country as the leader. He is presently serving as a Consultant in BAS & CO. LLP and is also acting as a CEO & Founder of Distress Bricks Private Limited.
                 </p>
               </div>
             </div>
@@ -419,7 +460,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Arun Kumar Pandey</h3>
                 <p className="text-teal-600 font-semibold mb-4">Chartered Accountant, Pandey & Associates</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Rock-solid 30 years as Chartered Accountant with 15 big-league companies before establishing own firm. In-depth industry proficiency invaluable to our core group.
+                  Arun Pandey comes with a rock solid experience of 30 years as a Chartered Accountant. Having worked with 15 companies which are in the big league, today he runs his own company &quot;A Pandey & Associates&quot;. Immensely benefitting his collective experience working has given him in-depth proficiency about the working of this industry. Today he is amongst the core group of NRPL.
                 </p>
               </div>
             </div>

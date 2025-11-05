@@ -27,168 +27,168 @@ const ServicesPage = () => {
   const serviceCategories = [
     {
       id: "container-logistics",
-      title: "Container Logistics Solutions",
-      description: "Complete containerized cargo management with end-to-end solutions for all your container transportation needs.",
+      title: "Container Services",
+      description: "Choose the service that fits your cargo. Need multiple solutions? We handle combined shipments too.",
       color: "bg-blue-50 border-blue-200",
       gradient: "from-blue-500 to-blue-600",
       services: [
         {
-          name: "Empty Container Transportation (ECT)",
-          description: "Comprehensive empty container services for both Exim and domestic requirements with efficient positioning and repositioning.",
+          name: "Empty Container Transportation",
+          description: "Short haul from ports to nearby yards. Long haul across states to ICDs and empty parks.",
           icon: <FaBoxes />,
           slug: "empty-container-transportation",
           features: [
-            "Exim empty containers (shipping lines)",
-            "Domestic empty containers (sale/lease)",
-            "Efficient positioning and repositioning"
+            "Short haul from ports to nearby yards",
+            "Long haul across states to ICDs",
+            "Empty parks connections"
           ]
         },
         {
           name: "Export Import Containers",
-          description: "Specialized ExIm transport services facilitating seamless international trade operations.",
+          description: "Door-to-port for exports. Port-to-door for imports. Complete tracking and documentation.",
           icon: <FaShippingFast />,
           slug: "export-import-containers",
           features: [
-            "Export container logistics",
-            "Import container logistics", 
-            "Customs clearance support"
+            "Door-to-port for exports",
+            "Port-to-door for imports", 
+            "Complete tracking and documentation"
           ]
         },
         {
-          name: "Domestic Cargo In Our Containers",
-          description: "Secured cargo transportation in our owned ISO containers for domestic shipments.",
+          name: "Domestic Containers",
+          description: "Your cargo in our 20-foot or 40-foot ISO containers. Apply your own seals for security.",
           icon: <FaTruck />,
           slug: "domestic-cargo-containers",
           features: [
-            "Containerized domestic transportation",
-            "Secured cargo in owned ISO containers",
-            "Door-to-door delivery"
+            "20-foot or 40-foot ISO containers",
+            "Apply your own seals for security",
+            "Domestic cargo transport"
           ]
         }
       ]
     },
     {
       id: "specialized-cargo",
-      title: "Specialized Cargo Solutions", 
+      title: "Specialized Transport", 
       description: "Custom solutions for unique cargo requirements with specialized handling and transportation expertise.",
       color: "bg-amber-50 border-amber-200",
       gradient: "from-amber-500 to-amber-600",
       services: [
         {
-          name: "Solar Panel & Parts Transportation",
-          description: "Specialized logistics for renewable energy components with careful handling of fragile solar equipment.",
+          name: "Solar Panel Transportation",
+          description: "Container vehicles and open trailers for fragile solar panels. From ports, warehouses, or manufacturing units.",
           icon: <FaSolarPanel />,
           slug: "solar-panel-transportation",
           features: [
-            "Solar modules and photovoltaic panels",
-            "Renewable energy components",
-            "Temperature-controlled transport"
+            "Container vehicles and open trailers",
+            "Fragile solar panel handling",
+            "From ports, warehouses, or manufacturing units"
           ]
         },
         {
-          name: "Over Dimension Cargo (ODC)",
-          description: "Expert handling of oversized machinery and project cargo with specialized equipment and permits.",
+          name: "ODC Transport",
+          description: "Vehicles from 40-foot to 100-foot for oversized cargo. Route surveys, permissions, and escorts included.",
           icon: <FaIndustry />,
           slug: "over-dimension-cargo",
           features: [
-            "Oversized machinery and equipment",
-            "Project cargo management",
-            "Route surveys and permits"
+            "40-foot to 100-foot vehicles",
+            "Route surveys and permissions",
+            "Escorts included"
           ]
         },
         {
-          name: "Bulk Cargo Transportation",
-          description: "Efficient transportation of bulk materials including steel coils, grains, and construction materials.",
+          name: "Bulk Cargo",
+          description: "Wood, grains, coal, steel coils, plates, TMT bars across India.",
           icon: <FaWarehouse />,
           slug: "bulk-cargo-solutions",
           features: [
-            "Steel coils and metal products",
-            "Grains and agricultural products",
-            "Construction materials"
+            "Wood, grains, coal",
+            "Steel coils, plates, TMT bars",
+            "Pan-India coverage"
           ]
         },
         {
-          name: "Chemical Transportation",
-          description: "Safe and compliant transportation of chemicals in specialized tank containers.",
+          name: "Chemical Transport",
+          description: "20-foot tank containers for liquids and gases. No leakage, no pilferage.",
           icon: <FaFlask />,
           slug: "chemical-transportation",
           features: [
-            "Hazardous and non-hazardous chemicals",
-            "ISO tank containers",
-            "Safety compliance and documentation"
+            "20-foot tank containers",
+            "Liquids and gases",
+            "No leakage, no pilferage"
           ]
         }
       ]
     },
     {
       id: "multimodal-transport",
-      title: "Multimodal Transport Solutions",
+      title: "Alternative Transport",
       description: "Integrated transportation across multiple modes for optimized logistics and cost-effective solutions.",
       color: "bg-emerald-50 border-emerald-200",
       gradient: "from-emerald-500 to-emerald-600",
       services: [
         {
           name: "Rail Services",
-          description: "Comprehensive rail transportation for containers and bulk cargo with integrated rail-road solutions.",
+          description: "Partner with rail operators for cost-effective long-distance transport of high-volume cargo.",
           icon: <FaTrain />,
           slug: "rail-services",
           features: [
-            "Container by rail",
-            "Bulk cargo by rail",
-            "Integrated rail-road solutions"
+            "Cost-effective long-distance transport",
+            "High-volume cargo",
+            "Rail operator partnerships"
           ]
         },
         {
           name: "Coastal Services",
-          description: "Maritime shipping services across 10 major Indian ports providing cost-effective alternatives to road transport.",
+          description: "Connect 10 major ports: Mundra, Hazira, JNPT, Pipava, Mangalore, Cochin, Tuticorin, Chennai, Vizag, Haldia, Kolkata.",
           icon: <FaShip />,
           slug: "coastal-services",
           features: [
-            "Coastal shipping across major ports",
-            "Maritime alternative to road transport",
-            "Port-to-port connectivity"
+            "10 major ports connected",
+            "Bi-directional service",
+            "Cost-effective coastal transport"
           ]
         }
       ]
     },
     {
       id: "value-added-services",
-      title: "Value-Added Logistics Services",
+      title: "Value-Added Services",
       description: "Enhanced services for optimal supply chain management with comprehensive storage and specialized handling.",
       color: "bg-violet-50 border-violet-200", 
       gradient: "from-violet-500 to-violet-600",
       services: [
         {
           name: "LCL Consolidation",
-          description: "Less-than-Container-Load cargo optimization for small shipments with cost-effective solutions.",
+          description: "Ship small quantities (1 kg to 20+ kg) by sharing container space. Pay only for your cargo's weight or volume.",
           icon: <FaBoxes />,
           slug: "lcl-consolidation",
           features: [
-            "Less-than-Container-Load cargo clubbing",
-            "Small shipment optimization",
-            "Cost-effective solutions"
+            "1 kg to 20+ kg shipments",
+            "Share container space",
+            "Pay only for weight or volume"
           ]
         },
         {
-          name: "High Value Goods Transportation",
-          description: "Premium cargo services with GPS tracking and armed escort for valuable and sensitive shipments.",
+          name: "Transportation Of High Value Goods",
+          description: "GPS tracking, special locks, armed escorts, brand-new containers.",
           icon: <FaShieldAlt />,
           slug: "high-value-goods",
           features: [
-            "GPS-tracked premium cargo",
-            "Armed escort services",
-            "Enhanced security solutions"
+            "GPS tracking",
+            "Special locks and armed escorts",
+            "Brand-new containers"
           ]
         },
         {
           name: "Storage and Warehousing",
-          description: "Comprehensive storage solutions including container parks, warehousing, and specialized storage facilities.",
+          description: "Empty container parks, loaded container storage, cargo warehouses, cold storage, pharma-grade facilities.",
           icon: <FaWarehouse />,
           slug: "storage-warehousing",
           features: [
             "Empty container parks",
             "Loaded container storage",
-            "Cold storage and specialized facilities"
+            "Cold storage and pharma-grade facilities"
           ]
         }
       ]
@@ -316,10 +316,10 @@ const ServicesPage = () => {
               Service Categories
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive <span className="text-blue-600">Logistics Solutions</span>
+              Complete Logistics Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our full range of specialized services designed to meet every aspect of your transportation and logistics needs.
+              Choose the service that fits your cargo. Need multiple solutions? We handle combined shipments too.
             </p>
           </motion.div>
 

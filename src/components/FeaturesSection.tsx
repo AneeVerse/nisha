@@ -19,10 +19,10 @@ const FeaturesSection = () => {
                 About Our Company
               </div>
               <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                The Beginning That <span className="text-blue-600">Never Stopped Growing</span>
+                Decades of Excellence. <span className="text-blue-600">Built on Trust.</span>
               </h2>
               <p className="text-base text-gray-600 leading-relaxed">
-                Founded by <span className="font-semibold text-gray-900">Mr. Nandkishor Agarwal</span> in <span className="font-semibold text-blue-600">1982</span>, Nisha Roadways started from an 80 sq ft office and grew into India's leading logistics powerhouse, now serving <span className="font-semibold text-blue-600">500+ companies</span> with the same dedication that built our legacy.
+                Since 1982, Nisha Roadways has moved over 2.3 million shipments across India. We're not just moving cargo we're orchestrating supply chains that work.
               </p>
             </div>
             
@@ -38,10 +38,10 @@ const FeaturesSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">
-                    Pioneer in Empty Container Movement
+                    43 years of logistics expertise
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    We revolutionized empty container transportation by road, setting industry benchmarks that others follow.
+                    43 years of logistics expertise serving 300+ active clients across every major industry sector.
                   </p>
                 </div>
               </div>
@@ -54,10 +54,10 @@ const FeaturesSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">
-                    Three Decades of Excellence
+                    Pan-India network
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Since 1982, we've delivered consistent quality that earned us the trust and respect of India's biggest brands.
+                    Pan-India network with 20+ offices connecting ports, ICDs, warehouses, and factories from Mundra to Kolkata.
                   </p>
                 </div>
               </div>

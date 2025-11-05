@@ -29,14 +29,10 @@ export default function Hero() {
         <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-24">
           <div className="max-w-4xl">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-white leading-[0.9] tracking-tight mb-8">
-              India's Most Trusted <br />
-              <span className="text-white">
-               Logistics Partner 
-              </span>
+              Intelligent Solutions for Every Supply Chain Challenge
             </h1>
              <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 max-w-[800px]  mb-8 font-ligh lg:mt-10">
-              From containers to project cargo, we move what matters most to your business
-              Pan-India coverage. Zero damage guarantee. 24/7 tracking..
+              From empty container optimization to complex ODC movements, we transform logistics challenges into competitive advantages. Twelve integrated solutions. One intelligent network. Infinite possibilities for your business.
             </p>
 
              {/* CTA Button - Match navbar styling */}
@@ -50,7 +46,7 @@ export default function Hero() {
                 
                 {/* Content */}
                 <span className="relative flex items-center gap-2">
-                 GET QUOTE NOW
+                 DISCOVER SOLUTIONS
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
                     <path d="M5 12h14"/>
                     <path d="m12 5 7 7-7 7"/>

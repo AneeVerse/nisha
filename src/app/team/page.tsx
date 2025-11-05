@@ -40,14 +40,11 @@ export default function TeamPage() {
           </div>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-12 leading-tight tracking-tight">
-            The People Behind
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mt-1">
-              India&apos;s Logistics Success
-            </span>
+            The People Moving India
           </h1>
           
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-16 max-w-5xl mx-auto leading-relaxed font-medium">
-            Meet the visionary leaders, dedicated professionals, and passionate team members who drive excellence in every mile we cover across India&apos;s logistics landscape.
+            43 years in business. 96,000 trips per year. That doesn&apos;t happen by accident—it happens because of the people behind it.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
@@ -95,8 +92,8 @@ export default function TeamPage() {
                     NA
                   </div>
                   <div className="text-center sm:text-left">
-                    <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3">Nandkishor Agarwal</h3>
-                    <p className="text-lg lg:text-xl text-blue-600 font-semibold mb-2">Chairman & Managing Director</p>
+                    <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3">NK AGARWAL</h3>
+                    <p className="text-lg lg:text-xl text-blue-600 font-semibold mb-2">Founder & Chairman</p>
                     <p className="text-gray-600 font-medium">Visionary Leader & Industry Pioneer</p>
                   </div>
                 </div>
@@ -148,8 +145,8 @@ export default function TeamPage() {
                     NA
                   </div>
                   <div className="text-center sm:text-left">
-                    <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3">Navin Agarwal</h3>
-                    <p className="text-lg lg:text-xl text-purple-600 font-semibold mb-2">Executive Director</p>
+                    <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3">NAVIN AGARWAL</h3>
+                    <p className="text-lg lg:text-xl text-purple-600 font-semibold mb-2">CEO</p>
                     <p className="text-gray-600 font-medium">Strategic Operations & Growth Leader</p>
                   </div>
                 </div>
@@ -222,8 +219,8 @@ export default function TeamPage() {
                   <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 shadow-xl">
                     RA
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">Rajkumar Agarwal</h3>
-                  <p className="text-lg text-blue-600 font-semibold mb-2">Senior Advisor</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">RAJKUMAR AGARWAL</h3>
+                  <p className="text-lg text-blue-600 font-semibold mb-2">Mentor</p>
                   <p className="text-gray-600 font-medium">Strategic Planning & Operations</p>
                 </div>
                 
@@ -261,8 +258,8 @@ export default function TeamPage() {
                   <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 shadow-xl">
                     SS
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">Sumit Singhania</h3>
-                  <p className="text-lg text-purple-600 font-semibold mb-2">Technology Advisor</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">SUMIT SINGHANIA</h3>
+                  <p className="text-lg text-purple-600 font-semibold mb-2">C.A (Consultant)</p>
                   <p className="text-gray-600 font-medium">Digital Innovation & Tech Strategy</p>
                 </div>
                 
@@ -300,8 +297,8 @@ export default function TeamPage() {
                   <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 shadow-xl">
                     AP
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">Arun Kumar Pandey</h3>
-                  <p className="text-lg text-green-600 font-semibold mb-2">Compliance Advisor</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">ARUN KUMAR PANDEY</h3>
+                  <p className="text-lg text-green-600 font-semibold mb-2">C.A (Consultant)</p>
                   <p className="text-gray-600 font-medium">Regulatory Affairs & Risk Management</p>
                 </div>
                 

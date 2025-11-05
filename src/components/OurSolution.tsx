@@ -24,46 +24,46 @@ type ServiceConfig = {
 const SERVICES: ServiceConfig[] = [
   {
     key: "container-logistics",
-    label: "Container Logistics Solutions",
+    label: "Container Solutions",
     imageSrc: "/images/our-solution/road.avif",
-    imageAlt: "Container logistics solutions",
-    heading: "Container Logistics Solutions",
+    imageAlt: "Container solutions",
+    heading: "Container Solutions",
     description:
-      "Comprehensive container transportation services including empty containers, export-import logistics, and domestic cargo movement across all major ports and ICDs.",
-    benefits: ["Port-to-door connectivity", "Real-time tracking", "Customs support"],
+      "Complete container logistics including Empty Container Transportation (ECT), Export Import Containers (ExIm Transport Service), and Domestic Cargo In Our Containers across all major ports and ICDs.",
+    benefits: ["Empty Container Transportation (ECT)", "Export Import Containers", "Domestic Cargo In Our Containers"],
     link: "/services#container-logistics",
   },
   {
     key: "specialized-cargo",
-    label: "Specialized Cargo Solutions",
+    label: "Specialized Transport",
     imageSrc: "/images/our-solution/ship.avif",
-    imageAlt: "Specialized cargo solutions",
-    heading: "Specialized Cargo Solutions",
+    imageAlt: "Specialized transport",
+    heading: "Specialized Transport",
     description:
-      "Custom solutions for unique cargo requirements including project cargo, bulk transportation, chemical logistics, and solar panel transportation with specialized handling.",
-    benefits: ["Custom engineering", "Safety protocols", "Specialized equipment"],
+      "Custom solutions for unique cargo requirements including Solar Panel & Parts Transportation (SolarTransport), Over Dimension Cargo (ODC), and Bulk Cargo Transportation with specialized handling.",
+    benefits: ["Solar Panel & Parts Transportation", "Over Dimension Cargo (ODC)", "Bulk Cargo Transportation"],
     link: "/services#specialized-cargo",
   },
   {
     key: "multimodal-transport",
-    label: "Multimodal Transport Solutions",
+    label: "Alternative Logistics",
     imageSrc: "/images/our-solution/railway.avif",
-    imageAlt: "Multimodal transport solutions",
-    heading: "Multimodal Transport Solutions",
+    imageAlt: "Alternative logistics",
+    heading: "Alternative Logistics",
     description:
-      "Integrated transportation across multiple modes including rail services and coastal shipping, providing seamless connectivity and cost-effective alternatives.",
-    benefits: ["Multi-mode integration", "Cost optimization", "Flexible routing"],
+      "Integrated transportation solutions including Rail Services, Coastal Services, and LCL Consolidation, providing seamless connectivity and cost-effective alternatives.",
+    benefits: ["Rail Services", "Coastal Services", "LCL Consolidation"],
     link: "/services#multimodal-transport",
   },
   {
     key: "value-added-services",
-    label: "Value-Added Logistics Services",
+    label: "Value-Added Services",
     imageSrc: "/images/our-solution/airway.avif",
-    imageAlt: "Value-added logistics services",
-    heading: "Value-Added Logistics Services",
+    imageAlt: "Value-added services",
+    heading: "Value-Added Services",
     description:
-      "Enhanced services for optimal supply chain management including LCL consolidation, high-value goods escort, and comprehensive warehousing solutions.",
-    benefits: ["Supply chain optimization", "Security services", "Inventory management"],
+      "Enhanced services for optimal supply chain management including Transportation Of High Value Goods, Storage and Warehousing, and Chemical Transportation in Tank Containers.",
+    benefits: ["Transportation Of High Value Goods", "Storage and Warehousing", "Chemical Transportation"],
     link: "/services#value-added-services",
   },
 ]
@@ -156,7 +156,7 @@ export default function OurSolution() {
 
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-6">
-            COMPLETE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">LOGISTICS SOLUTIONS</span> UNDER ONE ROOF
+            Integrated Intelligence. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">Seamless Connectivity.</span>
 
           </h2>
           
@@ -164,8 +164,7 @@ export default function OurSolution() {
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-6"></div>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive range of logistics services designed to meet your transportation needs with
-            precision and reliability.
+            Trade flows better when every connection works intelligently. We orchestrate comprehensive supply chain solutions that anticipate challenges, optimize resources, and change what's possible for businesses across India.
           </p>
         </div>
       </div>
@@ -281,7 +280,7 @@ export default function OurSolution() {
                           
                           {/* Content */}
                           <span className="relative flex items-center gap-2">
-                            Know More
+                            EXPLORE ALL SERVICES
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
                               <path d="M5 12h14"/>
                               <path d="m12 5 7 7-7 7"/>

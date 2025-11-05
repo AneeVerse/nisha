@@ -532,7 +532,7 @@ export default function Navbar() {
                 
                 {/* Content */}
                 <span className="relative flex items-center gap-2">
-                 GET QUOTE NOW
+                 DISCOVER SOLUTIONS
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
                     <path d="M5 12h14"/>
                     <path d="m12 5 7 7-7 7"/>

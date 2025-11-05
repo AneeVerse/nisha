@@ -23,17 +23,12 @@ const CtaBanner: React.FC = () => {
             <div className="flex-1 text-center lg:text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-4">
                 <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                  Ready to Experience the
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-                  Nisha Roadways Difference?
+                  Ready to Transform Your Supply Chain?
                 </span>
               </h2>
               
               <p className="text-base sm:text-lg text-slate-200 mb-6 leading-relaxed font-light">
-                Join <span className="font-semibold text-blue-300">500+ companies</span> who trust us with their cargo. 
-                Get a quote in <span className="font-semibold text-indigo-300">24 hours</span>.
+                Let's discuss how our integrated logistics solutions can optimize your operations, reduce costs, and accelerate your growth.
               </p>
 
               {/* CTA Button */}
@@ -41,7 +36,7 @@ const CtaBanner: React.FC = () => {
                 <button className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm rounded-lg shadow-xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="relative z-10 flex items-center gap-2">
-                    Get Your Custom Quote
+                    START YOUR FIRST SHIPMENT
                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>

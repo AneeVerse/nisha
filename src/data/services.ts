@@ -34,54 +34,54 @@ export interface ServiceData {
 export const servicesData: ServiceData[] = [
   {
     slug: "empty-container-transportation",
-    title: "India's Pioneer in Empty Container Transportation",
-    subtitle: "Connecting all major ports and ICDs with cost-effective empty container solutions since 1982.",
+    title: "Moving Empty Containers Across India",
+    subtitle: "We transport empty containers between ports, ICDs, yards, and customer locations. Choose short haul or long haul based on your distance needs.",
     heroImage: "/images/use-everywhere/images1.png",
     about: {
-      title: "Revolutionizing Container Movement",
-      description: "Nisha Roadways revolutionized empty container movement by road in India. We handle 20ft, 40ft, and 45ft empty containers with specialized skeleton trailers and platform vehicles, ensuring quick turnaround times at competitive rates.",
+      title: "Container Types We Handle",
+      description: "We handle all types of empty containers including GP (General Purpose), High cube, Reefer, Generator containers with machinery, Tank containers, Flat rack and open top containers, and Office containers. Our fleet is equipped to transport any container type safely across India.",
       stats: [
-        { value: "1982", label: "Since" },
-        { value: "Pan-India", label: "Coverage" }
+        { value: "7+", label: "Container Types" },
+        { value: "3 Sizes", label: "Available" }
       ],
       image: "/images/use-everywhere/images2.png"
     },
     keyBenefits: [
-      { title: "Cost Leadership", description: "Up to 40% savings compared to rail transport" },
-      { title: "Speed Advantage", description: "Direct port-to-port delivery without transshipment delays" },
-      { title: "Fleet Expertise", description: "Dedicated skeleton and platform trailers" },
-      { title: "Network Coverage", description: "Presence at all major ports and ICDs nationwide" }
+      { title: "Condition checks", description: "We verify container condition before loading. Any damage gets documented and reported immediately." },
+      { title: "Fast turnaround", description: "Our drivers know the routes. We plan for traffic, border clearances, and weighbridge queues." },
+      { title: "Transparent pricing", description: "You get a quote upfront. No hidden charges for demurrage or detention unless caused by delays outside our control." },
+      { title: "Two Service Models", description: "Exim Container Transport (shipping lines) and Domestic Container Transport (container trading companies)." }
     ],
     technicalSpecs: [
-      { title: "Container Types", description: "20ft, 40ft, and 45ft empty containers" },
-      { title: "Vehicle Types", description: "Specialized skeleton trailers and platform vehicles" },
-      { title: "Load Capacity", description: "Up to 30 tons per vehicle with optimal weight distribution" },
+      { title: "Container Types", description: "GP, High cube, Reefer, Generator, Tank, Flat rack, Open top, Office containers" },
+      { title: "Available Sizes", description: "20-foot, 40-foot, 40-foot high cube containers" },
+      { title: "How It Works", description: "Pickup location & destination -> Vehicle assignment -> Driver picks up -> GPS tracking -> Delivery -> Documentation" },
       { title: "Safety Standards", description: "ISO certified handling procedures and GPS tracking" }
     ],
     industries: [
-      { title: "Manufacturing", description: "Raw materials, finished goods, and industrial equipment transportation" },
-      { title: "Automotive", description: "Vehicle parts, components, and finished automobiles" },
-      { title: "Textiles", description: "Fabric, garments, and textile machinery" },
-      { title: "Chemicals", description: "Industrial chemicals and pharmaceutical products" },
-      { title: "Electronics", description: "Consumer electronics and technology equipment" },
-      { title: "Retail", description: "Consumer goods and retail merchandise" }
+      { title: "Shipping Lines", description: "For Exim container repositioning" },
+      { title: "Container Trading", description: "For domestic sale/leasing container movement" },
+      { title: "Logistics Providers", description: "For integrated supply chain solutions" },
+      { title: "Manufacturers", description: "For internal container movements" }
     ],
     process: [
-      { title: "Booking Request", description: "Submit your container transportation requirements through our online portal or contact our team directly" },
-      { title: "Route Planning", description: "Our logistics team plans the optimal route considering traffic, regulations, and delivery timelines" },
-      { title: "Transportation", description: "Secure loading and transportation with real-time GPS tracking and regular status updates" },
-      { title: "Delivery", description: "Safe delivery to destination with proper documentation and confirmation of receipt" }
+      { title: "You tell us pickup location and destination", description: "Provide details for efficient planning." },
+      { title: "We assign the right vehicle based on container type", description: "Matching vehicle to cargo needs." },
+      { title: "Our driver picks up the container", description: "Prompt and professional pickup." },
+      { title: "GPS tracking activates automatically", description: "Real-time visibility during transit." },
+      { title: "Container delivered to destination", description: "Timely and secure delivery." },
+      { title: "Documentation provided instantly", description: "All paperwork handled efficiently." }
     ],
-    ctaText: "Ready to optimize your empty container logistics? Get started with India's most reliable service."
+    ctaText: "Request ECT Quote"
   },
   {
     slug: "export-import-containers",
-    title: "Seamless Export-Import Container Solutions",
-    subtitle: "Complete container logistics from port to door with customs support and damage-free delivery guarantee.",
+    title: "Complete Export Import Container Solutions",
+    subtitle: "We handle the full journey for your loaded containers. Export or import, we manage pickup, transport, tracking, and delivery.",
     heroImage: "/images/use-everywhere/images2.png",
     about: {
-      title: "Complete Container Logistics",
-      description: "Full-service export and import container transportation covering 20ft, 40ft, and 45ft loaded containers. From customs clearance documentation to final delivery, we handle every aspect of your container transportation needs with precision and reliability.",
+      title: "Export & Import Services",
+      description: "For exports: We collect empty containers from ports, yards, or ICDs, transport to your factory for stuffing, and bring loaded containers to designated ports. For imports: We transport loaded containers from ports and CFSs to your factory or warehouse, and return empty containers after destuffing. We work with shipping lines, CHAs, and freight forwarders.",
       stats: [
         { value: "24/7", label: "Operations" },
         { value: "100%", label: "Compliance" }
@@ -89,520 +89,231 @@ export const servicesData: ServiceData[] = [
       image: "/images/use-everywhere/images3.png"
     },
     keyBenefits: [
-      { title: "End-to-End Service", description: "Port pickup to final destination delivery" },
-      { title: "Customs Support", description: "Documentation and clearance assistance" },
-      { title: "Multi-Size Capability", description: "20ft, 40ft, 45ft container handling" },
-      { title: "Damage Prevention", description: "Specialized securing and handling protocols" }
+      { title: "Export Services", description: "Collect empty containers from ports, yards, or ICDs. Transport to your factory for stuffing. Bring loaded containers to designated ports." },
+      { title: "Import Services", description: "Transport loaded containers from ports and CFSs to your factory or warehouse. After destuffing, return empty containers to ports, ICDs, or empty parks." },
+      { title: "Documentation Support", description: "We work with your CHAs and freight forwarders to ensure smooth customs clearance. All documentation is provided digitally through our system." },
+      { title: "Safety Measures", description: "Pre-trip inspection, damage reporting, and insurance options available based on cargo value." }
     ],
     technicalSpecs: [
-      { title: "Container Types", description: "Standard, high-cube, refrigerated, open-top" },
-      { title: "Weight Capacity", description: "Up to 28 tons per container" },
-      { title: "Special Handling", description: "Reefer containers, hazardous goods containers" },
-      { title: "Documentation", description: "Complete customs and transport paperwork" }
+      { title: "Container Types", description: "20-foot GP and high cube, 40-foot GP and high cube, Reefer containers, Tank containers, Flat rack and open top" },
+      { title: "Export Process", description: "Container condition check -> Bottle seal provided -> Real-time tracking -> Timely delivery with port documentation" },
+      { title: "Import Process", description: "Pick up loaded container -> Track throughout transit -> Deliver to factory/warehouse -> Check cargo condition -> Return empty container" },
+      { title: "Insurance", description: "Available based on cargo value. We provide options from multiple insurers." }
     ],
     industries: [
-      { title: "Exporters", description: "International trade and export businesses" },
-      { title: "Importers", description: "Import companies and trading houses" },
-      { title: "Manufacturing", description: "Industrial manufacturers and suppliers" },
-      { title: "FMCG", description: "Fast-moving consumer goods companies" },
-      { title: "Pharmaceuticals", description: "Medical and pharmaceutical products" },
-      { title: "Automotive", description: "Auto parts and vehicle manufacturers" }
+      { title: "Shipping Lines", description: "Container movement for shipping lines" },
+      { title: "CHAs", description: "Customs House Agents requiring transport services" },
+      { title: "Freight Forwarders", description: "Freight forwarding companies" },
+      { title: "Exporters", description: "Export businesses" },
+      { title: "Importers", description: "Import companies and trading houses" }
     ],
     process: [
-      { title: "Route Planning", description: "Optimal route selection for timely delivery" },
-      { title: "Customs Coordination", description: "Documentation and clearance management" },
-      { title: "Secure Transport", description: "GPS tracking and real-time updates" },
-      { title: "Final Delivery", description: "Door-to-door service with delivery confirmation" }
+      { title: "Container condition check at pickup", description: "Ensuring container integrity before loading." },
+      { title: "Bottle seal provided for security", description: "Security seals for cargo protection." },
+      { title: "Real-time tracking during transit", description: "GPS tracking throughout the journey." },
+      { title: "Timely delivery with port documentation", description: "Complete documentation provided." },
+      { title: "All information shared with you and your CHA", description: "Transparent communication throughout." }
     ],
-    ctaText: "Streamline your container logistics with our comprehensive service."
-  },
-  {
-    slug: "project-cargo-management",
-    title: "Moving the Unmovable - Project Cargo Specialists",
-    subtitle: "Oversized, overweight, and complex cargo transportation with custom engineering solutions.",
-    heroImage: "/images/use-everywhere/images3.png",
-    about: {
-      title: "Industrial Cargo Expertise",
-      description: "Industrial machinery, power plant equipment, construction components - we move what others consider impossible. Our project cargo expertise includes route surveys, permit acquisition, custom vehicle configurations, and specialized handling equipment.",
-      stats: [
-        { value: "500T+", label: "Max Capacity" },
-        { value: "40+ Years", label: "Experience" }
-      ],
-      image: "/images/use-everywhere/images1.png"
-    },
-    keyBenefits: [
-      { title: "Custom Solutions", description: "Tailored vehicles and handling for unique cargo" },
-      { title: "Route Engineering", description: "Comprehensive route surveys and feasibility studies" },
-      { title: "Permit Management", description: "Complete regulatory compliance and documentation" },
-      { title: "Risk Mitigation", description: "Advanced planning and contingency protocols" }
-    ],
-    technicalSpecs: [
-      { title: "Weight Capacity", description: "Up to 500 tons with specialized trailers" },
-      { title: "Dimensional Limits", description: "No size restrictions with proper planning" },
-      { title: "Special Equipment", description: "Hydraulic trailers, SPMTs, cranes" },
-      { title: "Route Planning", description: "Bridge analysis and road feasibility studies" }
-    ],
-    industries: [
-      { title: "Power Generation", description: "Turbines, generators, and power plant equipment" },
-      { title: "Oil & Gas", description: "Refinery equipment and pipeline components" },
-      { title: "Construction", description: "Heavy machinery and construction equipment" },
-      { title: "Mining", description: "Mining equipment and processing machinery" },
-      { title: "Steel", description: "Steel plant equipment and heavy structures" },
-      { title: "Infrastructure", description: "Bridge components and infrastructure materials" }
-    ],
-    process: [
-      { title: "Site Survey", description: "Detailed route and site assessment" },
-      { title: "Engineering Design", description: "Custom transport solution development" },
-      { title: "Permit Acquisition", description: "Regulatory approvals and documentation" },
-      { title: "Execution", description: "Careful transport with expert supervision" }
-    ],
-    ctaText: "Ready to move your impossible cargo? Let our experts handle your project."
-  },
-  {
-    slug: "bulk-cargo-solutions",
-    title: "Efficient Bulk Cargo Transportation",
-    subtitle: "Specialized handling of dry bulk, liquid bulk, and break bulk cargo with advanced logistics.",
-    heroImage: "/images/use-everywhere/images1.png",
-    about: {
-      title: "Bulk Cargo Excellence",
-      description: "Comprehensive bulk cargo solutions for industries requiring specialized handling. Our fleet includes pneumatic tankers, tipper trucks, and specialized bulk carriers designed for efficient loading, transport, and discharge operations.",
-      stats: [
-        { value: "1000+", label: "Vehicles" },
-        { value: "99.5%", label: "On-Time" }
-      ],
-      image: "/images/use-everywhere/images2.png"
-    },
-    keyBenefits: [
-      { title: "Specialized Fleet", description: "Pneumatic tankers and bulk carriers" },
-      { title: "Contamination Control", description: "Dedicated vehicles for specific products" },
-      { title: "Efficient Loading", description: "Advanced loading and discharge systems" },
-      { title: "Quality Assurance", description: "Product integrity throughout transport" }
-    ],
-    technicalSpecs: [
-      { title: "Capacity Range", description: "15 to 45 cubic meters per vehicle" },
-      { title: "Product Types", description: "Cement, chemicals, grains, powders" },
-      { title: "Loading Systems", description: "Pneumatic, gravity, and mechanical systems" },
-      { title: "Safety Features", description: "Pressure monitoring and emergency systems" }
-    ],
-    industries: [
-      { title: "Cement", description: "Cement plants and construction materials" },
-      { title: "Chemicals", description: "Chemical powders and granules" },
-      { title: "Food Processing", description: "Grains, flour, and food ingredients" },
-      { title: "Pharmaceuticals", description: "Pharmaceutical powders and ingredients" },
-      { title: "Mining", description: "Mineral ores and processed materials" },
-      { title: "Agriculture", description: "Seeds, fertilizers, and agricultural products" }
-    ],
-    process: [
-      { title: "Product Analysis", description: "Understanding cargo characteristics and requirements" },
-      { title: "Vehicle Selection", description: "Choosing appropriate bulk carrier type" },
-      { title: "Loading Operations", description: "Efficient and contamination-free loading" },
-      { title: "Delivery", description: "Safe discharge at destination facilities" }
-    ],
-    ctaText: "Optimize your bulk cargo operations with our specialized solutions."
-  },
-  {
-    slug: "chemical-transportation",
-    title: "Safe Chemical Transportation Solutions",
-    subtitle: "Hazardous and non-hazardous chemical transport with full regulatory compliance and safety protocols.",
-    heroImage: "/images/use-everywhere/images2.png",
-    about: {
-      title: "Chemical Safety Excellence",
-      description: "Specialized chemical transportation services with trained drivers, certified vehicles, and comprehensive safety protocols. We handle acids, alkalis, solvents, and specialty chemicals with complete regulatory compliance and emergency response capabilities.",
-      stats: [
-        { value: "Zero", label: "Incidents" },
-        { value: "24/7", label: "Emergency Support" }
-      ],
-      image: "/images/use-everywhere/images3.png"
-    },
-    keyBenefits: [
-      { title: "Safety First", description: "Comprehensive safety protocols and training" },
-      { title: "Regulatory Compliance", description: "Full adherence to hazmat regulations" },
-      { title: "Emergency Response", description: "24/7 emergency support and response teams" },
-      { title: "Specialized Equipment", description: "Chemical-compatible tanks and safety systems" }
-    ],
-    technicalSpecs: [
-      { title: "Tank Materials", description: "Stainless steel, FRP, and specialized linings" },
-      { title: "Safety Systems", description: "Emergency valves, spill containment, monitoring" },
-      { title: "Capacity Range", description: "5,000 to 30,000 liters per vehicle" },
-      { title: "Temperature Control", description: "Heated and insulated tanks available" }
-    ],
-    industries: [
-      { title: "Chemical Manufacturing", description: "Chemical plants and processing facilities" },
-      { title: "Pharmaceuticals", description: "Pharmaceutical raw materials and intermediates" },
-      { title: "Petrochemicals", description: "Petroleum derivatives and specialty chemicals" },
-      { title: "Water Treatment", description: "Water treatment chemicals and solutions" },
-      { title: "Agriculture", description: "Pesticides, fertilizers, and agricultural chemicals" },
-      { title: "Food Processing", description: "Food-grade chemicals and additives" }
-    ],
-    process: [
-      { title: "Safety Assessment", description: "Chemical compatibility and risk analysis" },
-      { title: "Route Planning", description: "Safe route selection avoiding sensitive areas" },
-      { title: "Loading Procedures", description: "Certified loading with safety protocols" },
-      { title: "Monitored Transport", description: "Real-time monitoring with emergency backup" }
-    ],
-    ctaText: "Trust your chemical transportation to safety experts."
-  },
-  {
-    slug: "coastal-services",
-    title: "Comprehensive Coastal Transportation",
-    subtitle: "Specialized coastal cargo services connecting major ports with inland destinations efficiently.",
-    heroImage: "/images/use-everywhere/images3.png",
-    about: {
-      title: "Coastal Connectivity",
-      description: "Dedicated coastal transportation services linking major Indian ports with inland industrial centers. Our coastal fleet specializes in container, bulk, and break-bulk cargo movement with optimized routes and port connectivity.",
-      stats: [
-        { value: "12", label: "Major Ports" },
-        { value: "500+", label: "Routes" }
-      ],
-      image: "/images/use-everywhere/images1.png"
-    },
-    keyBenefits: [
-      { title: "Port Expertise", description: "Deep knowledge of all major coastal ports" },
-      { title: "Multimodal Solutions", description: "Seamless road-sea-rail integration" },
-      { title: "Cost Optimization", description: "Efficient coastal routes reducing transport costs" },
-      { title: "Time Efficiency", description: "Direct port connections minimizing delays" }
-    ],
-    technicalSpecs: [
-      { title: "Port Coverage", description: "All major and minor ports on Indian coast" },
-      { title: "Cargo Types", description: "Containers, bulk, break-bulk, project cargo" },
-      { title: "Fleet Variety", description: "Trailers, tankers, flatbeds, specialized vehicles" },
-      { title: "Documentation", description: "Complete port and customs documentation" }
-    ],
-    industries: [
-      { title: "Shipping Lines", description: "Container and cargo shipping companies" },
-      { title: "Port Operators", description: "Port authorities and terminal operators" },
-      { title: "Steel", description: "Steel plants and metal processing industries" },
-      { title: "Coal & Mining", description: "Coal transportation and mining operations" },
-      { title: "Petroleum", description: "Oil refineries and petroleum products" },
-      { title: "Fertilizers", description: "Fertilizer plants and agricultural inputs" }
-    ],
-    process: [
-      { title: "Port Coordination", description: "Seamless coordination with port authorities" },
-      { title: "Cargo Planning", description: "Optimal cargo consolidation and routing" },
-      { title: "Transport Execution", description: "Efficient movement with real-time tracking" },
-      { title: "Delivery Confirmation", description: "Proof of delivery and documentation" }
-    ],
-    ctaText: "Connect your coastal operations with our specialized services."
+    ctaText: "Get ExIm Quote"
   },
   {
     slug: "domestic-cargo-containers",
-    title: "Domestic Container Transportation",
-    subtitle: "Efficient domestic container movement connecting industrial centers across India.",
+    title: "Secure Domestic Cargo Transport",
+    subtitle: "Move your domestic cargo in our 20-foot or 40-foot ISO containers. You get the security of containerized transport without owning the container.",
     heroImage: "/images/use-everywhere/images1.png",
     about: {
-      title: "Domestic Container Excellence",
-      description: "Comprehensive domestic container transportation services connecting manufacturing hubs, distribution centers, and consumption markets across India. Our specialized fleet ensures safe, timely delivery of containerized cargo nationwide.",
+      title: "Perfect For Your Cargo",
+      description: "Ideal for CFS cargo removed from shipping lines, factory goods needing secure transportation, and high-value items like electronics, machinery, and pharmaceuticals. You get the security of containerized transport with your own seals, GPS tracking, and insurance options—all without owning the container.",
       stats: [
-        { value: "28", label: "States Covered" },
-        { value: "1000+", label: "Routes Daily" }
+        { value: "4", label: "Capacity Options" },
+        { value: "3", label: "Container Types" }
       ],
       image: "/images/use-everywhere/images2.png"
     },
     keyBenefits: [
-      { title: "Pan-India Network", description: "Comprehensive coverage across all states" },
-      { title: "Container Expertise", description: "Specialized handling of all container types" },
-      { title: "Hub Connectivity", description: "Direct connections between industrial centers" },
-      { title: "Flexible Scheduling", description: "Customized schedules for business needs" }
+      { title: "Perfect For", description: "CFS cargo, Factory goods, High-value items (electronics, machinery, pharmaceuticals)" },
+      { title: "Your own seals", description: "Apply your company's security seals. Only you or your consignee can break them." },
+      { title: "GPS tracking", description: "Real-time location updates. You know exactly where your cargo is." },
+      { title: "Insurance options", description: "Coverage based on declared cargo value. Multiple insurer options available." }
     ],
     technicalSpecs: [
-      { title: "Container Sizes", description: "20ft, 40ft, 45ft standard and high-cube" },
-      { title: "Vehicle Types", description: "Container trailers and multi-axle vehicles" },
-      { title: "Load Capacity", description: "Up to 32 tons per container" },
-      { title: "Tracking Systems", description: "GPS monitoring and status updates" }
+      { title: "Available Capacities", description: "9-ton, 18-ton, 22-ton, 25-ton vehicles" },
+      { title: "Container Types Available", description: "Standard 20-foot GP, Standard 40-foot GP, 40-foot high cube" },
+      { title: "Pricing Structure", description: "Vehicle capacity used, Distance traveled, Insurance (if opted), Additional services" },
+      { title: "Container Rental", description: "You don't pay for container rental—it's included." }
     ],
     industries: [
-      { title: "FMCG", description: "Fast-moving consumer goods distribution" },
-      { title: "Textiles", description: "Garment and textile industry logistics" },
-      { title: "Automotive", description: "Auto parts and component distribution" },
-      { title: "Electronics", description: "Consumer electronics and appliances" },
-      { title: "Pharmaceuticals", description: "Medical and pharmaceutical distribution" },
-      { title: "E-commerce", description: "Online retail and marketplace logistics" }
+      { title: "CFS Cargo", description: "Cargo removed from shipping lines and stored in warehouses" },
+      { title: "Factory Goods", description: "Domestic production needing secure transportation" },
+      { title: "High-Value Items", description: "Electronics, machinery, pharmaceuticals needing protection" },
+      { title: "Distributors", description: "Regional distribution and logistics" }
     ],
     process: [
-      { title: "Route Optimization", description: "Efficient route planning for timely delivery" },
-      { title: "Container Loading", description: "Professional loading and securing procedures" },
-      { title: "Transit Monitoring", description: "Real-time tracking and status updates" },
-      { title: "Final Delivery", description: "Safe delivery with proper documentation" }
+      { title: "Share cargo details", description: "Weight, dimensions, value, destination." },
+      { title: "We recommend vehicle capacity and container type", description: "Based on your cargo requirements." },
+      { title: "Container arrives at your location", description: "Prompt delivery to your facility." },
+      { title: "You stuff and seal the container", description: "Full control over cargo security." },
+      { title: "We transport with GPS tracking", description: "Real-time visibility throughout." },
+      { title: "You or your consignee destuffs at destination", description: "Convenient delivery process." }
     ],
-    ctaText: "Streamline your domestic container logistics with our nationwide network."
+    ctaText: "Book Domestic Container"
   },
   {
-    slug: "high-value-goods",
-    title: "High-Value Goods Transportation",
-    subtitle: "Secure transportation of valuable cargo with enhanced security protocols and insurance coverage.",
-    heroImage: "/images/use-everywhere/images2.png",
-    about: {
-      title: "Premium Security Solutions",
-      description: "Specialized transportation for high-value goods including electronics, pharmaceuticals, jewelry, and sensitive equipment. Our security-enhanced fleet provides maximum protection with GPS tracking, armed escorts, and comprehensive insurance coverage.",
-      stats: [
-        { value: "₹100Cr+", label: "Insurance Coverage" },
-        { value: "Zero", label: "Loss Record" }
-      ],
-      image: "/images/use-everywhere/images3.png"
-    },
-    keyBenefits: [
-      { title: "Maximum Security", description: "Multi-layered security protocols and monitoring" },
-      { title: "Insurance Coverage", description: "Comprehensive coverage for high-value cargo" },
-      { title: "Real-time Tracking", description: "Advanced GPS and communication systems" },
-      { title: "Trained Personnel", description: "Security-trained drivers and support staff" }
-    ],
-    technicalSpecs: [
-      { title: "Security Features", description: "GPS tracking, panic buttons, communication systems" },
-      { title: "Vehicle Types", description: "Armored and security-enhanced vehicles" },
-      { title: "Escort Services", description: "Armed security escorts when required" },
-      { title: "Insurance Limits", description: "Up to ₹100 crores coverage per shipment" }
-    ],
-    industries: [
-      { title: "Electronics", description: "High-end electronics and technology products" },
-      { title: "Pharmaceuticals", description: "Expensive medicines and medical equipment" },
-      { title: "Jewelry", description: "Precious metals and jewelry items" },
-      { title: "Banking", description: "Cash and valuable document transportation" },
-      { title: "Art & Antiques", description: "Valuable art pieces and collectibles" },
-      { title: "Aerospace", description: "Aircraft parts and precision instruments" }
-    ],
-    process: [
-      { title: "Security Assessment", description: "Risk analysis and security planning" },
-      { title: "Route Planning", description: "Secure route selection and timing" },
-      { title: "Secure Loading", description: "Supervised loading with security protocols" },
-      { title: "Protected Transit", description: "Monitored transport with security backup" }
-    ],
-    ctaText: "Protect your valuable cargo with our premium security services."
-  },
-  {
-    slug: "high-value-goods-escort",
-    title: "High-Value Goods Escort Services",
-    subtitle: "Armed escort services for extremely valuable cargo requiring maximum security protection.",
+    slug: "solar-panel-transportation",
+    title: "Specialized Solar Transportation",
+    subtitle: "We launched our dedicated solar transportation team two years ago to support India's renewable energy growth. We move solar panels from ports, warehouses, and manufacturing units across India.",
     heroImage: "/images/use-everywhere/images3.png",
     about: {
-      title: "Maximum Protection Services",
-      description: "Premium escort services for extremely high-value shipments requiring armed security protection. Our trained security personnel provide round-the-clock protection with advanced communication systems and emergency response protocols.",
+      title: "Why Solar Cargo Needs Specialists",
+      description: "Solar panels are fragile—they crack under pressure, break during improper loading, and get damaged by vibrations. Our team understands proper stacking, securing methods, and road conditions. We've trained drivers specifically for this cargo type and use specialized equipment including 40-foot and 20-foot container vehicles, plus open trailers with proper lashing points and tarpaulin coverage.",
       stats: [
-        { value: "Licensed", label: "Security Personnel" },
-        { value: "24/7", label: "Protection" }
+        { value: "2 Years", label: "Expertise" },
+        { value: "5+", label: "Equipment Types" }
       ],
       image: "/images/use-everywhere/images1.png"
     },
     keyBenefits: [
-      { title: "Armed Protection", description: "Licensed armed security personnel" },
-      { title: "Emergency Response", description: "Immediate response to security threats" },
-      { title: "Communication Systems", description: "Advanced communication and alert systems" },
-      { title: "Route Security", description: "Pre-planned secure routes and checkpoints" }
+      { title: "Why Solar Cargo Needs Specialists", description: "Solar panels are fragile. Our team understands proper stacking, securing methods, and road conditions. We've trained drivers specifically for this cargo type." },
+      { title: "Equipment We Use", description: "40-foot and 20-foot container vehicles for maximum protection. Open trailers with proper lashing points and tarpaulin coverage." },
+      { title: "What We Transport", description: "Solar panels (imported and domestic), Solar inverters, Mounting structures, Battery storage systems, Other solar installation equipment" },
+      { title: "Insurance", description: "We recommend insurance for all solar cargo. Coverage available based on invoice value or declared value." }
     ],
     technicalSpecs: [
-      { title: "Security Personnel", description: "Licensed and trained armed guards" },
-      { title: "Communication", description: "Satellite communication and emergency alerts" },
-      { title: "Vehicle Security", description: "Armored vehicles with security features" },
-      { title: "Response Time", description: "Immediate emergency response capability" }
+      { title: "Container Vehicles", description: "40-foot container vehicles for maximum protection, 20-foot container vehicles for smaller loads" },
+      { title: "Open Trailers", description: "Designed for solar panel loading, Proper lashing points, Tarpaulin coverage for weather protection" },
+      { title: "From Where to Where", description: "From ports (Mundra, JNPT, Chennai), From warehouses (CFS and private warehouses), From manufacturers (Domestic solar units), To sites (Solar farms, rooftop installations, distributor warehouses)" },
+      { title: "Our Process", description: "Pre-loading inspection -> Floor padding -> Systematic panel stacking -> Professional lashing -> GPS tracking -> Careful offloading" }
     ],
     industries: [
-      { title: "Banking", description: "Cash transportation and valuable documents" },
-      { title: "Jewelry", description: "High-value jewelry and precious metals" },
-      { title: "Government", description: "Sensitive government materials and documents" },
-      { title: "Defense", description: "Defense equipment and sensitive materials" },
-      { title: "Pharmaceuticals", description: "Extremely valuable medical products" },
-      { title: "Technology", description: "Sensitive technology and prototypes" }
+      { title: "Solar Manufacturers", description: "Solar panel and component manufacturers" },
+      { title: "EPC Contractors", description: "Engineering, procurement, and construction companies" },
+      { title: "Power Developers", description: "Renewable energy project developers" },
+      { title: "Distributors", description: "Solar equipment distributors and dealers" },
+      { title: "Installation Companies", description: "Solar installation and service companies" }
     ],
     process: [
-      { title: "Threat Assessment", description: "Comprehensive security risk evaluation" },
-      { title: "Security Planning", description: "Detailed security protocol development" },
-      { title: "Escort Deployment", description: "Armed escort team deployment" },
-      { title: "Secure Delivery", description: "Protected delivery with confirmation" }
+      { title: "Pre-loading inspection of vehicle/container", description: "Ensuring proper equipment condition." },
+      { title: "Proper floor padding installation", description: "Protecting fragile panels." },
+      { title: "Systematic panel stacking with separators", description: "Preventing damage during transit." },
+      { title: "Professional lashing to prevent shifting", description: "Secure cargo handling." },
+      { title: "Tarpaulin coverage (for open trailers)", description: "Weather protection." },
+      { title: "GPS tracking throughout journey", description: "Real-time monitoring." },
+      { title: "Careful offloading at destination", description: "Safe delivery process." }
     ],
-    ctaText: "Ensure maximum security for your most valuable shipments."
-  },
-  {
-    slug: "lcl-consolidation",
-    title: "LCL Consolidation Services",
-    subtitle: "Less than Container Load consolidation services optimizing costs for smaller shipments.",
-    heroImage: "/images/use-everywhere/images1.png",
-    about: {
-      title: "Smart Consolidation Solutions",
-      description: "Efficient Less than Container Load (LCL) consolidation services that combine multiple smaller shipments into full container loads, reducing costs while maintaining delivery schedules. Perfect for businesses with smaller volume requirements.",
-      stats: [
-        { value: "60%", label: "Cost Savings" },
-        { value: "Daily", label: "Consolidations" }
-      ],
-      image: "/images/use-everywhere/images2.png"
-    },
-    keyBenefits: [
-      { title: "Cost Optimization", description: "Significant savings through shared container costs" },
-      { title: "Flexible Volumes", description: "No minimum volume requirements" },
-      { title: "Regular Schedules", description: "Daily consolidation and dispatch services" },
-      { title: "Cargo Security", description: "Professional packing and cargo protection" }
-    ],
-    technicalSpecs: [
-      { title: "Minimum Volume", description: "From 1 cubic meter shipments" },
-      { title: "Container Types", description: "20ft and 40ft standard containers" },
-      { title: "Consolidation Centers", description: "Strategic locations across major cities" },
-      { title: "Documentation", description: "Individual tracking for each shipment" }
-    ],
-    industries: [
-      { title: "Small Exporters", description: "Small and medium export businesses" },
-      { title: "E-commerce", description: "Online retailers and marketplace sellers" },
-      { title: "Trading Companies", description: "Import-export trading businesses" },
-      { title: "Manufacturers", description: "Small batch manufacturers and suppliers" },
-      { title: "Startups", description: "New businesses with limited volumes" },
-      { title: "Retailers", description: "Retail businesses with periodic shipments" }
-    ],
-    process: [
-      { title: "Shipment Booking", description: "Easy booking through online portal" },
-      { title: "Consolidation", description: "Professional packing and consolidation" },
-      { title: "Container Loading", description: "Efficient loading and documentation" },
-      { title: "Delivery Tracking", description: "Individual shipment tracking and delivery" }
-    ],
-    ctaText: "Reduce your shipping costs with our smart consolidation services."
-  },
-  {
-    slug: "lcl-consolidation-services",
-    title: "Advanced LCL Consolidation Solutions",
-    subtitle: "Premium LCL services with value-added logistics and supply chain optimization.",
-    heroImage: "/images/use-everywhere/images2.png",
-    about: {
-      title: "Premium Consolidation Services",
-      description: "Advanced LCL consolidation with value-added services including warehousing, inventory management, and supply chain optimization. Designed for businesses requiring comprehensive logistics solutions beyond basic consolidation.",
-      stats: [
-        { value: "50+", label: "Consolidation Centers" },
-        { value: "99%", label: "Accuracy Rate" }
-      ],
-      image: "/images/use-everywhere/images3.png"
-    },
-    keyBenefits: [
-      { title: "Value-Added Services", description: "Warehousing, packaging, and inventory management" },
-      { title: "Supply Chain Integration", description: "End-to-end supply chain solutions" },
-      { title: "Technology Platform", description: "Advanced tracking and management systems" },
-      { title: "Custom Solutions", description: "Tailored consolidation strategies" }
-    ],
-    technicalSpecs: [
-      { title: "Warehouse Network", description: "50+ strategically located consolidation centers" },
-      { title: "Technology Systems", description: "WMS, TMS, and real-time tracking" },
-      { title: "Value-Added Services", description: "Packaging, labeling, quality checks" },
-      { title: "Integration Capabilities", description: "ERP and system integration options" }
-    ],
-    industries: [
-      { title: "Retail Chains", description: "Multi-location retail and distribution" },
-      { title: "FMCG Brands", description: "Consumer goods manufacturers" },
-      { title: "Fashion & Apparel", description: "Clothing and fashion industry" },
-      { title: "Electronics", description: "Consumer electronics and components" },
-      { title: "Healthcare", description: "Medical devices and pharmaceutical supplies" },
-      { title: "Automotive", description: "Auto parts and component suppliers" }
-    ],
-    process: [
-      { title: "Requirement Analysis", description: "Understanding specific consolidation needs" },
-      { title: "Solution Design", description: "Custom consolidation strategy development" },
-      { title: "Implementation", description: "System setup and process implementation" },
-      { title: "Optimization", description: "Continuous improvement and optimization" }
-    ],
-    ctaText: "Optimize your supply chain with our advanced consolidation solutions."
-  },
-  {
-    slug: "logistics-consulting",
-    title: "Strategic Logistics Consulting",
-    subtitle: "Expert consulting services to optimize your supply chain and reduce logistics costs.",
-    heroImage: "/images/use-everywhere/images3.png",
-    about: {
-      title: "Supply Chain Excellence",
-      description: "Comprehensive logistics consulting services helping businesses optimize their supply chain operations, reduce costs, and improve efficiency. Our experts analyze your current operations and design customized solutions for maximum impact.",
-      stats: [
-        { value: "30%", label: "Average Cost Reduction" },
-        { value: "500+", label: "Projects Completed" }
-      ],
-      image: "/images/use-everywhere/images1.png"
-    },
-    keyBenefits: [
-      { title: "Cost Optimization", description: "Significant reduction in logistics costs" },
-      { title: "Process Improvement", description: "Streamlined operations and workflows" },
-      { title: "Technology Integration", description: "Modern logistics technology implementation" },
-      { title: "Strategic Planning", description: "Long-term supply chain strategy development" }
-    ],
-    technicalSpecs: [
-      { title: "Analysis Tools", description: "Advanced analytics and modeling software" },
-      { title: "Consulting Areas", description: "Network design, process optimization, technology" },
-      { title: "Implementation Support", description: "Full implementation and change management" },
-      { title: "Performance Metrics", description: "KPI development and monitoring systems" }
-    ],
-    industries: [
-      { title: "Manufacturing", description: "Industrial and manufacturing companies" },
-      { title: "Retail", description: "Retail chains and distribution networks" },
-      { title: "E-commerce", description: "Online retail and marketplace businesses" },
-      { title: "Healthcare", description: "Pharmaceutical and medical device companies" },
-      { title: "Automotive", description: "Auto manufacturers and suppliers" },
-      { title: "FMCG", description: "Consumer goods and food companies" }
-    ],
-    process: [
-      { title: "Current State Analysis", description: "Comprehensive assessment of existing operations" },
-      { title: "Gap Identification", description: "Identifying improvement opportunities" },
-      { title: "Solution Design", description: "Developing customized optimization strategies" },
-      { title: "Implementation Support", description: "Guiding implementation and measuring results" }
-    ],
-    ctaText: "Transform your logistics operations with expert consulting."
+    ctaText: "Get Solar Transport Quote"
   },
   {
     slug: "over-dimension-cargo",
-    title: "Over-Dimensional Cargo Transportation",
-    subtitle: "Specialized handling of oversized cargo with custom equipment and route planning.",
+    title: "Moving Cargo That Doesn't Fit",
+    subtitle: "We handle cargo up to 100 feet long, 20 feet wide, and 22 feet high. Industrial machinery, plant equipment, windmill parts, transformers—if it's oversized, we move it.",
     heroImage: "/images/use-everywhere/images1.png",
     about: {
-      title: "Oversized Cargo Specialists",
-      description: "Expert transportation of over-dimensional cargo including industrial machinery, construction equipment, and large structures. Our specialized fleet and experienced team handle cargo that exceeds standard size and weight limits with precision and safety.",
+      title: "Our ODC Fleet & Complete Services",
+      description: "We handle cargo up to 100 feet long, 20 feet wide, and 22 feet high with our specialized fleet: 40-foot to 100-foot trailers, hydraulic axle vehicles, and multi-axle trailers up to 18 axles. We provide complete ODC services including route surveys, vehicle recommendations, permission assistance, escort services, and loading supervision.",
       stats: [
-        { value: "200T+", label: "Max Weight" },
-        { value: "Zero", label: "Damage Claims" }
+        { value: "100ft", label: "Max Length" },
+        { value: "18", label: "Max Axles" }
       ],
       image: "/images/use-everywhere/images2.png"
     },
     keyBenefits: [
-      { title: "Specialized Equipment", description: "Custom trailers and handling equipment" },
-      { title: "Route Engineering", description: "Detailed route surveys and planning" },
-      { title: "Permit Management", description: "Complete regulatory compliance" },
-      { title: "Safety Protocols", description: "Comprehensive safety measures and procedures" }
+      { title: "Route surveys", description: "We survey the complete route before moving your cargo. Bridge heights, road widths, turning radius, overhead cables—everything gets checked." },
+      { title: "Vehicle recommendations", description: "Based on cargo dimensions and weight, we recommend the right trailer type. We explain why one trailer works better than another." },
+      { title: "Permission assistance", description: "RTO permissions, traffic police clearances, state border permits—we help with all paperwork. We know which authorities to contact." },
+      { title: "Escort services", description: "Police escorts, pilot vehicles, gunmen (for high-value ODC)—available based on route requirements." }
     ],
     technicalSpecs: [
-      { title: "Weight Capacity", description: "Up to 200 tons with specialized trailers" },
-      { title: "Dimensional Limits", description: "No size restrictions with proper planning" },
-      { title: "Equipment Types", description: "Lowbed trailers, extendable trailers, SPMTs" },
-      { title: "Safety Features", description: "Escort vehicles, warning systems, route marking" }
+      { title: "Our ODC Fleet", description: "40-foot low bed trailers, Semi low bed trailers, High bed trailers, 70-foot trailers, 90-foot trailers, 100-foot trailers, Hydraulic axle vehicles, Multi-axle trailers (up to 18 axles)" },
+      { title: "Types of ODC We Handle", description: "Import ODC (from ports to factory sites), Export ODC (from manufacturing units to ports), Domestic ODC (factory to factory)" },
+      { title: "Cargo Examples", description: "Industrial boilers, Transformers, Windmill blades and towers, Plant machinery, Heat exchangers, Reactors, Heavy construction equipment, Pre-fabricated structures" },
+      { title: "Loading supervision", description: "Our team supervises loading to ensure proper weight distribution and securing." }
     ],
     industries: [
-      { title: "Construction", description: "Heavy construction equipment and machinery" },
       { title: "Power Generation", description: "Turbines, transformers, and power equipment" },
       { title: "Oil & Gas", description: "Refinery equipment and large vessels" },
+      { title: "Construction", description: "Heavy construction equipment and machinery" },
       { title: "Infrastructure", description: "Bridge components and structural elements" },
-      { title: "Mining", description: "Mining equipment and processing machinery" },
-      { title: "Manufacturing", description: "Large industrial machinery and equipment" }
+      { title: "Manufacturing", description: "Large industrial machinery and equipment" },
+      { title: "Renewable Energy", description: "Windmill parts and solar installation equipment" }
     ],
     process: [
-      { title: "Feasibility Study", description: "Route analysis and transport feasibility" },
-      { title: "Permit Acquisition", description: "Obtaining all necessary permits and approvals" },
-      { title: "Equipment Preparation", description: "Custom equipment setup and testing" },
-      { title: "Supervised Transport", description: "Expert-supervised transportation execution" }
+      { title: "Route surveys", description: "Complete route survey before moving cargo." },
+      { title: "Vehicle recommendations", description: "Recommend the right trailer type based on cargo." },
+      { title: "Permission assistance", description: "Help with all paperwork and permits." },
+      { title: "Escort services", description: "Arrange escorts based on route requirements." },
+      { title: "Loading supervision", description: "Supervise loading for proper weight distribution." },
+      { title: "Supervised Transport", description: "Expert-supervised transportation execution." }
     ],
-    ctaText: "Move your oversized cargo safely with our specialized expertise."
+    ctaText: "Request ODC Consultation"
+  },
+  {
+    slug: "bulk-cargo-solutions",
+    title: "Bulk Commodities Across India",
+    subtitle: "We transport bulk cargo in open trucks and covered vehicles. From raw materials to finished products, we handle high-volume shipments efficiently.",
+    heroImage: "/images/use-everywhere/images1.png",
+    about: {
+      title: "What We Transport & Vehicle Types",
+      description: "We transport wood and timber, grains and agricultural products, coal and minerals, steel products, and construction materials. Our fleet includes open body trucks for weather-resistant cargo, covered trucks for weather protection, flatbed trailers for steel coils and plates, and high-sided trucks for lightweight, voluminous cargo.",
+      stats: [
+        { value: "5+", label: "Cargo Types" },
+        { value: "4", label: "Vehicle Types" }
+      ],
+      image: "/images/use-everywhere/images2.png"
+    },
+    keyBenefits: [
+      { title: "What We Transport", description: "Wood and timber, Grains and agricultural products, Coal and minerals, Steel products, Construction materials" },
+      { title: "Vehicle Types", description: "Open body trucks for weather-resistant cargo, Covered trucks for weather protection, Flatbed trailers for steel coils and plates, High-sided trucks for lightweight, voluminous cargo" },
+      { title: "Loading & Securing", description: "Steel coils: Proper chocking and lashing. Steel plates: Stacked flat with separators. TMT bars: Bundle securing. Timber: Cross-stacking and chain binding." },
+      { title: "Documentation", description: "Weight certificates, Loading photos, Transit updates, POD (Proof of Delivery), Weighbridge slips" }
+    ],
+    technicalSpecs: [
+      { title: "Capacity Options", description: "9-ton, 14-ton, 18-ton, 22-ton, 25-ton trucks, Multi-axle trailers for heavier loads" },
+      { title: "Safety Measures", description: "Load distribution: Proper weight distribution to comply with axle load limits. Securing: Chains, ropes, and nets based on cargo type. Tarpaulin: Weather protection for sensitive cargo." },
+      { title: "Steel Coils", description: "Proper chocking and lashing to prevent rolling" },
+      { title: "Steel Plates", description: "Stacked flat with separators to prevent scratching" }
+    ],
+    industries: [
+      { title: "Steel Industry", description: "Steel coils, plates, TMT bars, billets, structural steel" },
+      { title: "Construction", description: "Sand, gravel, crushed stone, cement (in bulk)" },
+      { title: "Agriculture", description: "Wheat, rice, corn, pulses (in covered vehicles)" },
+      { title: "Mining", description: "Industrial coal, pet coke, iron ore" },
+      { title: "Timber", description: "Logs, planks, plywood, wooden pallets" }
+    ],
+    process: [
+      { title: "Cargo assessment", description: "Understanding cargo type and requirements." },
+      { title: "Vehicle selection", description: "Choosing appropriate vehicle type." },
+      { title: "Loading & Securing", description: "Professional loading and securing methods." },
+      { title: "Weighbridge", description: "Weight verification and documentation." },
+      { title: "Transport", description: "Safe transit with GPS tracking." },
+      { title: "Delivery", description: "Timely delivery with POD." }
+    ],
+    ctaText: "Get Bulk Cargo Quote"
   },
   {
     slug: "rail-services",
-    title: "Integrated Rail Transportation Services",
-    subtitle: "Multimodal rail solutions connecting major industrial centers with cost-effective transport.",
+    title: "Cost-Effective Rail Transportation",
+    subtitle: "We partner with rail operators across India to move your cargo by train. This works best for high-volume, low-value products where cost matters more than speed.",
     heroImage: "/images/use-everywhere/images2.png",
     about: {
-      title: "Rail Logistics Excellence",
-      description: "Comprehensive rail transportation services offering cost-effective solutions for bulk cargo, containers, and long-distance shipments. Our rail network connectivity ensures efficient movement of goods across major industrial corridors.",
+      title: "When Rail Makes Sense",
+      description: "Rail transportation works best for large quantities (100+ tons), low per-unit value products, non-urgent shipments (5-10 days delivery), and long distances. We provide combined Rail + Road solutions: we pick up cargo from your factory, transport to railway siding, handle rail movement, and deliver from destination siding to consignee location—giving you cost benefits of rail with door-to-door convenience.",
       stats: [
-        { value: "5000+", label: "Rail Cars" },
-        { value: "All Major", label: "Rail Networks" }
+        { value: "100+", label: "Tons Capacity" },
+        { value: "40%", label: "Cost Savings" }
       ],
       image: "/images/use-everywhere/images3.png"
     },
     keyBenefits: [
-      { title: "Cost Efficiency", description: "Significant cost savings for long-distance transport" },
-      { title: "Environmental Benefits", description: "Reduced carbon footprint compared to road transport" },
-      { title: "High Capacity", description: "Large volume handling capabilities" },
-      { title: "Network Coverage", description: "Access to extensive rail network" }
+      { title: "When Rail Makes Sense", description: "Large quantities (100+ tons), Low per-unit value, Non-urgent shipments (5-10 days), Long distances" },
+      { title: "Combined Solutions", description: "Rail + Road: We pick up cargo from your factory, transport to railway siding, handle rail movement, and deliver from destination siding to consignee location." },
+      { title: "Cost Benefit", description: "This gives you the cost benefit of rail with the convenience of door-to-door service." },
+      { title: "What We Transport by Rail", description: "Industrial raw materials, Steel products, Coal and minerals, Bulk grains, Construction materials, Containerized cargo" }
     ],
     technicalSpecs: [
-      { title: "Car Types", description: "Container cars, bulk cars, specialized wagons" },
-      { title: "Capacity Range", description: "20 to 60 tons per car" },
-      { title: "Network Access", description: "All major rail networks and terminals" },
-      { title: "Multimodal Integration", description: "Seamless road-rail connectivity" }
+      { title: "How It Works", description: "You share cargo details -> We check rail availability -> We book rail space -> We handle loading -> We track wagon movement -> We arrange unloading -> We provide first-mile and last-mile road transport" },
+      { title: "Our Rail Network", description: "We work with rail operators serving all major industrial corridors across India." },
+      { title: "Documentation", description: "Railway receipt (RR), Loading photos and weight certificates, Transit tracking updates, Unloading confirmation, POD" },
+      { title: "Car Types", description: "Container cars, bulk cars, specialized wagons" }
     ],
     industries: [
       { title: "Steel", description: "Steel plants and metal processing industries" },
@@ -610,183 +321,239 @@ export const servicesData: ServiceData[] = [
       { title: "Cement", description: "Cement plants and construction materials" },
       { title: "Chemicals", description: "Chemical plants and processing facilities" },
       { title: "Agriculture", description: "Grain transportation and food processing" },
-      { title: "Automotive", description: "Auto manufacturers and component suppliers" }
+      { title: "Construction", description: "Construction materials and bulk commodities" }
     ],
     process: [
-      { title: "Route Planning", description: "Optimal rail route selection and scheduling" },
-      { title: "Car Allocation", description: "Appropriate rail car type selection" },
-      { title: "Loading Operations", description: "Efficient loading at origin terminals" },
-      { title: "Delivery Coordination", description: "Final delivery and unloading coordination" }
+      { title: "You share cargo details and quantity", description: "Provide cargo specifications." },
+      { title: "We check rail availability for your route", description: "Check schedule and availability." },
+      { title: "We book rail space and arrange wagon allocation", description: "Secure rail transportation." },
+      { title: "We handle loading at origin railway siding", description: "Professional loading services." },
+      { title: "We track the wagon movement", description: "Real-time tracking." },
+      { title: "We arrange unloading at destination siding", description: "Coordinate unloading." },
+      { title: "If needed, we provide first-mile and last-mile road transport", description: "Complete door-to-door service." }
     ],
-    ctaText: "Leverage rail efficiency for your long-distance transportation needs."
+    ctaText: "Check Rail Transport Rates"
   },
   {
-    slug: "solar-panel-transportation",
-    title: "Specialized Solar Panel Transportation",
-    subtitle: "Careful handling and transport of solar panels and renewable energy equipment.",
+    slug: "coastal-services",
+    title: "Coastal Shipping Across India",
+    subtitle: "We offer coastal shipping services connecting 10 major Indian ports. This reduces your transportation costs for long-distance movements along the coastline.",
     heroImage: "/images/use-everywhere/images3.png",
     about: {
-      title: "Renewable Energy Logistics",
-      description: "Specialized transportation services for solar panels, wind turbine components, and renewable energy equipment. Our careful handling procedures and specialized equipment ensure damage-free delivery of sensitive renewable energy components.",
+      title: "Connect 10 Major Indian Ports",
+      description: "We offer bi-directional coastal shipping connecting Mundra, Hazira, JNPT/Nhava Sheva, Pipava, Mangalore, Cochin, Tuticorin, Chennai, Visakhapatnam, Haldia, and Kolkata. This works best for long distances (1000+ km), non-urgent cargo (5-15 days), and cost-sensitive cargo—saving 30-50% compared to road transport. We provide complete door-to-door service through coastal route.",
       stats: [
-        { value: "1000+", label: "MW Transported" },
-        { value: "99.9%", label: "Damage-Free" }
+        { value: "10", label: "Major Ports" },
+        { value: "30-50%", label: "Cost Savings" }
       ],
       image: "/images/use-everywhere/images1.png"
     },
     keyBenefits: [
-      { title: "Specialized Handling", description: "Expert handling of fragile solar equipment" },
-      { title: "Damage Prevention", description: "Advanced packaging and securing methods" },
-      { title: "Project Coordination", description: "Coordinated delivery for large projects" },
-      { title: "Installation Support", description: "On-site delivery and positioning services" }
+      { title: "Ports We Connect", description: "Mundra, Hazira, JNPT/Nhava Sheva, Pipava, Mangalore, Cochin, Tuticorin, Chennai, Visakhapatnam, Haldia, Kolkata" },
+      { title: "Service Coverage", description: "Bi-directional service between all ports. Any port to any port." },
+      { title: "When Coastal Shipping Works", description: "Long distances (1000+ km apart), Non-urgent cargo (5-15 days), Cost-sensitive cargo (30-50% savings), Heavy cargo (when road permits become complicated)" },
+      { title: "Complete Solution", description: "Door-to-door through coastal route: Factory → Road → Origin Port → Sea → Destination Port → Road → Consignee" }
     ],
     technicalSpecs: [
-      { title: "Equipment Types", description: "Solar panels, inverters, mounting systems" },
-      { title: "Vehicle Features", description: "Air-ride suspension, climate control" },
-      { title: "Packaging Systems", description: "Custom packaging and securing methods" },
-      { title: "Handling Equipment", description: "Specialized lifting and positioning equipment" }
+      { title: "What We Ship", description: "Containerized cargo (20-foot and 40-foot containers), Break bulk (Steel products, machinery, project cargo), Bulk commodities (Based on vessel availability)" },
+      { title: "How It Works", description: "You share cargo details -> We check vessel schedules -> We arrange port-to-port movement -> We provide first-mile road transport -> We handle port documentation -> We track vessel movement -> We arrange last-mile transport" },
+      { title: "Cost Savings", description: "Coastal shipping costs 30-50% less than road transport for eligible routes." },
+      { title: "Transit Time", description: "5-15 days depending on route and vessel schedule." }
     ],
     industries: [
-      { title: "Solar Manufacturers", description: "Solar panel and component manufacturers" },
-      { title: "EPC Contractors", description: "Engineering, procurement, and construction companies" },
-      { title: "Power Developers", description: "Renewable energy project developers" },
-      { title: "Distributors", description: "Solar equipment distributors and dealers" },
-      { title: "Installation Companies", description: "Solar installation and service companies" },
-      { title: "Government Projects", description: "Government renewable energy initiatives" }
+      { title: "Shipping Lines", description: "Container and cargo shipping companies" },
+      { title: "Steel Industry", description: "Steel products transportation" },
+      { title: "Machinery", description: "Project cargo and machinery" },
+      { title: "Bulk Commodities", description: "Bulk materials transportation" },
+      { title: "Importers/Exporters", description: "International trade cargo" }
     ],
     process: [
-      { title: "Equipment Assessment", description: "Detailed assessment of equipment specifications" },
-      { title: "Custom Packaging", description: "Specialized packaging for protection" },
-      { title: "Careful Loading", description: "Expert loading with damage prevention" },
-      { title: "Site Delivery", description: "Precise delivery and positioning at site" }
+      { title: "You share cargo details and route", description: "Provide cargo specifications." },
+      { title: "We check vessel schedules and availability", description: "Check vessel availability." },
+      { title: "We arrange port-to-port movement", description: "Book vessel space." },
+      { title: "We provide first-mile road transport (factory to origin port)", description: "Road transport to port." },
+      { title: "We handle port documentation and customs (if needed)", description: "Complete documentation." },
+      { title: "We track vessel movement", description: "Real-time tracking." },
+      { title: "We arrange last-mile transport (destination port to consignee)", description: "Final delivery." }
     ],
-    ctaText: "Power your renewable energy projects with our specialized transport."
+    ctaText: "Explore Coastal Transport"
+  },
+  {
+    slug: "lcl-consolidation",
+    title: "Ship Small Quantities Cost-Effectively",
+    subtitle: "Less than Container Load (LCL) consolidation lets you ship small cargo quantities without paying for a full container. We consolidate multiple clients' cargo heading to the same destination.",
+    heroImage: "/images/use-everywhere/images1.png",
+    about: {
+      title: "Who Benefits from LCL Consolidation",
+      description: "Perfect for small businesses without enough cargo to fill a container, trial orders testing new markets, regular small shipments (100-500 kg), and e-commerce fulfillment. We consolidate multiple clients' cargo heading to the same destination. You pay for actual weight or volumetric weight (whichever is higher), with quantity range from 1 kg to 20 kg and beyond—no minimum or maximum limits.",
+      stats: [
+        { value: "1kg-20kg+", label: "Range" },
+        { value: "60%", label: "Cost Savings" }
+      ],
+      image: "/images/use-everywhere/images2.png"
+    },
+    keyBenefits: [
+      { title: "Who Benefits", description: "Small businesses, Trial orders, Regular small shipments (100-500 kg), E-commerce fulfillment" },
+      { title: "Quantity Range", description: "From 1 kg to 20 kg and beyond. No minimum or maximum limits—you pay for what you ship." },
+      { title: "Safety & Security", description: "Proper segregation: Your cargo is marked and segregated from others. Documentation: Separate consignment note. Insurance: Available for declared value. Tracking: Vehicle-level tracking." },
+      { title: "Delivery Time", description: "Standard: 3-7 days depending on distance. Express: 1-3 days for select routes." }
+    ],
+    technicalSpecs: [
+      { title: "How It Works", description: "You share cargo details -> We calculate volumetric weight -> You pay for actual or volumetric weight (whichever is higher) -> We consolidate with others -> GPS tracking -> Delivery -> You receive only your cargo" },
+      { title: "Pricing", description: "You pay based on: Actual weight (in kg), Volumetric weight (length × width × height ÷ 5000), Destination zone, Service type (standard or express)" },
+      { title: "Vehicle Types", description: "Trucks for consolidated road transport, Containers for containerized LCL consolidation" },
+      { title: "Popular Routes", description: "Mumbai to Delhi, Ahmedabad to Kolkata, Chennai to Bangalore, Delhi to Mumbai, Bangalore to Hyderabad, and many more routes across India" }
+    ],
+    industries: [
+      { title: "Small Businesses", description: "When you don't have enough cargo to fill a container" },
+      { title: "Trial Orders", description: "Testing new markets or suppliers with small quantities" },
+      { title: "Regular Small Shipments", description: "Weekly or monthly shipments of 100-500 kg" },
+      { title: "E-commerce Fulfillment", description: "Sending inventory to regional warehouses" },
+      { title: "Trading Companies", description: "Small volume import-export businesses" }
+    ],
+    process: [
+      { title: "You share cargo details (weight, dimensions, destination)", description: "Provide shipment details." },
+      { title: "We calculate volumetric weight", description: "Calculate shipping cost." },
+      { title: "You pay for actual weight or volumetric weight (whichever is higher)", description: "Transparent pricing." },
+      { title: "We consolidate your cargo with others going to the same location", description: "Efficient consolidation." },
+      { title: "GPS tracking throughout journey", description: "Real-time tracking." },
+      { title: "Delivery to your destination", description: "Timely delivery." },
+      { title: "You receive only your cargo with proper documentation", description: "Complete documentation." }
+    ],
+    ctaText: "Calculate LCL Cost"
+  },
+  {
+    slug: "high-value-goods",
+    title: "Protecting What Matters Most",
+    subtitle: "Electronics, pharmaceuticals, jewelry, high-value machinery—when cargo value is high, risk management becomes everything. We provide specialized security measures to protect high-value shipments.",
+    heroImage: "/images/use-everywhere/images2.png",
+    about: {
+      title: "Specialized Security Measures",
+      description: "We protect electronics, pharmaceuticals, jewelry, high-value machinery, branded goods, and art. Our security includes GPS tracking through multiple systems, high-security locks only openable with your keys, armed escorts when needed, escort vehicles, brand-new containers, and pre-checked vehicles. Security is customized based on cargo value, route risk profile, and client requirements.",
+      stats: [
+        { value: "6", label: "Security Features" },
+        { value: "Zero", label: "Loss Record" }
+      ],
+      image: "/images/use-everywhere/images3.png"
+    },
+    keyBenefits: [
+      { title: "GPS tracking", description: "Real-time location through multiple tracking systems (driver phone + dedicated GPS device)." },
+      { title: "Special locks", description: "High-security locks on container doors. Only openable with specific keys held by you and your consignee." },
+      { title: "Armed escorts", description: "Gunmen or armed security personnel traveling with the vehicle." },
+      { title: "Brand-new containers", description: "Fresh, damage-free containers to prevent any cargo damage." }
+    ],
+    technicalSpecs: [
+      { title: "Security Measures", description: "GPS tracking, Special locks, Armed escorts, Escort vehicles, Brand-new containers, Pre-checked vehicles" },
+      { title: "What We Protect", description: "Electronics and semiconductors, Pharmaceuticals and medical equipment, Jewelry and precious metals, High-value machinery, Branded goods, Art and antiques" },
+      { title: "Customized Solutions", description: "We design security based on: Cargo value, Route risk profile, Client requirements, Insurance mandates" },
+      { title: "Insurance", description: "Comprehensive cargo insurance, Coverage based on invoice value or declared value, Different coverage options (door-to-door, port-to-door, etc.)" }
+    ],
+    industries: [
+      { title: "Electronics", description: "Electronics and semiconductors" },
+      { title: "Pharmaceuticals", description: "Pharmaceuticals and medical equipment" },
+      { title: "Jewelry", description: "Jewelry and precious metals" },
+      { title: "Machinery", description: "High-value machinery" },
+      { title: "Branded Goods", description: "Branded goods" },
+      { title: "Art & Antiques", description: "Art and antiques" }
+    ],
+    process: [
+      { title: "Security assessment", description: "Risk analysis and security planning." },
+      { title: "Customized security design", description: "Based on cargo value and route risk." },
+      { title: "Driver selection", description: "Experienced drivers with clean records, trained in emergency protocols." },
+      { title: "Secure loading", description: "Supervised loading with security protocols." },
+      { title: "Protected transit", description: "Monitored transport with GPS tracking and security backup." },
+      { title: "Communication", description: "Hourly location updates, Immediate alerts, Direct driver contact, 24/7 control room support" }
+    ],
+    ctaText: "Secure Your Valuable Cargo"
   },
   {
     slug: "storage-warehousing",
-    title: "Comprehensive Storage & Warehousing",
-    subtitle: "Modern warehousing solutions with inventory management and distribution services.",
+    title: "Complete Storage Solutions",
+    subtitle: "We provide warehousing across India for empty containers, loaded containers, and cargo. Choose the storage type based on your needs.",
     heroImage: "/images/use-everywhere/images1.png",
     about: {
-      title: "Modern Warehousing Solutions",
-      description: "State-of-the-art warehousing and storage facilities with advanced inventory management systems. Our strategically located warehouses provide comprehensive storage solutions with value-added services for diverse industries.",
+      title: "Storage Types & Features",
+      description: "We provide empty container parks, loaded container storage, cargo warehouses, cold storage, pharma-grade facilities, and specialized warehouses. Our facilities feature 24/7 security guards, CCTV surveillance, loading docks, forklifts, inventory management, and online access to stock data. Locations near major ports, ICDs, industrial hubs, and metro cities across India.",
       stats: [
-        { value: "10M+", label: "Sq Ft Space" },
+        { value: "6", label: "Storage Types" },
         { value: "50+", label: "Locations" }
       ],
       image: "/images/use-everywhere/images2.png"
     },
     keyBenefits: [
-      { title: "Strategic Locations", description: "Warehouses in key industrial and commercial areas" },
-      { title: "Advanced Technology", description: "WMS and inventory management systems" },
-      { title: "Value-Added Services", description: "Packaging, labeling, and quality control" },
-      { title: "Flexible Solutions", description: "Short-term and long-term storage options" }
+      { title: "Storage Types", description: "Empty container parks, Loaded container storage, Cargo warehouses, Cold storage, Pharma-grade facilities, Specialized warehouses" },
+      { title: "Container Storage", description: "Available for: 20-foot, 40-foot, High cube, Reefer containers (with power points), Tank containers. Rental options: Per day, Per week, Monthly, Long-term contracts" },
+      { title: "Cargo Warehouse Features", description: "Security: 24/7 security guards, CCTV surveillance, Boundary walls and gates, Access control. Facilities: Loading docks, Forklifts, Packaging area, Office space" },
+      { title: "Value-Added Services", description: "Loading and unloading, Sorting and segregation, Repackaging, Labeling, Quality inspection space, Container stuffing/destuffing" }
     ],
     technicalSpecs: [
-      { title: "Storage Capacity", description: "10+ million square feet across locations" },
-      { title: "Facility Features", description: "Climate control, security systems, fire safety" },
-      { title: "Technology Systems", description: "WMS, RFID, barcode scanning" },
-      { title: "Handling Equipment", description: "Forklifts, conveyor systems, automated storage" }
+      { title: "Locations", description: "We have warehousing facilities near: Major ports (Mumbai, Chennai, Mundra, etc.), ICDs and dry ports, Industrial hubs, Metro cities" },
+      { title: "Documentation", description: "Inventory management, Stock reports, In/out registers, Online access to stock data" },
+      { title: "Pricing", description: "Storage charges based on: Storage type, Space required (sq ft or container count), Duration, Additional services used, Location" },
+      { title: "Container Types", description: "20-foot containers, 40-foot containers, High cube containers, Reefer containers (with power points), Tank containers" }
     ],
     industries: [
-      { title: "FMCG", description: "Consumer goods and food products" },
-      { title: "Pharmaceuticals", description: "Medical and pharmaceutical products" },
-      { title: "Electronics", description: "Consumer electronics and components" },
-      { title: "Textiles", description: "Garments and textile products" },
-      { title: "Automotive", description: "Auto parts and components" },
-      { title: "E-commerce", description: "Online retail and marketplace fulfillment" }
+      { title: "Shipping Lines", description: "Empty container storage" },
+      { title: "Importers/Exporters", description: "Loaded container storage" },
+      { title: "Manufacturers", description: "Cargo warehouses for production materials" },
+      { title: "Pharmaceuticals", description: "Pharma-grade facilities" },
+      { title: "Food & Beverage", description: "Cold storage for perishables" },
+      { title: "E-commerce", description: "Cargo warehouses for fulfillment" }
     ],
     process: [
-      { title: "Requirement Analysis", description: "Understanding storage and handling requirements" },
-      { title: "Facility Allocation", description: "Appropriate warehouse space allocation" },
-      { title: "Inventory Management", description: "Professional inventory tracking and management" },
-      { title: "Distribution Services", description: "Order fulfillment and distribution support" }
+      { title: "Storage requirement analysis", description: "Understanding storage needs." },
+      { title: "Facility selection", description: "Choose appropriate storage type and location." },
+      { title: "Space allocation", description: "Allocate warehouse space or container storage." },
+      { title: "Inventory management", description: "Professional inventory tracking and management." },
+      { title: "Value-added services", description: "Additional services as needed." },
+      { title: "Distribution services", description: "Order fulfillment and distribution support." }
     ],
-    ctaText: "Optimize your inventory management with our modern warehousing solutions."
+    ctaText: "Find Storage Near You"
   },
   {
-    slug: "warehousing-solutions",
-    title: "Advanced Warehousing Solutions",
-    subtitle: "Technology-driven warehousing with automation and supply chain integration.",
+    slug: "chemical-transportation",
+    title: "Safe Chemical Transport",
+    subtitle: "We transport liquids and gases in 20-foot domestic tank containers. This method is safer than traditional tankers with zero theft risk and minimal leakage.",
     heroImage: "/images/use-everywhere/images2.png",
     about: {
-      title: "Next-Generation Warehousing",
-      description: "Advanced warehousing solutions featuring automation, robotics, and AI-driven inventory management. Our smart warehouses provide maximum efficiency with reduced costs and improved accuracy for modern supply chains.",
+      title: "Why Tank Containers for Chemicals",
+      description: "We transport liquids and gases in 20-foot ISO tank containers. This method offers zero theft (sealed containers can't be tapped), minimal pilferage (seals show tampering), no leakage (properly maintained tanks), and safer transport (ISO-certified containers). We handle industrial chemicals, petrochemicals, edible oils, liquid fertilizers, water treatment chemicals, LPG, and industrial gases. Capacity: 21,000-26,000 liters per container.",
       stats: [
-        { value: "99.9%", label: "Accuracy Rate" },
-        { value: "Automated", label: "Systems" }
+        { value: "Zero", label: "Theft Risk" },
+        { value: "21-26K", label: "Liters Capacity" }
       ],
       image: "/images/use-everywhere/images3.png"
     },
     keyBenefits: [
-      { title: "Automation Technology", description: "Robotic systems and automated processes" },
-      { title: "AI-Driven Operations", description: "Artificial intelligence for optimization" },
-      { title: "Real-time Visibility", description: "Complete inventory visibility and tracking" },
-      { title: "Scalable Solutions", description: "Flexible capacity based on business needs" }
+      { title: "Zero theft", description: "Sealed containers can't be tapped or siphoned during transit." },
+      { title: "Minimal pilferage", description: "Container seals show any tampering attempt." },
+      { title: "No leakage", description: "Properly maintained tank containers prevent spills." },
+      { title: "Safer transport", description: "ISO-certified containers built for chemical transport." }
     ],
     technicalSpecs: [
-      { title: "Automation Level", description: "Fully automated storage and retrieval systems" },
-      { title: "AI Capabilities", description: "Machine learning for demand forecasting" },
-      { title: "Integration Options", description: "ERP, WMS, and e-commerce platform integration" },
-      { title: "Performance Metrics", description: "Real-time KPI monitoring and reporting" }
+      { title: "Tank Container Specifications", description: "Size: 20-foot ISO tank containers. Capacity: Typically 21,000-26,000 liters (varies by product density). Material: Stainless steel tanks for most chemicals. Certifications: ISO certified for chemical transport." },
+      { title: "What We Transport", description: "Liquid chemicals: Industrial chemicals, Petrochemicals, Edible oils, Liquid fertilizers, Water treatment chemicals. Gases: LPG, Industrial gases, Compressed gases (in compatible containers)" },
+      { title: "Safety Protocols", description: "Pre-loading inspection: Tank condition, valve condition, and cleanliness verified. Product compatibility check: Ensuring previous product won't contaminate current shipment. Proper sealing: All valves sealed after loading. Documentation: MSDS (Material Safety Data Sheet) carried during transit. Driver training: Drivers trained in chemical handling and emergency response." },
+      { title: "Compliance", description: "Compliance with hazardous goods transport regulations, Proper labeling and placarding, Emergency response information available, Required permits for specific chemicals" }
     ],
     industries: [
-      { title: "E-commerce Giants", description: "Large online retailers and marketplaces" },
-      { title: "Pharmaceutical", description: "Temperature-controlled pharmaceutical storage" },
-      { title: "Automotive", description: "Just-in-time automotive component storage" },
-      { title: "Fashion & Retail", description: "Fast-fashion and seasonal inventory management" },
-      { title: "Technology", description: "High-value electronics and components" },
-      { title: "Healthcare", description: "Medical devices and healthcare supplies" }
+      { title: "Chemical Manufacturing", description: "Industrial chemicals and processing facilities" },
+      { title: "Petrochemicals", description: "Petroleum derivatives and specialty chemicals" },
+      { title: "Pharmaceuticals", description: "Pharmaceutical raw materials and intermediates" },
+      { title: "Agriculture", description: "Liquid fertilizers and agricultural chemicals" },
+      { title: "Food Processing", description: "Edible oils and food-grade chemicals" },
+      { title: "Water Treatment", description: "Water treatment chemicals and solutions" }
     ],
     process: [
-      { title: "Technology Assessment", description: "Evaluating automation and technology needs" },
-      { title: "System Design", description: "Custom warehouse automation design" },
-      { title: "Implementation", description: "Technology deployment and integration" },
-      { title: "Optimization", description: "Continuous improvement and performance tuning" }
+      { title: "Pre-loading inspection", description: "Tank condition, valve condition, and cleanliness verified." },
+      { title: "Product compatibility check", description: "Ensuring previous product won't contaminate current shipment." },
+      { title: "Proper sealing", description: "All valves sealed after loading." },
+      { title: "Documentation", description: "MSDS (Material Safety Data Sheet) carried during transit." },
+      { title: "Driver training", description: "Drivers trained in chemical handling and emergency response." },
+      { title: "Monitored transport", description: "Safe transit with compliance and safety protocols." },
+      { title: "Cleaning services", description: "Tank container cleaning between shipments with different cleaning protocols." }
     ],
-    ctaText: "Future-proof your warehousing with our advanced automation solutions."
-  },
-  {
-    slug: "warehousing-storage",
-    title: "Flexible Warehousing & Storage",
-    subtitle: "Customizable storage solutions with flexible terms and value-added services.",
-    heroImage: "/images/use-everywhere/images3.png",
-    about: {
-      title: "Flexible Storage Solutions",
-      description: "Customizable warehousing and storage solutions designed to meet diverse business requirements. From short-term storage to long-term distribution centers, we provide flexible terms and comprehensive services tailored to your needs.",
-      stats: [
-        { value: "Flexible", label: "Terms" },
-        { value: "24/7", label: "Access" }
-      ],
-      image: "/images/use-everywhere/images1.png"
-    },
-    keyBenefits: [
-      { title: "Flexible Terms", description: "Short-term and long-term storage options" },
-      { title: "Customizable Space", description: "Tailored storage configurations" },
-      { title: "Value-Added Services", description: "Packaging, sorting, and distribution services" },
-      { title: "Cost-Effective", description: "Competitive pricing with transparent costs" }
-    ],
-    technicalSpecs: [
-      { title: "Space Options", description: "From 1000 sq ft to 100,000+ sq ft" },
-      { title: "Storage Types", description: "Ambient, climate-controlled, cold storage" },
-      { title: "Access Options", description: "24/7 access with security systems" },
-      { title: "Service Levels", description: "Basic storage to full-service fulfillment" }
-    ],
-    industries: [
-      { title: "Small Businesses", description: "Growing businesses needing flexible storage" },
-      { title: "Seasonal Businesses", description: "Companies with seasonal inventory fluctuations" },
-      { title: "Importers", description: "Import businesses needing temporary storage" },
-      { title: "Manufacturers", description: "Manufacturers requiring overflow storage" },
-      { title: "Distributors", description: "Regional distributors and wholesalers" },
-      { title: "Startups", description: "New businesses with evolving storage needs" }
-    ],
-    process: [
-      { title: "Needs Assessment", description: "Understanding specific storage requirements" },
-      { title: "Space Configuration", description: "Customizing storage space and services" },
-      { title: "Service Setup", description: "Implementing required services and systems" },
-      { title: "Ongoing Support", description: "Continuous support and service optimization" }
-    ],
-    ctaText: "Find the perfect storage solution for your business needs."
+    ctaText: "Transport Chemicals Safely"
   }
 ];
 

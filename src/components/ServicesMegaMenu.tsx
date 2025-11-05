@@ -73,7 +73,7 @@ const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({
     {
       title: "Container Logistics Solutions",
       url: "/services#container-logistics",
-      color: "bg-blue-50 hover:bg-blue-100 text-blue-900 border-blue-200",
+      color: "bg-blue-50 hover:bg-blue-100 text-blue-900",
       description: "Complete containerized cargo management",
       items: [
         {
@@ -99,7 +99,7 @@ const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({
     {
       title: "Specialized Cargo Solutions",
       url: "/services#specialized-cargo",
-      color: "bg-amber-50 hover:bg-amber-100 text-amber-900 border-amber-200",
+      color: "bg-amber-50 hover:bg-amber-100 text-amber-900",
       description: "Custom solutions for unique cargo requirements",
       items: [
         {
@@ -131,7 +131,7 @@ const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({
     {
       title: "Multimodal Transport Solutions",
       url: "/services#multimodal-transport",
-      color: "bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border-emerald-200",
+      color: "bg-emerald-50 hover:bg-emerald-100 text-emerald-900",
       description: "Integrated transportation across multiple modes",
       items: [
         {
@@ -151,7 +151,7 @@ const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({
     {
       title: "Value-Added Logistics Services",
       url: "/services#value-added-services",
-      color: "bg-violet-50 hover:bg-violet-100 text-violet-900 border-violet-200",
+      color: "bg-violet-50 hover:bg-violet-100 text-violet-900",
       description: "Enhanced services for optimal supply chain management",
       items: [
         {
@@ -230,7 +230,7 @@ const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({
                       <Link 
                         onClick={() => onClose && onClose()} 
                         href={category.url} 
-                        className={`text-base sm:text-lg font-bold group py-2 sm:py-3 px-3 sm:px-4 rounded-lg inline-flex items-center gap-2 sm:gap-3 transition-all duration-300 border ${category.color} w-full`}
+                        className={`text-base sm:text-lg font-bold group py-2 sm:py-3 px-3 sm:px-4 rounded-lg inline-flex items-center gap-2 sm:gap-3 transition-all duration-300 ${category.color} w-full`}
                       >
                         <span className="truncate">{category.title}</span>
                         <FaArrowRight className="text-xs sm:text-sm group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />

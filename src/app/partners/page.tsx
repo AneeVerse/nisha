@@ -37,14 +37,11 @@ export default function PartnersPage() {
           </div>
           
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
-            Trusted Partners Across
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mt-1">
-              16+ Industries
-            </span>
+            Our Network Partners
           </h1>
           
           <p className="text-base sm:text-lg lg:text-lg text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium">
-            For over four decades, we&apos;ve been the logistics backbone for India&apos;s leading companies. From Fortune 500 giants to innovative startups, discover the industry leaders who trust Nisha Roadways with their most critical shipments.
+            We work with shipping lines, rail operators, coastal shipping companies, warehousing partners, and insurance providers to give you complete logistics solutions.
           </p>
 
           {/* Stats Bar */}
@@ -90,14 +87,10 @@ export default function PartnersPage() {
               Industry Leadership
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-10 leading-tight">
-              Industry Leaders Who
-              <span className="block text-blue-600 mt-2">Choose Excellence</span>
+              Why Partners Matter
             </h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-medium mb-8">
-              When India&apos;s most demanding companies need logistics excellence, they choose Nisha Roadways. Our client portfolio reads like a who&apos;s who of Indian industry—from shipping giants who trust us with their containers to pharmaceutical leaders who rely on our precision, and from steel manufacturers who depend on our specialized handling to FMCG brands who count on our nationwide reach.
-            </p>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our collaborations aren&apos;t just business relationships—they&apos;re partnerships built on four decades of reliability, innovation, and unwavering commitment to excellence.
+              You don&apos;t need to call separate vendors for rail, coastal, warehouse, and insurance. We coordinate everything through our partner network. One point of contact. Complete solution.
             </p>
           </div>
         </div>

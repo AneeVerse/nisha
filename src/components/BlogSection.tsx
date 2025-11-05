@@ -95,11 +95,11 @@ export default function BlogSection() {
         <div className="mb-8 sm:mb-12 md:mb-16 text-center">
          
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-6">
-            LATEST <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">INSIGHTS</span> FROM OUR TRUCKER TOOLS
+            Industry Insights <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">& Logistics Trends</span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover industry expertise, safety protocols, and innovative solutions from our logistics professionals
+            Stay updated with the latest in supply chain transformation, container optimization, and logistics innovation.
           </p>
         </div>
 

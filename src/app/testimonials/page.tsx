@@ -12,69 +12,47 @@ export default function TestimonialsPage() {
   const testimonials = [
     {
       id: 1,
-      name: "Rajesh Kumar Sharma",
-      position: "Chief Operations Officer",
-      company: "Tata Steel Limited",
-      industry: "Steel",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      testimonial: "Nisha Roadways has been our trusted logistics partner for over 12 years. Their expertise in handling heavy steel products, including coils and structural materials, is unmatched. What sets them apart is their proactive approach to route planning and their ability to handle our most challenging shipments with zero damage. Their team understands the criticality of our operations and consistently delivers beyond expectations.",
-      keyMetrics: "12+ years partnership, Zero damage claims, 98.5% on-time delivery"
-    },
-    {
-      id: 2,
-      name: "Dr. Priya Mehta",
-      position: "Supply Chain Director",
-      company: "Sun Pharmaceutical Industries",
-      industry: "Pharmaceuticals",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      testimonial: "In the pharmaceutical industry, there&apos;s no room for error. Nisha Roadways&apos; temperature-controlled transportation and their meticulous documentation process have been crucial for our regulatory compliance. Their drivers are trained in pharmaceutical handling protocols, and their real-time monitoring gives us complete visibility. They&apos;ve helped us maintain our zero-deviation record across all shipments.",
-      keyMetrics: "Temperature compliance: 100%, Documentation accuracy: 99.9%, Regulatory adherence: Perfect"
-    },
-    {
-      id: 3,
-      name: "Captain Vikram Singh",
-      position: "Logistics Head",
-      company: "Maersk Line India",
-      industry: "Shipping",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      testimonial: "As pioneers in empty container transportation by road, Nisha Roadways revolutionized our inland logistics. Their innovative approach reduced our container repositioning costs by 35% while improving turnaround times. Their understanding of port operations and container handling is exceptional. They've been instrumental in optimizing our supply chain efficiency across major Indian ports.",
-      keyMetrics: "35% cost reduction, 40% faster turnaround, 15+ ports covered"
-    },
-    {
-      id: 4,
-      name: "Amit Patel",
-      position: "Project Manager",
-      company: "Larsen & Toubro Construction",
-      industry: "Construction",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      testimonial: "Managing construction logistics across multiple project sites requires a partner who understands the complexity of heavy machinery transportation. Nisha Roadways&apos; project cargo expertise and their ability to handle oversized equipment has been invaluable. Their route surveys and permit management saved us significant time and costs. They&apos;re not just transporters; they&apos;re logistics consultants who add real value to our projects.",
-      keyMetrics: "50+ project sites served, 100% permit success rate, 25% time savings"
-    },
-    {
-      id: 5,
-      name: "Sneha Agarwal",
-      position: "Founder & CEO",
-      company: "EcoTech Innovations",
-      industry: "Electronics",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      testimonial: "As a growing startup in the electronics space, we needed a logistics partner who could scale with us. Nisha Roadways provided the reliability of an established company with the flexibility we needed. Their escort services for high-value shipments and their damage-free track record gave us the confidence to expand nationally. They&apos;ve been crucial in our journey from a startup to a recognized brand.",
-      keyMetrics: "3x business growth supported, Zero theft incidents, 99.2% delivery accuracy"
-    },
-    {
-      id: 6,
-      name: "Colonel Rajesh Khanna (Retd.)",
-      position: "Operations Director",
-      company: "Bharat Heavy Electricals Limited",
+      name: "S Varadarajan",
+      position: "Executive Director & CEO",
+      company: "Shreyas Relay Systems Ltd.",
       industry: "Engineering",
       image: "/api/placeholder/80/80",
       rating: 5,
-      testimonial: "BHEL&apos;s heavy engineering equipment requires specialized handling that few companies can provide. Nisha Roadways&apos; technical expertise in load calculations, their custom securing methods, and their experienced crew have made them our preferred partner for critical shipments. During the recent turbine transportation project, their precision and attention to detail ensured flawless execution. Their reliability is military-grade.",
-      keyMetrics: "500+ heavy equipment moves, 100% safety record, 15+ year partnership"
+      testimonial: "Nisha Roadways have been our trusted partners for our container movements for the last decade. They have always been very service-centric and maintained excellent transparent relationships with the company. Always ready to meet any challenges that are given to them.",
+      keyMetrics: "10+ years partnership, Service-centric approach, Transparent relationships"
+    },
+    {
+      id: 2,
+      name: "Capt. Thaddeus Choo",
+      position: "OOCL (INDIA) PVT. LTD.",
+      company: "OOCL (INDIA) PVT. LTD.",
+      industry: "Shipping",
+      image: "/api/placeholder/80/80",
+      rating: 5,
+      testimonial: "At OOCL (India), we have always found Nisha Roadways services to be very prompt, transparent, and customer-oriented. Where we have challenges, Nisha Roadways is there to listen and work with us to tackle the challenges.",
+      keyMetrics: "Prompt service, Transparent operations, Customer-oriented approach"
+    },
+    {
+      id: 3,
+      name: "Apurva Sheth",
+      position: "Director",
+      company: "CKB GROUPS",
+      industry: "Trading",
+      image: "/api/placeholder/80/80",
+      rating: 5,
+      testimonial: "[Include full testimonial from website]",
+      keyMetrics: "Trusted partnership, Reliable service"
+    },
+    {
+      id: 4,
+      name: "Nitin Chhibber",
+      position: "Emirates Shipping",
+      company: "Emirates Shipping",
+      industry: "Shipping",
+      image: "/api/placeholder/80/80",
+      rating: 5,
+      testimonial: "Nisha Roadways Pvt. Ltd. is one of the most respected transportation companies in India. They have grown into this leadership position because they are flexible and open to changes to get the job done right—without compromising on their ethics or safety standards. NRPL is always our top choice for transportation at Emirates Shipping.",
+      keyMetrics: "Respected leadership, Flexible approach, Uncompromising ethics"
     }
   ]
 
@@ -147,14 +125,11 @@ export default function TestimonialsPage() {
           </div>
           
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
-            Voices of Trust from
-            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mt-1">
-              Industry Leaders
-            </span>
+            What Clients Say
           </h1>
           
           <p className="text-base sm:text-lg lg:text-lg text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium">
-            Discover why 500+ companies across 16+ industries have chosen Nisha Roadways as their trusted logistics partner. From Fortune 500 giants to innovative startups, hear directly from the leaders who&apos;ve experienced our commitment to excellence.
+            Here&apos;s what industry leaders say about working with us.
           </p>
 
           {/* Testimonial Impact Metrics */}
@@ -222,8 +197,7 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What Our Partners
-              <span className="block text-blue-600 mt-2">Say About Us</span>
+              Trusted by <span className="text-blue-600">India&apos;s Leading Companies</span>
             </h2>
           </div>
 
@@ -356,14 +330,14 @@ export default function TestimonialsPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Write Your Success Story?
+            Join These Companies
           </h2>
           <p className="text-xl text-blue-100 mb-8">
           Join 500+ companies who&apos;ve transformed their logistics operations through our partnership approach. Experience the difference that four decades of excellence makes.
         </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-colors">
-              Start Your Partnership
+              Start Your First Shipment
             </Link>
             <Link href="/partners" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               View All Partners
