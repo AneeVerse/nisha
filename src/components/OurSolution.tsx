@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useState, useRef, useEffect } from "react"
+import { type LucideIcon, Truck, Container, Shield, Package, Warehouse, Zap, CheckCircle } from "lucide-react"
 import Link from "next/link"
 
 type ServiceKey =
@@ -135,12 +136,51 @@ export default function OurSolution() {
   }, [])
 
   const activeService = SERVICES[activeServiceIndex]
+  
+  // Icon mappings for category and benefits (lucide-react)
+  const categoryIcons: Record<ServiceKey, LucideIcon> = {
+    "container-logistics": Container,
+    "specialized-cargo": Zap,
+    "multimodal-transport": Truck,
+    "value-added-services": Shield,
+  }
+
+  const getBenefitIcon = (name: string): LucideIcon => {
+    switch (name) {
+      case "Empty Container Transportation (ECT)":
+        return Container
+      case "Export Import Containers":
+        return Package
+      case "Domestic Cargo In Our Containers":
+        return Warehouse
+      case "Solar Panel & Parts Transportation":
+        return Zap
+      case "Over Dimension Cargo (ODC)":
+        return Package
+      case "Bulk Cargo Transportation":
+        return Truck
+      case "Rail Services":
+        return Truck
+      case "Coastal Services":
+        return Container
+      case "LCL Consolidation":
+        return Package
+      case "Transportation Of High Value Goods":
+        return Shield
+      case "Storage and Warehousing":
+        return Warehouse
+      case "Chemical Transportation":
+        return Container
+      default:
+        return CheckCircle
+    }
+  }
 
   return (
     <section
       id="our-solution"
       ref={sectionRef}
-      className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50"
+      className="relative min-h-screen bg-blue-50 pb-12 lg:pb-10"
     >
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
@@ -148,6 +188,9 @@ export default function OurSolution() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tl from-indigo-200/40 via-blue-200/30 to-cyan-200/40 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-100/20 via-cyan-100/20 to-indigo-100/20 rounded-full blur-3xl"></div>
       </div>
+      
+      {/* Extended blue background that goes further down */}
+      <div className="absolute inset-x-0 top-0 bottom-0 -z-10 bg-blue-50"></div>
 
       {/* Header Section */}
       <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -170,7 +213,7 @@ export default function OurSolution() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 lg:pb-40">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Fixed Left Image Card */}
           <div className="lg:w-1/2 order-2 lg:order-1 lg:self-start sticky top-28 lg:my-12">
@@ -208,77 +251,57 @@ export default function OurSolution() {
           </div>
 
           {/* Right Side - Scrollable Services */}
-          <div className="space-y-6 order-1 lg:order-2 lg:w-1/2 lg:flex-shrink-0">
+          <div className="order-1 lg:order-2 lg:w-1/2 lg:flex-shrink-0">
             {SERVICES.map((service, index) => (
               <div
                 key={service.key}
                 ref={(el) => {
                   serviceRefs.current[index] = el
                 }}
-                className="relative transition-all duration-500"
+                className="relative transition-all duration-500 mb-6 last:mb-0"
               >
                 {/* Service Card */}
                 <div className="relative group">
-                  {/* Background card */}
-                  <div className="relative rounded-2xl p-6 sm:p-8 bg-white shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                  {/* Background card - simplified to match reference style */}
+                  <div className="relative rounded-2xl p-6 sm:p-7 lg:p-8 bg-white shadow-sm border border-blue-100 hover:shadow-md transition-all duration-300 min-h-[220px]">
                     <div className="relative z-10">
-                      {/* Service number and label */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-500 text-white font-bold text-sm">
-                          {String(index + 1).padStart(2, "0")}
-                        </div>
-                        <div className="h-[2px] flex-1 rounded-full bg-blue-500"></div>
-                      </div>
+                      {/* Icon + Category title */}
+                      {(() => {
+                        const Icon = categoryIcons[service.key]
+                        return (
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-sm">
+                              <Icon className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-lg sm:text-xl font-semibold leading-tight text-gray-900">
+                              {service.heading}
+                            </h3>
+                          </div>
+                        )
+                      })()}
 
-                      {/* Content */}
-                      <h3 className="text-xl sm:text-2xl font-bold mb-3 leading-tight text-gray-900">
-                        {service.heading}
-                      </h3>
-
-                      <p className="text-base leading-relaxed mb-4 text-gray-600">
-                        {service.description}
-                      </p>
-
-                      {/* Benefits */}
-                      <div className="space-y-2 mb-6">
-                        <h4 className="text-sm font-semibold uppercase tracking-wider flex items-center gap-2 text-gray-500">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                          Key Benefits
-                        </h4>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center gap-2 group/benefit">
-                              <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-blue-500 text-white">
-                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M5 13l4 4L19 7"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <span className="text-sm font-medium text-gray-600">
+                      {/* Bullet list of services */}
+                      <ul className="mt-2 space-y-2">
+                        {service.benefits.map((benefit, benefitIndex) => {
+                          const Icon = getBenefitIcon(benefit)
+                          return (
+                            <li key={benefitIndex} className="flex items-center gap-3">
+                              <Icon className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                              <span className="text-sm sm:text-base leading-tight text-gray-700">
                                 {benefit}
                               </span>
                             </li>
-                          ))}
-                        </ul>
-                      </div>
+                          )
+                        })}
+                      </ul>
 
-                      {/* CTA Button */}
-                      <div>
+                      {/* CTA Button - untouched functionality */}
+                      <div className="mt-6">
                         <Link 
                           href={service.link}
-                          className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 overflow-hidden"
+                          className="group relative inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
                         >
-                          {/* Animated background overlay */}
                           <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
-                          
-                          {/* Glow effect */}
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                          
-                          {/* Content */}
                           <span className="relative flex items-center gap-2">
                             EXPLORE ALL SERVICES
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
