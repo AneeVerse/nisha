@@ -599,7 +599,7 @@ export default function Navbar() {
               <div className="flex-1 overflow-y-auto">
                 <div className="divide-y divide-gray-700/50 px-2 pb-10 pt-2">
               {/* Services */}
-              <details open className="group">
+              <details className="group">
                 <summary className="list-none flex items-center justify-between px-2 py-4 cursor-pointer text-lg font-medium text-white">
                   Services 
                   <ChevronDown className="w-5 h-5 group-open:rotate-180 transition-transform duration-300 text-blue-400" />
@@ -648,9 +648,13 @@ export default function Navbar() {
               </details>
 
                   <div className="pt-6 px-2">
-                    <Button onClick={() => setIsMobileMenuOpen(false)} className="w-full py-4 text-base font-medium bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                    <Link 
+                      href="/contact" 
+                      onClick={() => setIsMobileMenuOpen(false)} 
+                      className="w-full py-4 text-base font-medium bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
+                    >
                       Contact
-                    </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
