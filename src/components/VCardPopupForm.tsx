@@ -11,9 +11,10 @@ interface VCardPopupFormProps {
 export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
   const [formData, setFormData] = useState({
     name: "",
-    companyName: "",
+    company: "",
     email: "",
-    businessType: "",
+    phone: "",
+    service: "",
     fromVCard: true,
   });
   const [loading, setLoading] = useState(false);
@@ -23,16 +24,17 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
     if (!show) {
       setFormData({
         name: "",
-        companyName: "",
+        company: "",
         email: "",
-        businessType: "",
+        phone: "",
+        service: "",
         fromVCard: true,
       });
       setSubmitted(false);
     }
   }, [show]);
 
-  const businessTypes = [
+  const serviceTypes = [
     'Shipping Line',
     'CHA',
     'Freight Forwarder',
@@ -60,9 +62,10 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
         setSubmitted(true);
         setFormData({ 
           name: "", 
-          companyName: "", 
+          company: "", 
           email: "", 
-          businessType: "", 
+          phone: "", 
+          service: "", 
           fromVCard: true 
         });
         setTimeout(() => {
@@ -123,8 +126,8 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
                   />
                   <input
                     type="text"
-                    name="companyName"
-                    value={formData.companyName}
+                    name="company"
+                    value={formData.company}
                     onChange={handleChange}
                     className="block w-full sm:w-1/2 p-2.5 sm:p-3 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 placeholder-gray-500 text-gray-900 text-sm sm:text-base transition-all duration-200 shadow-sm bg-white"
                     placeholder="Company Name"
@@ -140,9 +143,18 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
                   placeholder="Email Address"
                   required
                 />
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="block w-full p-2.5 sm:p-3 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 placeholder-gray-500 text-gray-900 text-sm sm:text-base transition-all duration-200 shadow-sm bg-white"
+                  placeholder="Phone Number"
+                  required
+                />
                 <select
-                  name="businessType"
-                  value={formData.businessType}
+                  name="service"
+                  value={formData.service}
                   onChange={handleChange}
                   className="block w-full p-2.5 sm:p-3 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-gray-900 text-sm sm:text-base transition-all duration-200 shadow-sm bg-white appearance-none cursor-pointer"
                   style={{
@@ -154,8 +166,8 @@ export default function VCardPopupForm({ show, onClose }: VCardPopupFormProps) {
                   }}
                   required
                 >
-                  <option value="" disabled>Select Business Type</option>
-                  {businessTypes.map((type) => (
+                  <option value="" disabled>Select Service / Business Type</option>
+                  {serviceTypes.map((type) => (
                     <option key={type} value={type}>{type}</option>
                   ))}
                 </select>
